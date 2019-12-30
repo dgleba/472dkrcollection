@@ -1,0 +1,3 @@
+.idea/
+.startup_env
+app/db.sqlite3

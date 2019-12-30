@@ -1,0 +1,56 @@
+version: '3.6'
+
+services:
+  admr:
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 6451:8080
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+      - 6452:80
+    depends_on:
+      - djan
+    volumes:
+      - static_volume:/app/static
+      - media_volume:/app/media
+  djan:
+    build: ./app
+    restart: always
+    command: gunicorn app.wsgi:application --bind 0.0.0.0:8000 --workers 1 --timeout 30
+    volumes:
+      - ./app/:/app/
+      - static_volume:/app/static
+      - media_volume:/app/media
+    ports:
+      - 6453:8000
+    environment:
+      - DEBUG=0
+      - SQL_HOST=db
+      - SQL_PORT=3306
+      - SQL_DATABASE=dkrdb
+      - DATABASE=mysql
+    env_file:
+      - .startup_env
+      - .env
+    depends_on:
+      - db
+  db:
+    image: mysql:8.0.16
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 6454:3306    
+    volumes:
+      - ../datasys/django496:/var/lib/mysql
+    env_file:
+      - .env
+    environment:
+      - MYSQL_DATABASE=dkrdb
+SQL_DATABASE=dkrdb
+
+volumes:
+  static_volume:
+  media_volume:
