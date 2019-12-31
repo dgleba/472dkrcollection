@@ -16,7 +16,7 @@ services:
     user: "0:33"
     volumes:
       - .:/code
-      - ./mediafiles:/code/media
+      #- ./mediafiles:/code/media
       # use pip cache to reduce startup time..
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
       - ../data/499d-django/dot.cache/pip/:/root/.cache/pip
@@ -26,9 +26,10 @@ services:
     restart: always
     working_dir: /code
     volumes:
+      - .:/code
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./static:/code/static
-      - ./mediafiles:/code/media
+      #- ./static:/code/static
+      #- ./mediafiles:/code/media
     ports:
       - "8303:80"
 #
