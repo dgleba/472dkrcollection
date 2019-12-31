@@ -2,11 +2,10 @@
 
 https://docs.docker.com/compose/django/
 
-
 # Installation
 
 - If you have windows OS, install virtualbox and install ubuntu 16 inside it.
-- Use ubuntu 16. 
+- Use ubuntu 16.
 
 ```
 # cd to a tmp folder
@@ -16,12 +15,10 @@ cd 472dkrcollection
 cp -a 499d-django/ myshinynewdjangoprojectname
 ```
 
- - install docker and docker-compose
- - Do not install python, or django
-
+- install docker and docker-compose
+- Do not install python, or django
 
 # commands - for Development
-
 
 ```
 docker-compose build
@@ -41,21 +38,19 @@ docker-compose run --rm djan python manage.py createsuperuser
 
 dc up
 
-visit -    http://10.4.1.228:8301/   
+visit -    http://10.4.1.228:8301/
 
-admin -   http://10.4.1.228:8301/admin/login/?next=/admin/   
+admin -   http://10.4.1.228:8301/admin/login/?next=/admin/
   User - root . passw - 123
 
 
 ```
 
-
 # Pemmissions:
 
- - Docker may run with root or other user.
- - To edit files you may have to adjust the permissions.
- - use  `  make perm  ` to gain permissions to edit/write the files.
-
+- Docker may run with root or other user.
+- To edit files you may have to adjust the permissions.
+- use `make perm` to gain permissions to edit/write the files.
 
 # all hosts
 
@@ -65,27 +60,23 @@ in settings.py
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOSTS') else []
 ```
 
-
 # Production deployment
 
 ```
 no..
   docker-compose run --rm djan python manage.py collectstatic
 
+docker-compose -f docker-compose.prod.yml build
+
 yes..
   docker-compose -f docker-compose.prod.yml run --rm  djang python manage.py collectstatic --noinput
 
-docker-compose -f docker-compose.prod.yml build
 
 docker-compose -f docker-compose.prod.yml up
 
 
 
 ```
-
-
-
-
 
 # older
 
@@ -100,8 +91,7 @@ Sample project on how to dockerize your Django project in development and produc
 This may have come from..
 
 [remote "origin"]
-	url = https://github.com/nicholaskajoh/dockerized-django.git
-
+url = https://github.com/nicholaskajoh/dockerized-django.git
 
 ## Requirements
 
