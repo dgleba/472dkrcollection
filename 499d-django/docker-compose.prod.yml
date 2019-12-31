@@ -1,0 +1,48 @@
+version: "3.6"
+
+services:
+  
+  djang:
+    build: .
+    restart: on-failure
+    env_file:
+      - ./.env
+    command: gunicorn --bind 0.0.0.0:8080 djangoproj.wsgi
+    ports:
+      - "8302:8080"
+    depends_on:
+      - nginx
+    working_dir: /code
+    # set user to root, group to www-data. All files should be delete-able by www-data group.
+    user: "0:33"
+    volumes:
+      - .:/code
+      # use pip cache to reduce startup time..
+      # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
+      - ../data/499d-django/dot.cache/pip/:/root/.cache/pip
+      
+  nginx:
+    image: "nginx:1.16-alpine"
+    restart: always
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ../data/499d-django/staticfiles:/static
+      - ./mediafiles:/media
+    ports:
+      - "8303:80"
+
+#
+#
+  #   depends_on:
+  #     - db
+  # db:
+  #   image: "postgres:10.3-alpine"
+  #   restart: unless-stopped
+  #   env_file:
+  #     - ./.env
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - ./postgres/data:/var/lib/postgresql/data
+
+

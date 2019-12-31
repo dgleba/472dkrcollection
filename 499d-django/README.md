@@ -2,7 +2,26 @@
 
 https://docs.docker.com/compose/django/
 
-# commands
+
+# Installation
+
+- If you have windows OS, install virtualbox and install ubuntu 16 inside it.
+- Use ubuntu 16. 
+
+```
+# cd to a tmp folder
+cd tmp
+git clone https://github.com/dgleba/472dkrcollection.git
+cd 472dkrcollection
+cp -a 499d-django/ myshinynewdjangoprojectname
+```
+
+ - install docker and docker-compose
+ - Do not install python, or django
+
+
+# commands - for Development
+
 
 ```
 docker-compose build
@@ -14,8 +33,29 @@ docker-compose run --rm djan django-admin.py startproject djangoproj .
 
 docker-compose run --rm djan python manage.py startapp polls
 
+docker-compose run --rm djan python manage.py makemigrations
+
+docker-compose run --rm djan python manage.py migrate
+
+docker-compose run --rm djan python manage.py createsuperuser
+
+dc up
+
+visit -    http://10.4.1.228:8301/   
+
+admin -   http://10.4.1.228:8301/admin/login/?next=/admin/   
+  User - root . passw - 123
+
 
 ```
+
+
+# Pemmissions:
+
+ - Docker may run with root or other user.
+ - To edit files you may have to adjust the permissions.
+ - use  `  make perm  ` to gain permissions to edit/write the files.
+
 
 # all hosts
 
@@ -24,6 +64,28 @@ in settings.py
 ```
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOSTS') else []
 ```
+
+
+# Production deployment
+
+```
+no..
+  docker-compose run --rm djan python manage.py collectstatic
+
+yes..
+  docker-compose -f docker-compose.prod.yml run --rm  djang python manage.py collectstatic --noinput
+
+docker-compose -f docker-compose.prod.yml build
+
+docker-compose -f docker-compose.prod.yml up
+
+
+
+```
+
+
+
+
 
 # older
 
