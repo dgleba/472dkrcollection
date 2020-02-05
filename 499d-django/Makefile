@@ -5,15 +5,23 @@
 # run system with umask test dockerfile
 # I can't seem to get writable group permissions 2018-08-27_Mon_21.28-PM
 #
-umasktest:
-	docker-compose  -f docker-compose.devtest.yml  run djangodev  django-admin.py startproject myproject .
 
   
+perm:
+# fix permissions. make them group writable so www-data group can manage the files. move, delete, etc..  
+	# docker-compose run --rm djan sh -c 'su root;chmod -R g+w .;exit;exit'
+	docker-compose run --rm djdev sh -c 'chmod -R g+w .'
+
+
 # shell in django
 #
 djbash:
 	docker-compose run djangodev /bin/bash
 
+umasktest:
+	docker-compose  -f docker-compose.devtest.yml  run djangodev  django-admin.py startproject myproject .
+
+  
 
 # clean docker containers 
 #
@@ -34,12 +42,6 @@ dclean:
 dkv: 
 	docker --version
 	docker-compose -version
-
-  
-perm:
-# fix permissions. make them group writable so www-data group can manage the files. move, delete, etc..  
-	# docker-compose run --rm djan sh -c 'su root;chmod -R g+w .;exit;exit'
-	docker-compose run --rm djan sh -c 'chmod -R g+w .'
 
 perm1:
 # fix permissions. make them group writable so www-data group can manage the files. move, delete, etc..  

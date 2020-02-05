@@ -1,6 +1,6 @@
 version: "3.6"
 services:
-  djan:
+  djdev:
     build: .
     restart: on-failure
     working_dir: /code
@@ -15,15 +15,21 @@ services:
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
       - ../data/499d-django/dot.cache/pip/:/root/.cache/pip
     ports:
-      - "8301:8000"
-  #   depends_on:
-  #     - db
-  # db:
-  #   image: "postgres:10.3-alpine"
-  #   restart: unless-stopped
-  #   env_file:
-  #     - ./.env
-  #   ports:
-  #     - "5432:5432"
-  #   volumes:
-  #     - ./postgres/data:/var/lib/postgresql/data
+      - "6461:8000"
+
+
+
+
+    #  
+      #
+        #   depends_on:
+        #     - db
+        # db:
+        #   image: "postgres:10.3-alpine"
+        #   restart: unless-stopped
+        #   env_file:
+        #     - ./.env
+        #   ports:
+        #     - "5432:5432"
+        #   volumes:
+        #     - ./postgres/data:/var/lib/postgresql/data
