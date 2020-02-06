@@ -23,24 +23,27 @@ cp -a 499d-django/ myshinynewdjangoprojectname
 ```
 docker-compose build
 
-docker-compose run --rm djan django-admin.py startproject djangoproj .
+docker-compose run --rm djdev django-admin.py startproject djangoproj .
 
 # delete all docker images, containers, volumes, etc for this compose file
    dkd --rmi all -v
 
-docker-compose run --rm djan python manage.py startapp polls
+docker-compose run --rm djdev python manage.py startapp polls
 
-docker-compose run --rm djan python manage.py makemigrations
+docker-compose run --rm djdev python manage.py makemigrations
 
-docker-compose run --rm djan python manage.py migrate
+docker-compose run --rm djdev python manage.py migrate
 
-docker-compose run --rm djan python manage.py createsuperuser
+docker-compose run --rm djdev python manage.py createsuperuser
 
 dc up
+dc stop
+dc restart
 
-visit -    http://10.4.1.228:8301/
 
-admin -   http://10.4.1.228:8301/admin/login/?next=/admin/
+visit -    http://10.4.1.228:6461/
+
+admin -   http://10.4.1.228:6461/admin/login/?next=/admin/
   User - root . passw - 123
 
 
@@ -63,20 +66,32 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOST
 # Production deployment
 
 ```
-no..
-  docker-compose run --rm djan python manage.py collectstatic
-
 docker-compose -f docker-compose.prod.yml build
 
+no..
+  docker-compose run --rm djprod python manage.py collectstatic
+
 yes..
-  docker-compose -f docker-compose.prod.yml run --rm  djang python manage.py collectstatic --noinput
+  docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py collectstatic --noinput
 
 
 docker-compose -f docker-compose.prod.yml up
-
+docker-compose -f docker-compose.prod.yml stop
+docker-compose -f docker-compose.prod.yml restart
 
 
 ```
+
+# Database commands
+
+examples of commands to import, export, etc are here..
+
+https://github.com/dgleba/482dkrcollection/blob/master/mysqlsimple5/Makefile#L32
+
+
+
+
+
 
 # older
 
