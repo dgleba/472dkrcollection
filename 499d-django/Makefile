@@ -18,6 +18,14 @@ perm:
 djbash:
 	docker-compose run djangodev /bin/bash
 
+
+prb:
+	docker-compose  -f docker-compose.prod.yml  build
+
+prup:
+	docker-compose  -f docker-compose.prod.yml  up
+
+
 umasktest:
 	docker-compose  -f docker-compose.devtest.yml  run djangodev  django-admin.py startproject myproject .
 

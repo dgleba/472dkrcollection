@@ -14,7 +14,7 @@ services:
       - .:/code
       # use pip cache to reduce startup time..
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
-      - ../data/499d-django/dot.cache/pip/:/root/.cache/pip
+      - ../datasys/python-dot-cache/pip/:/root/.cache/pip
     ports:
       - "6461:8000"
 

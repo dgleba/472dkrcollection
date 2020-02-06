@@ -19,7 +19,7 @@ services:
       #- ./mediafiles:/code/media
       # use pip cache to reduce startup time..
       # https://stackoverflow.com/questions/25305788/how-to-avoid-reinstalling-packages-when-building-docker-image-for-python-project
-      - ../data/499d-django/dot.cache/pip/:/root/.cache/pip
+      - ../datasys/python-dot-cache/pip/:/root/.cache/pip
 
   nginx:
     image: "nginx:1.16-alpine"
@@ -44,9 +44,12 @@ services:
     ports:
       - "6462:3306"
     volumes:
-      - ../datasys/mysql499d/:/var/lib/mysql/ # folder for mysql's internal data files.
+      #   use PWD in mysql files volume so each project folder has it's own database folder. This is for mistake proofing. https://github.com/docker/compose/issues/2636
+      - ../datasys/mysql$PWD:/var/lib/mysql/ # folder for mysql's internal data files.
       - .:/root # folder for scripts, etc.
-      - ../data/datamysql499d/:/home # folder for exported data, etc.
+      - ../data/home$PWD/:/home # folder for exported data, etc.
+      # - ../data/home-mysql499d/:/home # folder for exported data, etc.
+    #
     # https://medium.freecodecamp.org/how-to-setup-log-rotation-for-a-docker-container-a508093912b2
     logging:
       driver: "json-file"

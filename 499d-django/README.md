@@ -18,6 +18,14 @@ cp -a 499d-django/ myshinynewdjangoprojectname
 - install docker and docker-compose
 - Do not install python, or django
 
+# Makefile
+
+Look at the make file for useful commands to speed up using the system.
+
+eg: make clean - this will clean up unneeded containers and such.
+
+
+
 # commands - for Development
 
 ```
