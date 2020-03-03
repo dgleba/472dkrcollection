@@ -3,12 +3,16 @@
 
 ```
 
-docker-compose build
+Prep:
 
+docker-compose build
 
 docker-compose run --rm sc4 npm i
 
 docker-compose run --rm sc4 npm i --save nodemailer
+
+
+run:
 
 docker-compose run --rm sc4 node --unhandled-rejections=strict index.js 
 
@@ -36,6 +40,9 @@ docker puppeteer gpg: no valid OpenPGP data found.
 # mail
 
 ```
+
+No luck with this..
+
 https://hub.docker.com/r/eeacms/postfix/
 
 
@@ -58,6 +65,7 @@ docker run -it --rm --link=postfix busybox sh
   Testing 1, 2, 3
   .
   quit         
+  
   
 ```
 

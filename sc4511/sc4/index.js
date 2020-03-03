@@ -26,7 +26,7 @@ process.on('unhandledRejection', function(err, promise) {
     console.log("text found");
     await page.screenshot({path: '/app/output/pagefound.png', fullPage:true});
   } catch(e) {
-    console.log(`The text "${text}" was not found on the page`);
+    console.log(`The text "${text}" was NOT NOT NOT on the page`);
     await page.screenshot({path: '/app/output/page-textnotfound.png', fullPage:true});
   }
 
