@@ -51,7 +51,7 @@ process.on('unhandledRejection', function (err, promise) {
     
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
-      to: 'dgleba@gmail.com',
+      to: 'dgleba@gmail.com,dgleba@stackpole.com,ckeller@london.ca,ke.seguin@icloud.com',
       subject: '-- SUCCESS -- new application found',
       text: 'The text 2020-2021 was found, so you should visit the page yourself and see it is true.'
     };
@@ -69,7 +69,7 @@ process.on('unhandledRejection', function (err, promise) {
 
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
-      to: 'dgleba@gmail.com,dgleba@stackpole.com,ckeller@london.ca',
+      to: 'dgleba@gmail.com,dgleba@stackpole.com,ckeller@london.ca,ke.seguin@icloud.com',
       subject: 'error - sc4 housing new application NOT found',
       text: 'the text `2020-2021` was NOT there'
     };
@@ -106,7 +106,7 @@ process.on('unhandledRejection', function (err, promise) {
     
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
-      to: 'dgleba@gmail.com',
+      to: 'dgleba@gmail.com,dgleba@stackpole.com,ckeller@london.ca,ke.seguin@icloud.com',
       subject: '-- SUCCESS -- new application found',
       text: 'The text 2021 was found, so you should visit the page yourself and see it is true.'
     };
