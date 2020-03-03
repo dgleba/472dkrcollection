@@ -83,7 +83,6 @@ var mailOptions = {
   subject: 'Sending Email using Node.js',
   text: 'That was not easy! 09:01AM'
 };
-
 transporter.sendMail(mailOptions, function (error, info) {
   if (error) {
     console.log(error);
