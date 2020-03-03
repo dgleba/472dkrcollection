@@ -5,33 +5,46 @@ var nodemailer = require('nodemailer');
 // var smtpTransport = require('nodemailer-smtp-transport');
 
 
-// 2020-03-03 12:20PM works.
-//
-var transporter = nodemailer.createTransport({
-  host: "smtp-mail.outlook.com", // hostname
-  secureConnection: false, // TLS requires secureConnection to be false
-  port: 587, // port for secure SMTP
-  tls: {
-    ciphers: 'SSLv3'
-  },
-  auth: {
-    user: process.env.ev_hotemail,
-    pass: process.env.ev_hotpass
-  }
-});
+// Current...
 
 
 // 504dc
 // 
 // https://nodemailer.com/smtp/
 // secure – if true the connection will use TLS when connecting to server. If false (the default) then TLS is used if server supports the STARTTLS extension. In most cases set this value to true if you are connecting to port 465. For port 587 or 25 keep it false.
-
+//
 var transporter = nodemailer.createTransport({
   host: "mail.jgleba.com", // hostname
   secure: false, // TLS requires secureConnection to be false
   port: 25 // port for secure SMTP
   
 });
+
+
+
+// #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// #@  
+// #@  works.
+// #@  
+// #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-03-03[Mar-Tue]12-46PM 
+
+// 2020-03-03 12:20PM works.
+// //
+// var transporter = nodemailer.createTransport({
+  // host: "smtp-mail.outlook.com", // hostname
+  // secureConnection: false, // TLS requires secureConnection to be false
+  // port: 587, // port for secure SMTP
+  // tls: {
+    // ciphers: 'SSLv3'
+  // },
+  // auth: {
+    // user: process.env.ev_hotemail,
+    // pass: process.env.ev_hotpass
+  // }
+// });
+
+
+
 
 
 // var smtpTransport = nodemailer.createTransport(smtpTransport({
