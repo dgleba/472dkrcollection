@@ -29,7 +29,9 @@ var transporter = nodemailer.createTransport({
 // #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-03-03[Mar-Tue]12-46PM 
 
 // 2020-03-03 12:20PM works.
-// //
+// 
+// Must be from hotmail account. See below - var mailOptions ...
+//
 // var transporter = nodemailer.createTransport({
   // host: "smtp-mail.outlook.com", // hostname
   // secureConnection: false, // TLS requires secureConnection to be false
@@ -45,7 +47,7 @@ var transporter = nodemailer.createTransport({
 
 
 
-
+// other trys..
 
 // var smtpTransport = nodemailer.createTransport(smtpTransport({
 //   service: 'Hotmail',
