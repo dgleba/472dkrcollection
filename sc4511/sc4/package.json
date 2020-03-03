@@ -1,0 +1,21 @@
+{
+  "name": "puppeteermb",
+  "version": "0.0.1",
+  "description": "command line screenshot with chrome",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Gleba",
+  "license": "ISC",
+  "ref": "https://github.com/GoogleChrome/puppeteer",
+  "keywords": [
+    "changes"
+  ],
+  "dependencies": {
+    "dayjs": "^1.8.0",
+    "dotenv": "^6.2.0",
+    "nodemailer": "^6.4.4",
+    "puppeteer": "^2.0.0"
+  }
+}

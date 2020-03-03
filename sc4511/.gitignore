@@ -9,6 +9,10 @@ logs/
 gitignored/
 node_modules/
 
+output/*
+
+
+
 # Environments
 .env
 .venv

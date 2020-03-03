@@ -1,0 +1,34 @@
+version: "3.6"
+
+# networks:
+  # sister:
+    # name: sister
+
+services:
+  sc4:
+    # couch to pg job
+    build: ./sc4
+    env_file:
+      - .env
+    # image: "node:10-slim"
+    #restart: always
+    # user: "node"
+    # environment:
+    #   - NODE_ENV=production
+    working_dir: /app
+    volumes:
+      - ./sc4:/app
+    # expose:
+    #   - "8081"
+    # depends_on:
+    #   - couchdb
+    # noworky.. command: sh .env &&  ./bin/index.js
+    command: ./index.js
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "3"
+
+  
+
