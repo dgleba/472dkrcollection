@@ -32,3 +32,34 @@ docker puppeteer gpg: no valid OpenPGP data found.
 
 ```
 
+
+# mail
+
+```
+https://hub.docker.com/r/eeacms/postfix/
+
+
+docker run --rm --name=postfix \
+             -e  MTP_HOST=192.168.88.45 \
+         eeacms/postfix
+         
+docker run --rm --name=postfix \
+             -e  MTP_HOST=ubu398j.local \
+         eeacms/postfix
+         
+         
+docker run -it --rm --link=postfix busybox sh
+   telnet postfix 25
+  HELO ubu398j.local
+  MAIL FROM: dgleba@ubu398j.local
+  RCPT TO: dgleba@gmail.com
+  DATA
+  subject: Test
+  Testing 1, 2, 3
+  .
+  quit         
+  
+```
+
+
+#
