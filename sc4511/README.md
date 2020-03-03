@@ -5,6 +5,8 @@
 
 Prep:
 
+cd /srv/file/test/472dkrcollection/sc4511/
+
 docker-compose build
 
 docker-compose run --rm sc4 npm i
