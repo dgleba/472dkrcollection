@@ -145,12 +145,12 @@ process.on('unhandledRejection', function (err, promise) {
       {},
       text
     );
-    console.log("error.. The text "${ text }" was there on the page. So its an old page.");
+    console.log(`error.. The text "${ text }" was there on the page. So its an old page.`);
     // mail..
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
       to: 'dgleba@gmail.com',
-      subject: 'error.. The text "${ text }" was there on the page. So its an old page.',
+      subject: 'error.. 2019 was there on the page. So its an old page.',
       text: 'error'
     };
     transporter.sendMail(mailOptions, function (error, info) {
@@ -201,7 +201,7 @@ process.on('unhandledRejection', function (err, promise) {
       {},
       text
     );
-    console.log("error.. The text "${ text }" was there on the page. So its an old page.");
+    console.log(`error.. The text "${ text }" was there on the page. So its an old page.`);
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
       to: 'dgleba@gmail.com',
