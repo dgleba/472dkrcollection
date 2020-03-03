@@ -153,13 +153,13 @@ process.on('unhandledRejection', function (err, promise) {
       subject: 'error.. 2019 was there on the page. So its an old page.',
       text: 'error'
     };
-    transporter.sendMail(mailOptions, function (error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
-    });
+    // transporter.sendMail(mailOptions, function (error, info) {
+      // if (error) {
+        // console.log(error);
+      // } else {
+        // console.log('Email sent: ' + info.response);
+      // }
+    // });
     //
     //await page.screenshot({ path: '/app/output/pagenotfound2.png', fullPage: true });
   } catch (e) {
@@ -208,13 +208,13 @@ process.on('unhandledRejection', function (err, promise) {
       subject: 'error.. The text "${ text }" was there on the page. So its an old page.',
       text: 'error'
     };
-    transporter.sendMail(mailOptions, function (error, info) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
-    });
+    // transporter.sendMail(mailOptions, function (error, info) {
+      // if (error) {
+        // console.log(error);
+      // } else {
+        // console.log('Email sent: ' + info.response);
+      // }
+    // });
     // await page.screenshot({ path: '/app/output/pagefound.png', fullPage: true });
   } catch (e) {
     console.log(`SUCCESS -- 2019 was not found. `);
