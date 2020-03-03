@@ -9,7 +9,8 @@ docker-compose build
 
 docker-compose run --rm sc4 npm i
 
-docker-compose run --rm sc4 npm i --save nodemailer
+wip:
+  docker-compose run --rm sc4 npm i --save nodemailer
 
 
 run:
