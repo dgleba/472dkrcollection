@@ -1,7 +1,7 @@
 
 const puppeteer = require('puppeteer');
 const dayjs = require('dayjs');
-require('dotenv').config()
+require('dotenv').config();
 
 // mail..
 //
