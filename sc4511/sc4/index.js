@@ -70,7 +70,7 @@ process.on('unhandledRejection', function (err, promise) {
     // mail..
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
-      to: 'dgleba@gmail.com,dgleba@stackpole.com,ckeller@london.ca,ke.seguin@icloud.com',
+      to: 'dgleba@gmail.com',
       subject: 'error - sc4 housing new application NOT found',
       text: 'the text `2020-2021` was NOT there'
     };
