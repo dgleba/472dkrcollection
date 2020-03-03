@@ -23,13 +23,40 @@ process.on('unhandledRejection', function(err, promise) {
       {},
       text
     );
-    console.log("text found");
+    console.log("SUCCESS ------------------- text found. Check the page your self now.");
     await page.screenshot({path: '/app/output/pagefound.png', fullPage:true});
   } catch(e) {
     console.log(`The text "${text}" was NOT NOT NOT on the page`);
-    await page.screenshot({path: '/app/output/page-textnotfound.png', fullPage:true});
+    // await page.screenshot({path: '/app/output/page-textnotfound.png', fullPage:true});
   }
 
   
   await browser.close();
 })();
+
+
+
+(async () => {
+  const url = 'https://sc4.edu/campus-life/college-housing/college-housing-application/';
+  const text = '2021';
+  const browser = await puppeteer.launch( {args: ['--no-sandbox', '--disable-setuid-sandbox']} );
+  const page = await browser.newPage();
+  await page.goto(url);
+
+  try {
+    await page.waitForFunction(
+      text => document.querySelector('body').innerText.includes(text),
+      {},
+      text
+    );
+    console.log("SUCCESS ------------------- text found. Check the page your self now.");
+    await page.screenshot({path: '/app/output/pagefound2021.png', fullPage:true});
+  } catch(e) {
+    console.log(`The text "${text}" was NOT NOT NOT on the page`);
+    // await page.screenshot({path: '/app/output/page-textnotfound.png', fullPage:true});
+  }
+
+  
+  await browser.close();
+})();
+
