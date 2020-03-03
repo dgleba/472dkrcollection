@@ -145,7 +145,7 @@ process.on('unhandledRejection', function (err, promise) {
       {},
       text
     );
-    console.log("error.. The text "${ text }" was there on the page. So it's an old page.");
+    console.log("error.. The text "${ text }" was there on the page. So its an old page.");
     // mail..
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
@@ -201,7 +201,7 @@ process.on('unhandledRejection', function (err, promise) {
       {},
       text
     );
-    console.log("error.. The text "${ text }" was there on the page. So it's an old page.");
+    console.log("error.. The text "${ text }" was there on the page. So its an old page.");
     var mailOptions = {
       from: 'davidgleba@hotmail.com',
       to: 'dgleba@gmail.com',
