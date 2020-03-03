@@ -23,6 +23,8 @@ docker-compose run --rm sc4 node test-pupshot.js
 
 docker-compose run --rm sc4 node test-email.js
 
+docker-compose run --rm sc4 node test-email.504dc.js
+
 
 ```
 
