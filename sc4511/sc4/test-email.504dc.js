@@ -16,9 +16,13 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
   host: "mail.jgleba.com", // hostname
   secure: false, // TLS requires secureConnection to be false
-  port: 25 // port for secure SMTP
-  
+  port: 25, // port for secure SMTP
+  auth: {
+    user: process.env.ev_muser,
+    pass: process.env.ev_muserpass
+  }  
 });
+
 
 
 
@@ -110,7 +114,7 @@ var mailOptions = {
   from: 'j@jgleba.com',
   to: 'dgleba@gmail.com',
   subject: 'Sending Email using Node.js',
-  text: 'That was not easy! 09:01AM'
+  text: 'That was not easy! 09:01pm1'
 };
 transporter.sendMail(mailOptions, function (error, info) {
   if (error) {
