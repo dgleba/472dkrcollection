@@ -91,13 +91,13 @@ var vpage;
 var vcmp;
 
 vpage = run();
-vcmp = vpage1.localeCompare(vpage);
 vpage1 = vpage;
+vcmp = vpage1.localeCompare(vpage);
 console.log(`vpage "${vpage}"`);
-console.log(`-zz1-----------------------------------`);
+console.log(`-zz0-----------------------------------`);
 console.log(`vcmp "${vcmp}"`);
 
-vcmp = vpage1.localeCompare(vpage);
+// vcmp = vpage1.localeCompare(vpage);
 console.log(`vpage "${vpage}"`);
 console.log(`-zz2-----------------------------------`);
 console.log(`vcmp "${vcmp}"`);
