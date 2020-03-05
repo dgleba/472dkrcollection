@@ -10,6 +10,7 @@ gitignored/
 node_modules/
 
 output/*
+output/
 
 
 

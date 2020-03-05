@@ -20,8 +20,8 @@ run touch package-lock.json
 run      npm i --save puppeteer
 
 RUN      sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' 
-# RUN      apt-get update 
-# RUN      apt-get install -y google-chrome-unstable --no-install-recommends 
+RUN      apt-get update 
+RUN      apt-get install -y google-chrome-unstable --no-install-recommends 
 RUN      rm -rf /var/lib/apt/lists/* 
 RUN      wget --quiet https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh -O /usr/sbin/wait-for-it.sh 
 RUN      chmod +x /usr/sbin/wait-for-it.sh
