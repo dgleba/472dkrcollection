@@ -1,12 +1,7 @@
-{# Load the tag library #}
-{% load bootstrap3 %}
+{% extends 'polls/base.html' %}
 
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript jquery=1 %}
 
-{# Display django.contrib.messages as Bootstrap alerts #}
-{% bootstrap_messages %}
+{% block polls_content %}
 
 Just a little bootstrap to see if it is working..
 <div>
@@ -28,3 +23,16 @@ Just a little bootstrap to see if it is working..
     <li><a href="#">Separated link</a></li>
   </ul>
 </div>
+
+
+<h1>Polls</h1>
+{% if latest_poll_list %}
+<ul>
+  {% for poll in latest_poll_list %}
+  <li><a href="{% url 'polls:detail' poll.id %}">{{ poll.question }}</a></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No polls are available.</p>
+{% endif %}
+{% endblock %}
