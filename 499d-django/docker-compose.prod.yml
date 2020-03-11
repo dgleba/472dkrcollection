@@ -7,8 +7,8 @@ services:
     env_file:
       - ./.env
     command: gunicorn --bind 0.0.0.0:8080 djangoproj.wsgi
-    ports:
-      - "6466:8080"
+    # ports:
+      # - "6466:8080"
     depends_on:
       - nginx
     working_dir: /code

@@ -39,13 +39,14 @@ docker-compose run --rm djdev django-admin.py startproject djangoproj .
 
 docker-compose run --rm djdev python manage.py startapp polls
 
-docker-compose run --rm djdev python manage.py startapp trakberry
+docker-compose run --rm djdev python manage.py startapp trakberry2
 
-docker-compose run --rm djdev python manage.py makemigrations
 
-docker-compose run --rm djdev python manage.py migrate
+# This can work with sqlite in development. See production below for use with mysql.
+  docker-compose run --rm djdev python manage.py makemigrations
+  docker-compose run --rm djdev python manage.py migrate
+  docker-compose run --rm djdev python manage.py createsuperuser
 
-docker-compose run --rm djdev python manage.py createsuperuser
 
 dc up
 dc stop
@@ -79,8 +80,18 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOST
 ```
 docker-compose -f docker-compose.prod.yml build
 
+
+docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py makemigrations
+
+docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py showmigrations
+
+docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py migrate
+
+docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py createsuperuser
+
+
 no..
-  docker-compose run --rm djprod python manage.py collectstatic
+  no.. docker-compose run --rm djprod python manage.py collectstatic
 
 yes..
   docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py collectstatic --noinput

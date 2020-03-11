@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls',
     'bootstrap3',
-
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -78,12 +78,23 @@ WSGI_APPLICATION = 'djangoproj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+    # 'default': {
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+         'default': {
+             'ENGINE': 'django.db.backends.mysql',
+             'NAME': os.getenv('MYSQL_DATABASE'),
+             'USER': os.getenv('MYSQL_USER'),
+             'HOST': os.getenv('MYSQL_HOST'),
+             'PASSWORD':os.getenv('MYSQL_PASSWORD'),
+         }
+       }
+
 
 
 # Password validation
@@ -125,3 +136,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
