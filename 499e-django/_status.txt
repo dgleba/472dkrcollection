@@ -7,6 +7,8 @@ works.
 django 2.2
 bootstrap_admin
 py 3.7
+mysql docker db
+polls view with bootstrap js to test assets
 
 _____________
 
@@ -21,5 +23,4 @@ media folder is untested.
 _____________
 
 
-_____________
 

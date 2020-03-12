@@ -1,8 +1,0 @@
-_____________
-
-2020-03-11
-upgrade to django 3.0
-removed bootstrap_admin
-
-_________
-

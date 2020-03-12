@@ -1,0 +1,11 @@
+_____________
+
+2020-03-11
+
+upgrade to django 3.0
+removed bootstrap_admin. I think there was an error.
+
+What i tested works!
+
+_________
+
