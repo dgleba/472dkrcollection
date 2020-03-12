@@ -1,0 +1,15 @@
+_____________
+
+2020-03-11
+upgrade to django 3.0
+try django-jet
+
+
+2020-03-11_Wed_23.27-PM
+djdev_1  |   File "/usr/local/lib/python3.7/site-packages/jet/models.py", line 3, in <module>
+djdev_1  |     from django.utils.encoding import python_2_unicode_compatible
+djdev_1  | ImportError: cannot import name 'python_2_unicode_compatible' from 'django.utils.encoding' (/usr/local/lib/python3.7/site-packages/django/utils/encoding.py)
+djdev_1  |
+
+_________
+
