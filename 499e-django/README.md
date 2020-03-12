@@ -80,6 +80,8 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOST
 ```
 docker-compose -f docker-compose.prod.yml build
 
+docker-compose -f docker-compose.prod.yml up
+
 
 docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py makemigrations
 
@@ -118,8 +120,66 @@ https://github.com/dgleba/482dkrcollection/blob/master/mysqlsimple5/Makefile#L32
 
 
 
+# 
+
+# REFERENCE
 
 
+# Django tutorial app code
+
+
+## 2.0 - 3.0
+
+ggl: django tutorial 3.0 download polls example
+
+
+1.
+
+https://github.com/krzysieqq/Django-poll-app
+
+Django 1.10 poll app tutorial
+
+
+2.
+
+https://github.com/divio/django-polls
+
+no mysite.
+
+3.
+
+git clone https://github.com/deployment-from-scratch/django-2.2-polls
+
+seems good.
+
+
+
+
+## 1.8
+
+Search: django tutorial 1.8 download polls
+
+
+1.
+
+https://github.com/SanketDG/django-polls
+
+Following the Django 1.8 Tutorial https://docs.djangoproject.com/en/1.8/intro/tutorial01/
+
+
+2.
+
+https://github.com/hezhao/django-polls
+
+Django 1.8 tutorial app with Python 3.5 https://docs.djangoproject.com/en/1.8…
+
+Following the Django 1.8 Tutorial https://docs.djangoproject.com/en/1.8/intro/tutorial01/
+
+
+
+
+
+# 
 
 # older
 
