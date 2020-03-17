@@ -33,18 +33,15 @@ umasktest:
 
 # clean docker containers 
 #
-dclean:   
-	docker ps 
-	docker ps -a
-	docker images
-	docker volume ls 
+clean:   
 	# remove this one.. 
-	-docker rmi dkr382django2t_djangodev 
 	-docker rmi dkr382r-django_djangodev
   # remove docker containers exited 
 	-docker rm $$(docker ps -qa --no-trunc --filter "status=exited") 
 	# remove tagged <none> 
 	-docker rmi $$(docker images | grep "^<none>" | awk '{ print $3 }') 
+	-docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
+
 
 #
 dkv: 

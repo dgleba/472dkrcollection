@@ -44,10 +44,11 @@ services:
     ports:
       - "6462:3306"
     volumes:
-      #   use PWD in mysql files volume so each project folder has it's own database folder. This is for mistake proofing. https://github.com/docker/compose/issues/2636
-      - ../datasys/mysql$PWD:/var/lib/mysql/ # folder for mysql's internal data files.
+      #  use PWD in mysql files volume so each project folder has it's own database folder. This is for mistake proofing. https://github.com/docker/compose/issues/2636
+      #  I tried directory with no full path.. ERROR: Invalid interpolation format for "volumes" option in service "db": "../datasys/mysql-${PWD##*/}:/var/lib/mysql/"
+      - ../datasys/mysql${PWD}:/var/lib/mysql/ # folder for mysql's internal data files.
       - .:/root # folder for scripts, etc.
-      - ../data/home$PWD/:/home # folder for exported data, etc.
+      - ../data/home${PWD}/:/home # folder for exported data, etc.
       # - ../data/home-mysql499d/:/home # folder for exported data, etc.
     #
     # https://medium.freecodecamp.org/how-to-setup-log-rotation-for-a-docker-container-a508093912b2

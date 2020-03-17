@@ -17,9 +17,12 @@ services:
       - ../datasys/python-dot-cache/pip/:/root/.cache/pip
     ports:
       - "6461:8000"
-
-
-
+    networks:
+      - 499d-django_default      
+  
+networks:
+  499d-django_default:
+    name: 499d-django_default
 
     #  
       #
