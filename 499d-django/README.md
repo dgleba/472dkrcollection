@@ -47,6 +47,8 @@ docker-compose run --rm djdev python manage.py startapp trakberry2
   docker-compose run --rm djdev python manage.py migrate
   docker-compose run --rm djdev python manage.py createsuperuser
 
+docker-compose exec djdev pip list
+
 
 dc up
 dc stop
