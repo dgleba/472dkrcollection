@@ -16,7 +16,7 @@ fi
 
 if [[ $MIGRATE = "True" ]]
 then
-    python manage.py makemigrations meter
+    python manage.py makemigrations peter
     python manage.py migrate
 
     echo "from django.contrib.auth.models import User;\
