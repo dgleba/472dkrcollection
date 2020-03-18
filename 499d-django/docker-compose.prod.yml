@@ -8,7 +8,7 @@ services:
       - ./.env
     command: gunicorn --bind 0.0.0.0:8080 djangoproj.wsgi
     # ports:
-      # - "6466:8080"
+      # - "6465:8080"
     depends_on:
       - nginx
     working_dir: /code
@@ -31,7 +31,7 @@ services:
       #- ./static:/code/static
       #- ./mediafiles:/code/media
     ports:
-      - "6467:80"
+      - "6464:80"
 
   db:
     image: mysql:5.7
