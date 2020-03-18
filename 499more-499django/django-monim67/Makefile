@@ -10,7 +10,7 @@
 perm:
 # fix permissions. make them group writable so www-data group can manage the files. move, delete, etc..  
 	# docker-compose run --rm djan sh -c 'su root;chmod -R g+w .;exit;exit'
-	docker-compose run --rm djdev sh -c 'chgrp -R www-data . &&  chmod -R g+w . '
+	docker-compose run --rm djdev sh -c 'chmod -R g+w .'
 
 
 # shell in django
@@ -33,15 +33,18 @@ umasktest:
 
 # clean docker containers 
 #
-clean:   
+dclean:   
+	docker ps 
+	docker ps -a
+	docker images
+	docker volume ls 
 	# remove this one.. 
+	-docker rmi dkr382django2t_djangodev 
 	-docker rmi dkr382r-django_djangodev
   # remove docker containers exited 
 	-docker rm $$(docker ps -qa --no-trunc --filter "status=exited") 
 	# remove tagged <none> 
 	-docker rmi $$(docker images | grep "^<none>" | awk '{ print $3 }') 
-	-docker network rm $(docker network ls | grep "bridge" | awk '/ / { print $1 }')
-
 
 #
 dkv: 
