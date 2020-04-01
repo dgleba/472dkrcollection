@@ -1,0 +1,45 @@
+# git clone https://github.com/dsavell/docker-grav grav516c
+
+version: "3.6"
+
+services:
+
+  grav:
+    image: dsavell/grav
+    restart: unless-stopped
+    volumes:
+      - ./data/grav/backup:/var/www/grav/backup
+      - ./data/grav/logs:/var/www/grav/logs
+      - ./data/grav/user:/var/www/grav/user
+    ports:
+      - "8311:80"
+    # expose:
+    #   - "8000"
+    # env_file:
+    #   - .env
+    environment:
+      - DUID=1000
+      - DGID=1000 
+      # - VIRTUAL_HOST=sf.dg.jgleba.com
+      # - LETSENCRYPT_HOST=sf.dg.jgleba.com
+      # - LETSENCRYPT_EMAIL=d@gmail.com
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "5"
+
+
+# docker create \
+#   --name=grav \
+#   --restart unless-stopped \
+#   -p 80:80 \
+#   -e DUID=1000 \
+#   -e DGID=1000 \
+#   -v /data/containers/grav/backup:/var/www/grav/backup \
+#   -v /data/containers/grav/logs:/var/www/grav/logs \
+#   -v /data/containers/grav/user:/var/www/grav/user \
+#   dsavell/grav
+# docker start grav
+
+ 

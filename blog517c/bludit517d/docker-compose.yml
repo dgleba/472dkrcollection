@@ -1,0 +1,38 @@
+
+#
+# from docker hub https://hub.docker.com/r/bludit/docker/
+# docker run --name bludit \
+#     -p 8000:80 \
+#     -v ~/bludit:/usr/share/nginx/html/bl-content \
+#     -d bludit/docker:latest
+# 
+
+version: "3.6"
+
+services:
+
+
+  bludit:
+    image: bludit/docker:latest
+    restart: unless-stopped
+    volumes:
+      - ./data/bludit:/usr/share/nginx/html/bl-content
+    ports:
+      - "8311:80"
+    # expose:
+    #   - "8000"
+    # env_file:
+    #   - .env
+    environment:
+      - dummy=1
+      # - DUID=1000
+      # - DGID=1000 
+      # # - VIRTUAL_HOST=sf.dg.jgleba.com
+      # - LETSENCRYPT_HOST=sf.dg.jgleba.com
+      # - LETSENCRYPT_EMAIL=d@gmail.com
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "5"
+

@@ -1,0 +1,38 @@
+
+# https://github.com/jojomi/docker-hugo
+
+version: "3.6"
+
+services:
+
+  dhugo:
+    image: jojomi/hugo:latest
+    volumes:
+      - ./data/src:/src
+      - ./data/output/:/output
+    environment:
+      - HUGO_REFRESH_TIME=60
+      # - HUGO_THEME=ananke
+      # - HUGO_BASEURL=mydomain.com
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "5"
+
+  nginx:
+    image: jojomi/nginx-static
+    volumes:
+      - ./data/output:/var/www
+    environment:
+      - z-VIRTUAL_HOST=mydomain.com
+    ports:
+      - "8312:80"
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "5"
+

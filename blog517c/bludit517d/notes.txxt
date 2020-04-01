@@ -1,0 +1,25 @@
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-03-30[Mar-Mon]23-23PM 
+
+
+
+albe@vamp398:/srv/test/blog517c/bludit517d$ ll
+total 16
+drwxrwsr-x 3 albe www-data 4096 Mar 30 23:16 .
+drwxrwsr-x 3 albe www-data 4096 Mar 30 21:41 ..
+drwxr-sr-x 3 root root     4096 Mar 30 23:16 data
+-rw-rw-r-- 1 albe www-data  755 Mar 30 23:10 docker-compose.yml
+albe@vamp398:/srv/test/blog517c/bludit517d$ sudo chmod -R 777 data/
+albe@vamp398:/srv/test/blog517c/bludit517d$
+
+_____________
+
+admin 345345
+
+_____________
+
+
