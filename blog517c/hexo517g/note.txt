@@ -1,0 +1,29 @@
+
+success.
+
+
+
+https://hub.docker.com/r/spurin/hexo
+
+
+
+docker create --name=hexo517g \
+-e HEXO_SERVER_PORT=4000 \
+-e GIT_USER="David Gleba" \
+-e GIT_EMAIL="dgleba@gmail.com" \
+-v /data/blog:/app \
+-p 8316:4000 \
+spurin/hexo
+
+docker start hexo517g
+
+
+
+eg:
+docker create --name=hexo-domain.com \
+-e HEXO_SERVER_PORT=4000 \
+-e GIT_USER="Your Name" \
+-e GIT_EMAIL="your.email@domain.tld" \
+-v /blog/domain.com:/app \
+-p 4000:4000 \
+spurin/hexo

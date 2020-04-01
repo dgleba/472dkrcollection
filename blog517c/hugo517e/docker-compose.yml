@@ -26,7 +26,7 @@ services:
     volumes:
       - ./data/output:/var/www
     environment:
-      - z-VIRTUAL_HOST=mydomain.com
+      - z_VIRTUAL_HOST=mydomain.com
     ports:
       - "8312:80"
     restart: always

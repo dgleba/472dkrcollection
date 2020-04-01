@@ -1,0 +1,34 @@
+
+# result forbidden nginx message.
+
+# https://hub.docker.com/r/simplyintricate/hexo/
+
+# docker run --name hexo -it -p 80:80 -v <hexo source dir>:/usr/share/nginx/html/source simplyintricate/hexo
+# sftp://192.168.88.60/srv/dkr/472dkrcollection/blog517c/hexo517f/data
+# docker run --name hexo -it -p 8315:80 -v /srv/dkr/472dkrcollection/blog517c/hexo517f/data:/usr/share/nginx/html/source simplyintricate/hexo
+# 192.168.88.60:8315
+
+
+
+version: "3.6"
+
+services:
+
+  dhexo:
+    image: simplyintricate/hexo
+    ports:
+      - "8314:80"
+    volumes:
+      - ./data:/usr/share/nginx/html/source
+     environment:
+      - dummy=60
+      # - HUGO_THEME=ananke
+      # - HUGO_BASEURL=mydomain.com
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "5"
+
+
