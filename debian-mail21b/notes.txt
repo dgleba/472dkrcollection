@@ -1,0 +1,22 @@
+
+# https://www.cyberciti.biz/faq/how-to-configure-postfix-relayhost-smarthost-to-send-email-using-an-external-smptd/
+# David Gleba outlook smtp..
+# Enable auth
+smtp_sasl_auth_enable = yes
+# Set username and password
+smtp_sasl_password_maps = static:davidgleba@hotmail.com:pwxx
+smtp_sasl_security_options = noanonymous
+# Turn on tls encryption 
+smtp_tls_security_level = encrypt
+header_size_limit = 4096000
+# Set external SMTP relay host here IP or hostname accepted along with a port number. 
+relayhost = [smtp-mail.outlook.com]:587
+# accept email from our web-server only 
+# inet_interfaces = 127.0.0.1
+
+smtp_use_tls = yes
+smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+smtp_tls_protocols = !SSLv2,!SSLv3,!TLSv1.1
+smtp_tls_ciphers = medium
+smtp_tls_mandatory_ciphers = medium
+smtp_tls_security_level = may

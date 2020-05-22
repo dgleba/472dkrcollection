@@ -1,0 +1,24 @@
+version: "3.6"
+services:
+  deb:
+    # image: python:3.7
+    hostname: debianmail21.local
+    build:
+      context: .
+      dockerfile: ./deb.Dockerfile
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # this yields error - no module mysql..  command: pip install -r requirements.txt
+    # command: sh -c "pip install -r requirements.txt && python manage.py runserver 0.0.0.0:8000"
+    # command: bash -c "/etc/init.d/sendmail reload && tail -f /dev/null"
+    # command: bash -c "service postfix start"
+    # the tail command below simply keeps the container running so it does not exit.
+    command: bash -c "tail -f /dev/null"
+    #
+    # restart: always
+    # ports:
+    #   - 8000:8000
+    # environment:
+    #   PYTHONUNBUFFERED: 1
+#

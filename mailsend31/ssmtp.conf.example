@@ -1,0 +1,10 @@
+hostname=mail.local
+mailhub=smtp-mail.outlook.com:587
+root=a@hotmail.com
+AuthUser=a@hotmail.com
+AuthPass=xx
+AuthMethod=LOGIN
+UseSTARTTLS=YES
+UseTLS=YES
+rewriteDomain=outlook.com
+FromLineOverride=YES
