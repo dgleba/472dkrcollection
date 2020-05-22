@@ -1,0 +1,113 @@
+
+2020-05-22_Fri_08.05-AM
+
+http://192.168.88.60:14101/cmk/check_mk/
+
+docker container run -dit -p 14101:5000 --ulimit nofile=1024 -v/omd/sites  -v/etc/localtime:/etc/localtime:ro --restart always checkmk/check-mk-raw:1.5.0-latest
+
+
+https://hub.docker.com/r/checkmk/check-mk-raw/
+
+The checkmk web interface should now be reachable via http://localhost:8080/cmk/check_mk/.
+
+The initial password of the initial administrative account cmkadmin will be written to the container logs (see docker container monitoring logs). 
+You can customize this during container creation if you like, see below.
+
+You can start a Checkmk container like this:
+    docker container run -dit -p 8080:5000 --ulimit nofile=1024 -v/omd/sites --name monitoring -v/etc/localtime:/etc/localtime:ro --restart always checkmk/check-mk-raw:1.5.0-latest
+
+
+_____________
+
+2020-05-22_Fri_08.39-admin
+
+Attaching to checkmk_checkmk_1
+checkmk_1  | ### CREATING SITE 'cmk'
+checkmk_1  | Adding /opt/omd/sites/cmk/tmp to /etc/fstab.
+checkmk_1  | Going to set TMPFS to off.
+checkmk_1  | Preparing tmp directory /omd/sites/cmk/tmp...OK
+checkmk_1  | Adding /opt/omd/sites/cmk/tmp to /etc/fstab.
+checkmk_1  | Going to set TMPFS to off.
+checkmk_1  | Created new site cmk with version 1.5.0p24.cre.
+checkmk_1  |
+checkmk_1  |   The site can be started with omd start cmk.
+checkmk_1  |   The default web UI is available at http://5accb27ff063/cmk/
+checkmk_1  |
+checkmk_1  |   The admin user for the web applications is cmkadmin with password: xxLf5
+checkmk_1  |   (It can be changed with 'htpasswd -m ~/etc/htpasswd cmkadmin' as site user.
+checkmk_1  | )
+checkmk_1  |   Please do a su - cmk for administration of this site.
+checkmk_1  |
+checkmk_1  | ### STARTING SITE
+checkmk_1  | Preparing tmp directory /omd/sites/cmk/tmp...Starting mkeventd...OK
+checkmk_1  | Starting rrdcached...OK
+checkmk_1  | Starting npcd...OK
+checkmk_1  | Starting nagios...2020-05-22 08:38:04 [6] updating log file index
+checkmk_1  | 2020-05-22 08:38:04 [6] updating log file index
+checkmk_1  | OK
+checkmk_1  | Starting apache...OK
+checkmk_1  | Initializing Crontab...OK
+checkmk_1  | OK
+checkmk_1  | ### STARTING CRON
+checkmk_1  | ### CONTAINER STARTED
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping checkmk_checkmk_1   ... done
+albe@vamp398:/srv/dkr/472dkrcollection/checkmk$ dc up
+Creating checkmk_checkmk_1 ... done
+Attaching to checkmk_checkmk_1
+checkmk_1  | ### STARTING SITE
+checkmk_1  | Preparing tmp directory /omd/sites/cmk/tmp...Starting mkeventd...OK
+checkmk_1  | Starting rrdcached...OK
+checkmk_1  | Starting npcd...OK
+checkmk_1  | Starting nagios...2020-05-22 08:38:50 [6] updating log file index
+checkmk_1  | 2020-05-22 08:38:50 [6] updating log file index
+checkmk_1  | OK
+checkmk_1  | Starting apache...OK
+checkmk_1  | Initializing Crontab...OK
+checkmk_1  | OK
+checkmk_1  | ### STARTING CRON
+checkmk_1  | ### CONTAINER STARTED
+
+
+
+
+_____________
+
+old
+
+
+Attaching to checkmk_checkmk_1
+checkmk_1  | ### CREATING SITE 'cmk'
+checkmk_1  | Adding /opt/omd/sites/cmk/tmp to /etc/fstab.
+checkmk_1  | Going to set TMPFS to off.
+checkmk_1  | Preparing tmp directory /omd/sites/cmk/tmp...OK
+checkmk_1  | Adding /opt/omd/sites/cmk/tmp to /etc/fstab.
+checkmk_1  | Going to set TMPFS to off.
+checkmk_1  | Created new site cmk with version 1.5.0p24.cre.
+checkmk_1  |
+checkmk_1  |   The site can be started with omd start cmk.
+checkmk_1  |   The default web UI is available at http://fdbeffe46aa8/cmk/
+checkmk_1  |
+checkmk_1  |   The admin user for the web applications is cmkadmin with password: hAb3aH4G
+checkmk_1  |   (It can be changed with 'htpasswd -m ~/etc/htpasswd cmkadmin' as site user.
+checkmk_1  | )
+checkmk_1  |   Please do a su - cmk for administration of this site.
+checkmk_1  |
+checkmk_1  | /docker-entrypoint.sh: line 64: exec: --: invalid option
+checkmk_1  | exec: usage: exec [-cl] [-a name] [command [arguments ...]] [redirection ...]
+checkmk_checkmk_1 exited with code 2
+albe@vamp398:/srv/test/checkmk$ dc up
+Recreating checkmk_checkmk_1 ... done
+Attaching to checkmk_checkmk_1
+checkmk_1  | ### STARTING SITE
+checkmk_1  | Preparing tmp directory /omd/sites/cmk/tmp...Starting mkeventd...OK
+checkmk_1  | Starting rrdcached...OK
+checkmk_1  | Starting npcd...OK
+checkmk_1  | Starting nagios...2020-05-22 08:27:09 [6] updating log file index
+checkmk_1  | 2020-05-22 08:27:09 [6] updating log file index
+checkmk_1  | OK
+checkmk_1  | Starting apache...OK
+checkmk_1  | Initializing Crontab...OK
+checkmk_1  | OK
+checkmk_1  | ### STARTING CRON
+checkmk_1  | ### CONTAINER STARTED
