@@ -1,0 +1,23 @@
+version: "3.6"
+services:
+  mail:
+    build:
+      context: .
+      dockerfile: ./pfix.Dockerfile
+    restart: always
+    ports:
+       - "25:25"
+    environment:
+      MAIL_RELAY_HOST: smtp.gmail.com 
+      MAIL_RELAY_PORT: 587       
+      # see .env for user/pass
+    env_file:
+      - .env
+
+# from readme...      
+# docker container run \
+#     -e MAIL_RELAY_HOST='smtp.gmail.com' \
+#     -e MAIL_RELAY_PORT='587' \
+#     -e MAIL_RELAY_USER='your_gmail_addr@gmail.com' \
+#     -e MAIL_RELAY_PASS='your_gmail_pass' \
+#     tecnativa/postfix-relay

@@ -2,15 +2,48 @@
 # One liners and simple stuff may be here in this makefile. See sc folder for scripts.
 # run scripts from project folder like this --  sc/cl
 
-m6:
-	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r dgleba@stackpole.com -s "Test mail 478"  dgleba@stackpole.com '
 	
 m8:
 	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
 
+m7:
+	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n 23mailsend \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4914"  dgleba@gmail.com '
+
+m6:
+	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r dgleba@stackpole.com -s "Test mail 478"  dgleba@stackpole.com '
+
+
+sh:
+	# docker-compose  -f docker-compose.yml exec py /bin/bash
+	# docker-compose  -f docker-compose.yml run --rm ubu /bin/bash
+	docker-compose   run  deb /bin/bash
+	
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+
+
+#  other / examples stuff...
+
+
+
 
 # this wont work, but it works to send mail within make sh...  
-m7:
+m7a:
 	docker-compose exec   deb /bin/bash -c ' sleep 1 && echo "Subject: test 614" | /usr/sbin/sendmail dgleba@stackpole.com '
 	
 m9:
@@ -40,34 +73,6 @@ dco:
 	# docker-compose  -f docker-compose.yml exec py /bin/bash
 	docker-compose  -f docker-compose.yml run  deb /bin/bash -c ' ls && pwd \
 		&& debconf-show postfix  '
-
-
-sh:
-	# docker-compose  -f docker-compose.yml exec py /bin/bash
-	# docker-compose  -f docker-compose.yml run --rm ubu /bin/bash
-	docker-compose   run  deb /bin/bash
-	
-
-
-
-
-
-
-
-
-
-
-
-
- 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
-
-
-#  other / examples stuff...
-
 
 
 upsf:
