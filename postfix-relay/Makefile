@@ -14,6 +14,7 @@ sh:
 	
 
 dd:
+	# remove everything for this project. images and all.
 	docker-compose down --remove-orphans --rmi all
 
 

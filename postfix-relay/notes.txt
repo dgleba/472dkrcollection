@@ -3,7 +3,6 @@
 
 more notes on the topic of - docker mail relay
 
-
 C:\n\sfile\0computersf\0-cm-notes-01\docker.email.relay.note.txt
 
 
