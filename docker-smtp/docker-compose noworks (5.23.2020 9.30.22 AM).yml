@@ -1,0 +1,28 @@
+version: "3.6"
+services:
+  mail:
+    build:
+      context: ./stretch
+      dockerfile: ./Dockerfile
+    # image: bytemark/smtp
+    restart: always
+    expose: 
+      - 25
+    ports:
+       - 25:25
+
+  # deb:
+    # image: python:3.7
+    # hostname: mail.local
+    # working_dir: /app
+    # volumes:
+    #   - ./:/app
+    # the tail command below simply keeps the container running so it does not exit.
+    # command: bash -c "tail -f /dev/null"
+    #
+    # restart: always
+    # ports:
+    #   - 8000:8000
+    # environment:
+    #   PYTHONUNBUFFERED: 1
+#

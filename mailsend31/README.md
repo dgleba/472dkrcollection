@@ -1,6 +1,8 @@
 #  test sending email 
 
 2020-05-21 ssmtp seems to be back after being removed.
+It seems to be in ubuntu.
+Try using it in this container.
 
 # Instructions
 

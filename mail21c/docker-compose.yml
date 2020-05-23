@@ -1,0 +1,20 @@
+version: "3.6"
+services:
+  deb:
+    # image: python:3.7
+    hostname: debianmail21.local
+    build:
+      context: .
+      dockerfile: ./deb.Dockerfile
+    working_dir: /app
+    volumes:
+      - ./:/app
+    # the tail command below simply keeps the container running so it does not exit.
+    command: bash -c "tail -f /dev/null"
+    #
+    # restart: always
+    # ports:
+    #   - 8000:8000
+    # environment:
+    #   PYTHONUNBUFFERED: 1
+

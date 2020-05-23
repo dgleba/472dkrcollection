@@ -1,5 +1,7 @@
 # Simple debian to test sending email
 
+2020-05-21: trying to use hotmail relay.
+
 This is a simple debian container with postfix installed to test sending a simple email.
 
 I left comments in some of the files to keep a record of the things I tried.
