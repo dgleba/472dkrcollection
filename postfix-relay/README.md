@@ -6,6 +6,60 @@ David Gleba 2020-05-23
 ggl search.. docker postfix as smtp mail relay
 
 
+# How to send a test email.
+
+## Works from https://github.com/dgleba/472dkrcollection/tree/master/23mailsend
+
+```
+make m7
+```
+
+## Works from powershell..
+
+```
+PS C:\Windows\system32> send-mailmessage -subject "test 92" -body "testing  email" -to "dgleba@gmail.com" -dno onFailure -smtpServer 192.168.88.60 -from "david1212@gmail.com"
+PS C:\Windows\system32>
+```
+
+
+# Setup Instructions
+
+## Build
+
+Edit docker-compose.yml and .env (copy example.env and edit)
+
+```
+docker-compose build
+```
+
+## Send mail
+
+```
+dc=docker-compose
+
+dc up
+
+Then send from any other mail send program. See powershell above as an example.
+
+```
+
+
+#
+
+#
+
+#
+
+
+Forked from:
+
+https://hub.docker.com/r/tecnativa/postfix-relay/
+
+https://github.com/Tecnativa/docker-postfix-relay
+
+
+#
+
 
 # [Dockerized SMTP relay](https://hub.docker.com/r/tecnativa/postfix-relay)
 
