@@ -6,6 +6,15 @@ http://192.168.88.60:14101/cmk/check_mk/
 docker container run -dit -p 14101:5000 --ulimit nofile=1024 -v/omd/sites  -v/etc/localtime:/etc/localtime:ro --restart always checkmk/check-mk-raw:1.5.0-latest
 
 
+
+_____________
+
+
+https://github.com/tribe29/checkmk/blob/master/docker/Dockerfile
+
+_____________
+
+
 https://hub.docker.com/r/checkmk/check-mk-raw/
 
 The checkmk web interface should now be reachable via http://localhost:8080/cmk/check_mk/.

@@ -8,7 +8,7 @@ main01()
 
 #base all waits on this start time.
 starttime=$(date +%s)
-echo "------------  starting  ------------- $starttime, $(TZ=":US/Eastern" date -d @$starttime)"
+echo "------------   starting  ------------- $starttime, $(date -d @$starttime)"
 
 i=0
 
@@ -58,7 +58,7 @@ do
   slp=1800
   let slptotal="$slp * $i"
   let targettime="$starttime + $slptotal"
-  echo " targettime - $targettime, $(TZ=":US/Eastern"  date -d @$targettime)"
+  echo " targettime - $targettime, $(date -d @$targettime)"
   echo "sleeping $slp ..."
   j=0
   while [[ $(date -u +%s) -le $targettime ]]
