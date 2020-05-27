@@ -37,10 +37,22 @@ do
   echo "$currenttime"
   if (( "$currenttime" >= 050010 && $currenttime <= 053017 )); then
     echo 'email send..'
-    echo -e  " isup.sh is working. \n\n $(TZ=":US/Eastern" date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup.sh  == \n\n ver.2020-05-24a" | mail  -r david1212@gmail.com -s "Hello from isup"  dgleba@gmail.com 
+    echo -e  " isup.sh is working. \n\n $(TZ=":US/Eastern" date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup.sh  == \n\n ver.2020-05-25a" | mail  -r david1212@gmail.com -s "Hello from isup"  dgleba@gmail.com 
   else
     # do nothing
     echo 'dont say hello 0500'
+  fi
+
+
+  # if time between, then..
+  currenttime=$(TZ=":US/Eastern" date +%H%M%S)
+  echo "$currenttime"
+  if (( "$currenttime" >= 100010 && $currenttime <= 103016 )); then
+    echo 'email send 10am..'
+    echo -e  " isup.sh is working. \n\n $(TZ=":US/Eastern" date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup.sh  == \n\n ver.2020-05-25a" | mail  -r david1212@gmail.com -s "Hello from isup"  dgleba@gmail.com 
+  else
+    # do nothing
+    echo 'dont say hello 1200'
   fi
 
   currenttime=$(TZ=":US/Eastern" date +%H%M)
@@ -48,7 +60,7 @@ do
   if (( "$currenttime" >= 1800 && $currenttime <= 1831 )); then
     echo  ""
     echo 'email send..'
-    echo -e  " isup.sh is working. \n\n $(TZ=":US/Eastern" date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup.sh  == \n\n ver.2020-05-24a" | mail  -r david1212@gmail.com -s "Hello from isup"  dgleba@gmail.com 
+    echo -e  " isup.sh is working. \n\n $(TZ=":US/Eastern" date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup.sh  == \n\n ver.2020-05-25a" | mail  -r david1212@gmail.com -s "Hello from isup"  dgleba@gmail.com 
   else
     # do nothing
     echo 'no hello 6pm'

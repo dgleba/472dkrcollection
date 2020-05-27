@@ -1,7 +1,0 @@
-
-2020-05-26  
-inwork
-
-copied from isup
-purpose: test cron in docker
-

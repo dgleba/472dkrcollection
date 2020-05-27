@@ -25,7 +25,7 @@ m6:
 sh:
 	# docker-compose  -f docker-compose.yml exec py /bin/bash
 	# docker-compose  -f docker-compose.yml run --rm ubu /bin/bash
-	docker-compose   run  deb /bin/bash
+	docker-compose   exec  deb /bin/bash
 	
 
 

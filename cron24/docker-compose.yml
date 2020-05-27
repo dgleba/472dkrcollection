@@ -1,23 +1,23 @@
 version: "3.6"
 services:
-  deb:
+  debs:
     # image: python:3.7
-    hostname: debianmail21.local
+    hostname: cron24.local
     build:
       context: .
-      dockerfile: ./deb.Dockerfile
-    working_dir: /app
+      dockerfile: ./Dockerfile
+    # working_dir: /app
     volumes:
-      - ./:/app
+      - ./:/code
     # the tail command below simply keeps the container running so it does not exit.
     # command: bash -c "tail -f /dev/null"
-    command: bash -c "./cron.sh"
+    # command: bash -c "./cron.sh"
     logging:
       driver: "json-file"
       options:
         max-size: "100k"
         max-file: "3"
-    restart: always
+    # restart: always
     # ports:
     #   - 8000:8000
     # environment:
