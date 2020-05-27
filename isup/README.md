@@ -31,4 +31,9 @@ ans.
     chmod +x entry.sh
 
 
-#
+# Reference
+
+This is copied from https://github.com/dgleba/472dkrcollection/tree/master/23mailsend
+
+Which was copied from:
+ https://github.com/dgleba/482dkrcollection/tree/master/debian-mail21

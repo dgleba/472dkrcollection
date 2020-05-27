@@ -34,6 +34,7 @@ do
 
   # if time between, then..
   currenttime=$(TZ=":US/Eastern" date +%H%M%S)
+  echo "$currenttime"
   if (( "$currenttime" >= 050010 && $currenttime <= 053017 )); then
     echo 'email send..'
     echo -e  " isup.sh is working. \n\n $(TZ=":US/Eastern" date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup.sh  == \n\n ver.2020-05-24a" | mail  -r david1212@gmail.com -s "Hello from isup"  dgleba@gmail.com 
@@ -43,6 +44,7 @@ do
   fi
 
   currenttime=$(TZ=":US/Eastern" date +%H%M)
+  echo "$currenttime"
   if (( "$currenttime" >= 1800 && $currenttime <= 1831 )); then
     echo  ""
     echo 'email send..'
@@ -59,7 +61,8 @@ do
   let slptotal="$slp * $i"
   let targettime="$starttime + $slptotal"
   echo " targettime - $targettime, $(TZ=":US/Eastern"  date -d @$targettime)"
-  echo "sleeping $slp ..."
+  let slpthis="$targettime - $(date +%s)"
+  echo "sleeping $slpthis ..."
   j=0
   while [[ $(date -u +%s) -le $targettime ]]
   do
