@@ -62,4 +62,7 @@ OMD[cmk]:~/backups$
 
 solution:
 
-tbd
+I just use command line `omd backup ...`
+
+see Makefile, make bk
+
