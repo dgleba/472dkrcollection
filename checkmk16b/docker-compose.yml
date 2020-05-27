@@ -6,18 +6,17 @@ version: "3.6"
 
 services:
   checkmk:
-    image: checkmk/check-mk-raw:1.5.0-latest
+    image: checkmk/check-mk-raw:1.6.0p12
     restart: always
-    hostname: checkmk.local
+    hostname: checkmk3.local
     ulimits:
       nofile: 1024
     ports:
-      - "14101:5000"
+      - "14103:5000"
     env_file:
       - .env
     volumes:
       - ../datasys/check_mk${PWD}:/omd/sites 
-      - ./backups:/omd/sites/${CMK_SITE_ID}/backups
       - /etc/localtime:/etc/localtime:ro
       #- ../data/mysqlhome${PWD}/:/home # folder for exported data, etc.
     # networks:
