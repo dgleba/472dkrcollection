@@ -1,0 +1,20 @@
+version: "3.6"
+services:
+  deb:
+    hostname: cron24.local
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env    
+    volumes:
+      - ./:/code
+      - /etc/localtime:/etc/localtime:ro
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "3"
+    restart: always
+
+

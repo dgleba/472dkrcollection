@@ -1,7 +1,12 @@
 
 2020-05-26  
-inwork
+works
 
-copied from isup
+
 purpose: test cron in docker
+
+run .py
+
+
+based on https://stackoverflow.com/questions/55096382/how-to-run-cron-job-in-docker-container
 
