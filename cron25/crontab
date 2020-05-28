@@ -1,0 +1,4 @@
+SHELL=/bin/bash
+BASH_ENV=/container.env
+* * * * * root root /code/run.sh>>/proc/1/fd/1
+# This extra line makes it a valid cron 

@@ -5,21 +5,30 @@
 p:
 	chmod +x *.sh
 
-bk:
-	docker-compose exec  checkmk /bin/bash -c ' omd backup -N cmk /backups/bak.omd.cmk.$$(date +"%Y.%m.%d_%H.%M.%S").tgz'
-
-sh:
-	# docker-compose  -f docker-compose.yml exec py /bin/bash
-	# docker-compose  -f docker-compose.yml run --rm ubu /bin/bash
-	docker-compose   exec  checkmk /bin/bash
-	
-
-m7:
-	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n isup \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4915"  dgleba@gmail.com '
 
 dd:
 	# remove everything for this project. images and all.
 	docker-compose down --remove-orphans --rmi all
+
+
+
+m8:
+	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
+
+m7:
+	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n isup \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4915"  dgleba@gmail.com '
+
+m6:
+	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r dgleba@stackpole.com -s "Test mail 478"  dgleba@stackpole.com '
+
+
+sh:
+	# docker-compose  -f docker-compose.yml exec py /bin/bash
+	# docker-compose  -f docker-compose.yml run --rm ubu /bin/bash
+	docker-compose   exec  deb /bin/bash
+	
+
+
 
 
 
@@ -40,10 +49,6 @@ dd:
 #  other / examples stuff...
 
 
-
-
-m8:
-	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
 
 
 # this wont work, but it works to send mail within make sh...  

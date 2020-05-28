@@ -1,6 +1,6 @@
 
-
-2020-05-27_Wed_22.28-PM: cron works.
+2020-05-26  
+inwork
 
 copied from isup
 purpose: test cron in docker
