@@ -2,27 +2,18 @@
 # One liners and simple stuff may be here in this makefile. See sc folder for scripts.
 # run scripts from project folder like this --  sc/cl
 
-p:
+
+
+# build and start up
+# Only lines after the last line edited in Dockerfile will be built. 
+# Lines unchanged before the last line edited in the Dockerfile will be taken from cache.
+#
+up:
+	docker-compose build
 	chmod +x *.sh
+	docker-compose up
 
 
-dd:
-	# remove everything for this project. images and all.
-	docker-compose down --remove-orphans --rmi all
-
-
-ca:
-	docker-compose exec  deb /bin/bash -c ' cat /container.env; df; cat /root/project_env.sh'
-
-
-m8:
-	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
-
-m7:
-	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n isup \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4915"  dgleba@gmail.com '
-
-m6:
-	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r dgleba@stackpole.com -s "Test mail 478"  dgleba@stackpole.com '
 
 
 sh:
@@ -31,6 +22,9 @@ sh:
 	docker-compose   exec  deb /bin/bash
 	
 
+dd:
+	# remove everything for this project. images and all.
+	docker-compose down --remove-orphans --rmi all
 
 
 
@@ -52,6 +46,18 @@ sh:
 #  other / examples stuff...
 
 
+
+m8:
+	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
+
+m7:
+	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n isup \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4915"  dgleba@gmail.com '
+
+m6:
+	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r dgleba@stackpole.com -s "Test mail 478"  dgleba@stackpole.com '
+
+p:
+	chmod +x *.sh
 
 
 # this wont work, but it works to send mail within make sh...  
@@ -204,11 +210,11 @@ recreatep:
 # recreate for production...
 	docker-compose -f docker-compose.prod.yml up --build  --force-recreate  
 
-rup:  
+rup1:  
 # dev recreate build force
 	docker-compose  up --build  --force-recreate  
  
-up:  
+up1:  
 # dev recreate build force
 	docker-compose  up 
 

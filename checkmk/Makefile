@@ -2,11 +2,18 @@
 # One liners and simple stuff may be here in this makefile. See sc folder for scripts.
 # run scripts from project folder like this --  sc/cl
 
-p:
-	chmod +x *.sh
 
 bk:
 	docker-compose exec  checkmk /bin/bash -c ' omd backup -N cmk /backups/bak.omd.cmk.$$(date +"%Y.%m.%d_%H.%M.%S").tgz'
+
+
+dd:
+	# remove everything for this project. images and all.
+	docker-compose down --remove-orphans --rmi all
+
+
+m7:
+	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n isup \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4915"  dgleba@gmail.com '
 
 sh:
 	# docker-compose  -f docker-compose.yml exec py /bin/bash
@@ -14,16 +21,6 @@ sh:
 	docker-compose   exec  checkmk /bin/bash
 	
 
-m7:
-	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n isup \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4915"  dgleba@gmail.com '
-
-dd:
-	# remove everything for this project. images and all.
-	docker-compose down --remove-orphans --rmi all
-
-
-
-
 
 
 
@@ -37,9 +34,11 @@ dd:
  
 
 
-#  other / examples stuff...
+#  other / examples / stuff...
 
 
+p:
+	chmod +x *.sh
 
 
 m8:
