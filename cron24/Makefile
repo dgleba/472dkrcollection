@@ -11,6 +11,9 @@ dd:
 	docker-compose down --remove-orphans --rmi all
 
 
+ca:
+	docker-compose exec  deb /bin/bash -c ' cat /container.env; df; cat /root/project_env.sh'
+
 
 m8:
 	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
