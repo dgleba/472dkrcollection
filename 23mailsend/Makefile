@@ -12,6 +12,11 @@ m7:
 m6:
 	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r dgleba@stackpole.com -s "Test mail 478"  dgleba@stackpole.com '
 
+m5:
+	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n 23mailsend \n = \n " | mail  -r dgleba@wightman.ca -s "Test mail 4921"  dgleba@gmail.com '
+
+
+
 
 sh:
 	# docker-compose  -f docker-compose.yml exec py /bin/bash
@@ -46,20 +51,20 @@ sh:
 m7a:
 	docker-compose exec   deb /bin/bash -c ' sleep 1 && echo "Subject: test 614" | /usr/sbin/sendmail dgleba@stackpole.com '
 	
-m9:
+m9a:
 	docker-compose exec   deb /bin/bash -c ' sleep 1 && echo "Subject: test 616" | /usr/sbin/sendmail dgleba@gmail.com '
 	
-m5:
+m5a:
 	docker-compose run   deb /bin/bash -c ' sleep 3 && echo "Subject: test 612" | /usr/sbin/sendmail dgleba@stackpole.com '
 
-m4:
+m4a:
 	docker-compose run --rm  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r dgleba@stackpole.com -s "Test mail 470"  dgleba@stackpole.com  '
 
-m3:
+m3a:
 	# docker-compose  -f docker-compose.yml exec py /bin/bash
 	docker-compose  -f docker-compose.yml run --rm  deb /bin/bash -c ' 	echo "Test mail debian-smpl dkr" | mail  -r dgleba@stackpole.com -s "Test mail 450"  dgleba@stackpole.com  '
 
-m2:
+m2a:
 	# docker-compose  -f docker-compose.yml exec py /bin/bash
 	docker-compose  -f docker-compose.yml run --rm  deb /bin/bash -c ' ls -la && pwd \
 		&& debconf-show postfix && echo "Test mail debian-smpl dkr" | mail  -r dgleba@stackpole.com -s "Test mail 449"  dgleba@stackpole.com  '

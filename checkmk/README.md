@@ -7,9 +7,13 @@ David Gleba
 
 # Instructions
 
+`dc` is short for docker-compose
+
 ```
 cp example.env .env
-edit .env
+```
+edit .env - to your liking with a text editor
+```
 dc up
 ```
 
