@@ -1,24 +1,16 @@
 version: "3.6"
 services:
   deb:
-    # image: python:3.7
-    hostname: debianmail21.local
-    build:
-      context: .
-      dockerfile: ./deb.Dockerfile
+    image: debian:10
     working_dir: /app
     volumes:
       - ./:/app
+      # https://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-a-bash-script
       # ERROR: Invalid interpolation format for "volumes" option in service "deb": "../data/deb/${PWD##*/}:/data"
-      # - "../data/deb/${PWD##/}:/data"
+      - ../data/deb/${PWD}:/data
     # the tail command below simply keeps the container running so it does not exit.
     command: bash -c "tail -f /dev/null"
-    #
-    # restart: always
-    # ports:
-    #   - 8000:8000
-    # environment:
-    #   PYTHONUNBUFFERED: 1
+
 
 
  

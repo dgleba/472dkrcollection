@@ -8,9 +8,9 @@ services:
     ports:
        - "25:25"
     environment:
-      # MAIL_RELAY_HOST: smtp.gmail.com 
+      MAIL_RELAY_HOST: smtp.gmail.com 
       # MAIL_RELAY_HOST: mail.wightman.ca 
-      MAIL_RELAY_HOST: smtp-mail.outlook.com 
+      # MAIL_RELAY_HOST: smtp-mail.outlook.com 
       MAIL_RELAY_PORT: 587 
       # ROUTE_CUSTOM: "192.168.0.0/16 172.0.0.0/8 10.0.0.0/8"       
       ROUTE_CUSTOM: "192.168.88.0/24"       
