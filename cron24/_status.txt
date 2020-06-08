@@ -1,7 +1,14 @@
 
+I prefer cron26.
+
+
+
+
 2020-05-27_Wed_22.28-PM: 
 
 works.
+
+
 
 
 purpose: test cron in docker with timzone and env from host

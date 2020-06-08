@@ -1,0 +1,19 @@
+
+status:
+2020-06-08_Mon_10.50-AM 
+tbd
+
+
+
+Purpose: 
+isup using cron
+
+Goal: 
+see if seafile pings ok
+
+
+from: cron26
+
+
+log:
+
