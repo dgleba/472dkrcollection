@@ -1,40 +1,6 @@
 #!/usr/bin/env bash
 
 
-# variables..
-
-vversion='ver.2020-06-08 r.30'
-echo $vversion
-vreplyto=david1212@gmail.com
-vto=dgleba@gmail.com
-
-
-
-function sendeml
-# send the email
-{
-  date
-  echo 'send email cause it is time'
-  echo -e  " isup2.sh is working. \n\n $(date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup2.sh  == \n\n $vversion" | mail  -r $vreplyto -s "Hello from isup2"  $vto
-}  
- 
- 
-# Check if its a certain minute of the hour, then do something
-function chekmin
-{
-  date
-  echo checkminute
-  xmn="x$(date +%M)"
-  echo $xmn
-  if [ "$xmn" == "x15" ]  
-  then
-    echo "it is $xmn"
-    sendeml
-  else
-    echo "NOT the right time"
-  fi
-}
-
 # ======================================================================
 
 main01()
@@ -45,7 +11,11 @@ starttime=$(date +%s)
 echo "------------  starting time  ------------- $starttime, $(date +"%Y.%m.%d_%H.%M.%S_%Z")"
 echo "------------  starting time  ------------- $starttime, $(TZ=":US/Eastern" date +"%Y.%m.%d_%H.%M.%S_%Z")"
 echo "------------  starting time  ------------- $starttime, $(TZ=":US/Eastern" date -d @$starttime)"
+
+vversion='ver.2020-06-08 r.24'
 echo $vversion
+vreplyto=david1212@gmail.com
+vto=dgleba@gmail.com
 
   # ping...
 
@@ -59,22 +29,8 @@ echo $vversion
     echo -e  " ERROR26 - $site01 is unreachable \n ping failed. \n  $(date +"%Y.%m.%d_%H.%M.%S_%Z") \n == isup2.sh  $vversion  == \n " | mail  -r $vreplyto -s "ERROR  $site01"  $vto
   fi
 
-# send hello email periodically
+  # send hello email periodically
 
-# Check if its certain hours of the day
-xhr="x$(date +%H)"
-echo $xhr
-case $xhr in
-    x01) chekmin;;
-    x05) chekmin;;
-    x11) chekmin;;
-    x18) chekmin;;
-esac
-
-}
-
-notused()
-{
   # if time between, then..
   currenttime=$(date +%H%M%S)
   echo "$currenttime"
@@ -115,8 +71,6 @@ notused()
 # ======================================================================
 # ======================================================================
 # ======================================================================
-
-
 
 echo "---------"
 date
