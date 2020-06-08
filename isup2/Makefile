@@ -10,6 +10,7 @@
 #
 up:
 	docker-compose build
+	docker-compose down
 	chmod +x *.sh
 	docker-compose up
 

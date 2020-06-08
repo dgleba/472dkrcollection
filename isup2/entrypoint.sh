@@ -26,6 +26,6 @@ BASH_ENV=/root/project_env.sh
 #
 # This extra line makes it a valid cron" > /crontab.txt
 
-echo -e  "\n2020-06-08 ver. 15\n"
+echo -e  "\n2020-06-08 ver. 16\n"
 
 service postfix restart && bash /code/isup2.sh && crontab /crontab.txt && cron -f
