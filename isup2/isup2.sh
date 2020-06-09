@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# ======================================================================
+
 
 # variables..
 
@@ -8,6 +10,7 @@ echo $vversion
 vreplyto=david1212@gmail.com
 vto=dgleba@gmail.com
 
+# ======================================================================
 
 
 function sendeml
@@ -108,7 +111,6 @@ notused()
     # do nothing
     echo 'no hello 6pm'
   fi
-
 }
 
 
@@ -117,10 +119,8 @@ notused()
 # ======================================================================
 
 
-
 echo "---------"
 date
 main01
 date
-
 
