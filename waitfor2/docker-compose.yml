@@ -1,6 +1,7 @@
 version: "3.6"
 services:
 
+  # first nginx webpage
   w1:
     # 192.168.88.60:14221
     image: nginx:1.19
@@ -23,6 +24,7 @@ services:
       retries: 3
       start_period: 10s
 
+  # 2nd nginx webpage
   w2:
     # 192.168.88.60:14222
     image: nginx:1.18-alpine
@@ -38,6 +40,7 @@ services:
       retries: 3
       start_period: 10s
 
+  # 3rd nginx webpage
   w3:
     # 192.168.88.60:14223
     image: nginx:1.19

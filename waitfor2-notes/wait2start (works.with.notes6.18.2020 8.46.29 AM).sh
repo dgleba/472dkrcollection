@@ -6,7 +6,10 @@ set -e
 
 # ======================================================================
 # Look at command line args..
- 
+
+# host="$1"
+# shift
+# echo host:$host  
 cmd="$@"
 echo   "cmd var is:  $cmd"
 
@@ -44,6 +47,31 @@ echo --- --- --- past w3
 
 # ======================================================================
 # Try to continue to start normally now..
+
+
+# Other junk I tried..
+
+# exec $cmd
+# exec /docker-entrypoint.sh
+# exec "$@"
+
+
+# Run the command in CMD in the dockerfile.
+
+# got error regarding - off
+#nginx -g daemon off;
+
+
+# seems like a kludge. but works.
+# nginx
+# tail -f /dev/null
+
+
+
+
+#_____________
+
+# works.. command with entrypoint in compose.
 
 set -vx
 # exec the passed in command to start things normally...
