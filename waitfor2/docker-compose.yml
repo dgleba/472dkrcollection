@@ -34,11 +34,12 @@ services:
       - ./index2.html:/usr/share/nginx/html/index.html
     # just trying healthcheck here to learn..  
     healthcheck:
-      test: ["CMD", "curl", "-f", "localhost:80"]
-      interval: 30s
+    # not sure if "http://127.0.0.1:14222" is working.
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:14222"]
+      interval: 15s
       timeout: 10s
       retries: 3
-      start_period: 10s
+      start_period: 5s
 
   # 3rd nginx webpage
   w3:
