@@ -1,0 +1,48 @@
+version: "3.6"
+services:
+
+  w1:
+    # 192.168.88.60:14221
+    image: nginx:1.19
+    ports:
+      - "14221:80"
+    volumes:
+      - ./:/app
+      - ./index1.html:/usr/share/nginx/html/index.html
+    # restart: always
+    working_dir: /app
+    # https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y
+    # https://docs.docker.com/compose/startup-order/
+    entrypoint: ./wait2start.sh
+    # run command from official nginx (see CMD in nginx dockerfile) after custom entrypoint above. See exec "$@" in wait2start.sh
+    command: ["nginx", "-g", "daemon off;"]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  w2:
+    # 192.168.88.60:14222
+    image: nginx:1.18-alpine
+    ports:
+      - "14222:80"
+    volumes:
+      - ./index2.html:/usr/share/nginx/html/index.html
+    # just trying healthcheck here to learn..  
+    healthcheck:
+      test: ["CMD", "curl", "-f", "localhost:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  w3:
+    # 192.168.88.60:14223
+    image: nginx:1.19
+    ports:
+      - "14223:80"
+    volumes:
+      - ./index3.html:/usr/share/nginx/html/index.html
+

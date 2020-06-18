@@ -1,0 +1,62 @@
+version: "3.6"
+services:
+
+  # start w1, but do not start w2 or w3. w1 must wait for w2 and w3.
+  # you will see w1 wait for w2/w3. wait-for-it continues as soon as w2/w3 starts.
+
+  w1:
+    # 192.168.88.60:14221
+    image: nginx:1.19
+    ports:
+      - "14221:80"
+    volumes:
+      - ./:/app
+      - ./index1.html:/usr/share/nginx/html/index.html
+    restart: unless-stopped
+    working_dir: /app
+    depends_on:
+      - w2
+      - w3
+        #- condition: service_healthy
+    # https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y
+    # https://docs.docker.com/compose/startup-order/
+    # https://stackoverflow.com/questions/25775266/how-to-keep-docker-container-running-after-starting-services
+    # command: /app/wait2start.sh
+    # entrypoint: /app/wait2start.sh
+    healthcheck:
+      test: ["CMD", "curl", "-f", "w1:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+
+  w2:
+    # 192.168.88.60:14222
+    image: nginx:1.19
+    ports:
+      - "14222:80"
+    volumes:
+      - ./index2.html:/usr/share/nginx/html/index.html
+    healthcheck:
+      test: ["CMD", "curl", "-f", "w2:80"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
+
+  w3:
+    # 192.168.88.60:14223
+    image: nginx:1.19
+    ports:
+      - "14223:80"
+    volumes:
+      - ./index3.html:/usr/share/nginx/html/index.html
+    # restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:14223"]
+      interval: 30s
+      timeout: 10s
+      retries: 9
+      start_period: 40s
+
