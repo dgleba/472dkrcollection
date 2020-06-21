@@ -1,0 +1,88 @@
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-19[Jun-Fri]23-18PM 
+
+
+
+
+see also 472dkrcollection /shut521
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-19[Jun-Fri]23-09PM 
+
+
+https://unix.stackexchange.com/questions/379823/remote-sudo-to-root-using-plaintext-then-running-commands
+
+
+sshpass -p$PASSWORD ssh -tt [username]@[host] "echo $PASSWORD | sudo -S -s /bin/bash -c 'service snmpd stop; reboot'"
+
+
+sshpass -pPASSWORD ssh -tt [username]@[host] 'echo PASSWORD | sudo -S -s /bin/bash -c "service snmpd stop; reboot"'
+
+
+blah blah blah...
+
+Note: The answer being provided here should work. 
+However, violates best practices. 
+This answer also assumes that sshpass is available on the host where the command will be initiated. 
+The user has noted it is going to be used one time, then removed.
+
+At the very least, the user should be using key exchange for the ssh login, and allow the use to execute the desired commands via sudo with no password.
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-19[Jun-Fri]23-10PM 
+
+
+chmod 0600 .env
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-20[Jun-Sat]23-07PM 
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-21[Jun-Sun]12-12PM 
+
+
+source ./.env
+
+u=albe
+patrn=192.168.88.45
+
+#sshpass -p$SSHPASS     cat ~/.ssh/id_rsa.pub | ssh  $u@$patrn   " mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys ; "
+#sshpass -p$SSHPASS     ssh-copy-id  $u@$patrn 
+
+date1=$(date +"__%Y.%m.%d_%H.%M.%S")
+# sshpass -p$supass  ssh -tt -o StrictHostKeyChecking=no  $u@$patrn  "echo $supass | sudo -S -s /bin/bash -c  'cp /etc/fstab /etc/fstab$date1'"
+
+# sshpass -p $pass01 ssh albe@192.168.88.36 "sudo cp /etc/fstab /etc/fstab.0619b.bak"
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-21[Jun-Sun]12-12PM 
+
+

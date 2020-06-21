@@ -22,7 +22,17 @@ up3:
 
 
 
+dc:
+	# remove containers
+	docker-compose down --remove-orphans 
+	-docker rm $$(docker ps -qa --no-trunc --filter "status=exited") 
+	# remove tagged <none> 
+	-docker rmi $$(docker images | grep "^<none>" | awk '{ print $3 }') 
 
+
+da:
+	# remove everything for this project, images too, add -v to remove volumes too.
+	docker-compose down --remove-orphans --rmi all
 
 
 
@@ -50,10 +60,6 @@ sh:
 	# docker-compose   exec  deb /bin/bash
 	docker-compose  run --rm  deb /bin/bash
 	
-
-dd:
-	# remove everything for this project, images too, add -v to remove volumes too.
-	docker-compose down --remove-orphans --rmi all
 
 m8:
 	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
@@ -169,6 +175,16 @@ umasktest:
 djbash:
 	docker-compose run djangodev /bin/bash
 
+  
+recreatep:  
+# recreate for production...
+	docker-compose -f docker-compose.prod.yml up --build  --force-recreate  
+
+rup10:  
+# dev recreate build force
+	docker-compose  up --build  --force-recreate  
+ 
+ 
 dps:   
 	docker images
 	docker network ls
@@ -181,8 +197,7 @@ dps:
 #
 clean:   
 	# remove this one.. 
-	-docker rmi dkr382django2t_djangodev 
-	-docker rmi dkr382r-django_djangodev
+	-docker rmi dkr382django2t_djangodev
   # remove docker containers exited 
 	-docker rm $$(docker ps -qa --no-trunc --filter "status=exited") 
 	# remove tagged <none> 
@@ -213,16 +228,7 @@ perm20:
 	docker-compose run djangodev \
 	bash -c "export fold=/myproject; chmod -R g+rws,o-w  $${fold}"
 
-  
-recreatep:  
-# recreate for production...
-	docker-compose -f docker-compose.prod.yml up --build  --force-recreate  
 
-rup10:  
-# dev recreate build force
-	docker-compose  up --build  --force-recreate  
- 
- 
   
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -30,7 +30,7 @@ Start w3 in another terminal and notice everything is now started one second aft
 make up3
 ```
 
-If w2 or w3 do not start, an error occurs after 299 seconds due to the timeout in the line:  `./wait-for-it.sh w2:80 -t 299 `
+If w2 or w3 do not start, an error occurs after 299 seconds due to the timeout. An example is in the line:  `./wait-for-it.sh w2:80 -t 299 `
 
 You can visit the webpages at `ip:port` in your browser.
 I was using `192.168.88.60:14221`

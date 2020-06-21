@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+cd ; date ; set +vx  ; set -vx ; # echo off, then echo on
+set +vx
+echo ~----------~----------Startinga [dirname $0 basename $0] `dirname "$0"`/`basename "$0"` 
+echo ~----------~----------Startingd $HOSTNAME, pwd: `pwd`, dlr0: "$0", bashsource0: "${BASH_SOURCE[0]}", $(date +"%Y-%m-%d_%H.%M.%S")
+
+#set -vx
+
+# Notes
+# cd /cygdrive/c/n/sfile/knowtes/2018/bash353/shutdown521/
+# /cygdrive/c/n/sfile/knowtes/2018/bash353/shutdown521/prep521.sh
+
+# echo "$u ALL=NOPASSWD: /sbin/shutdown" | sudo tee -a /etc/sudoers
+
+function forarray()  
+{
+patrn=''
+
+EXAMPLE_array=( 
+10.4.1.224
+10.4.1.227
+10.4.1.234
+10.4.1.231
+192.168.88.36
+)
+array01=( 
+192.168.88.45
+)
+
+
+#username
+u=albe
+p=22 # port
+
+echo ; echo This should ask for you to paste password for each host.... ; 
+echo  password.. you cant see that it is pasted.. but it is. ; echo;
+
+
+date
+for patrn in "${array01[@]}"
+do
+  echo "Processing $patrn ..."
+  # take action on each $patrn 
+  #cat ~/.ssh/id_rsa.pub | ssh $u@$s - $p "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+   cat ~/.ssh/id_rsa.pub | ssh  $u@$patrn   " mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys ; "
+   ssh -t $u@$patrn   "sudo chmod u+s /sbin/shutdown  "
+  date
+done 
+}
+
+forarray
+
