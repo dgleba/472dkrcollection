@@ -1,19 +1,20 @@
-#!/usr/bin/env bash
-echo Read these instructions and paste.
-exit
+
+# Read these instructions and paste.
 
 
 9.
 
 PREP
-
+```
 sudo apt install sshpass
 
 cp example.env .env
 
 edit .env 
+```
 
 set permissions so only you can see the .env file
+
     chmod 0600 .env
 
 
@@ -32,7 +33,7 @@ edit `shutsh`
 
 # shutdown the linux VM''s by ssh
 
-bash shutsh
+    bash shutsh
 
 
 55.
