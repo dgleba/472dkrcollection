@@ -63,3 +63,12 @@ https://github.com/docker-library/wordpress/issues/205
 
  - .
 
+4.
+
+   wait for it example.
+
+   https://mariobuonomo.dev/blog/docker-compose-wait-it-for-service
+
+
+.
+
