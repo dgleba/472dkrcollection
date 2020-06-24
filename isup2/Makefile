@@ -15,6 +15,9 @@ up:
 	docker-compose up
 
 
+mtest:
+	# send test mail
+	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail from isup2 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail isup2-7811 "  dgleba@gmail.com '
 
 
 sh:
@@ -49,8 +52,6 @@ dd:
 
 
 
-m8:
-	docker-compose exec  deb /bin/bash -c ' 	echo "Test mail debian-mail08 dkr" | mail  -r davidgleba@hotmail.com -s "Test mail 478"  dgleba@gmail.com '
 
 m7:
 	docker-compose exec  deb /bin/bash -c ' 	echo -e  "Test mail  dkr \n isup \n = \n " | mail  -r david1212@gmail.com -s "Test mail 4915"  dgleba@gmail.com '
