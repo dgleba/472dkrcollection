@@ -41,6 +41,8 @@ cd $dir
 dc exec sym bash -c 'syms/bin/symadmin --engine corp-000 reload-node 001'
 
 
+Done. Now edits in corp show up in store1.
+
 
 ```
 
@@ -58,10 +60,11 @@ dc exec sym bash -c 'syms/bin/symadmin --engine corp-000 reload-node 001'
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-07-01[Jul-Wed]22-51PM 
 
 
+# .
 
-older stuff below..
+# older stuff below..
 
-
+# .
 
 
 

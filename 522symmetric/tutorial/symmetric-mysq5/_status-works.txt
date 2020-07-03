@@ -1,0 +1,9 @@
+2020-07-02
+
+works.
+
+item table in corp is replicated to store1
+
+
+uses driver v. 8.0.20
+
