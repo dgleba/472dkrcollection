@@ -1,0 +1,16 @@
+
+
+See tutorial/mysq6. works.
+
+
+See tutorial/mysq5 - has less features. works.
+
+
+
+2020-07-02
+
+works.
+
+item table in corp is replicated to store1
+
+
