@@ -1,0 +1,80 @@
+version: "3"
+services:
+  target:
+    image: postgres
+    environment:
+      - POSTGRES_USER=target
+      - POSTGRES_PASSWORD=target
+      - POSTGRES_DB=target
+    ports:
+      - "5432:5432"
+  target2:
+    image: postgres
+    environment:
+      - POSTGRES_USER=target2
+      - POSTGRES_PASSWORD=target2
+      - POSTGRES_DB=target2
+    ports:
+      - "5433:5432"
+  symds_target:
+    build:
+      context: .
+    environment:
+      - HTTPS=FALSE
+      - GROUP_ID=target
+      - DB_HOST=target
+      - DB_SSL=FALSE
+      - DB_TYPE=postgres
+      - DB_NAME=target
+      - DB_USER=target
+      - DB_PASS=target
+      - USERNAME=user
+      - PASSWORD=pass
+      - SYNC_URL=http://symds_target:31415/sync/target
+      - REGISTRATION_URL=http://symds_source:31415/sync/source
+    ports:
+      - "31425:31415"
+  access_denied_target:
+    build:
+      context: .
+    environment:
+      - HTTPS=FALSE
+      - GROUP_ID=target2
+      - DB_HOST=target2
+      - DB_SSL=FALSE
+      - DB_TYPE=postgres
+      - DB_NAME=target2
+      - DB_USER=target2
+      - DB_PASS=target2
+      - USERNAME=wrong
+      - PASSWORD=password
+      - SYNC_URL=http://access_denied_target:31415/sync/target
+      - REGISTRATION_URL=http://symds_source:31415/sync/source
+  symds_source:
+    build:
+      context: .
+    environment:
+      - HTTPS=FALSE
+      - GROUP_ID=source
+      - DB_HOST=source
+      - DB_SSL=FALSE
+      - DB_TYPE=postgres
+      - DB_NAME=source
+      - DB_USER=source
+      - DB_PASS=source
+      - USERNAME=user
+      - PASSWORD=pass
+      - SYNC_URL=http://symds_source:31415/sync/source
+      - REPLICATE_TO=target
+      - REPLICATE_TABLES=test
+    ports:
+      - "31415:31415"
+  source:
+    build:
+      context: postgres-source
+    environment:
+      - POSTGRES_USER=source
+      - POSTGRES_PASSWORD=source
+      - POSTGRES_DB=source
+    ports:
+      - "5431:5432"

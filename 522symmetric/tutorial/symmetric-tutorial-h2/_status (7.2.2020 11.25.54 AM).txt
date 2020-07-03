@@ -1,0 +1,7 @@
+2020-07-02
+
+this works with h2 db's
+
+official tutorial.
+
+https://www.symmetricds.org/doc/3.11/html/tutorials.html#_quick_start

@@ -1,0 +1,6 @@
+FROM centos:8
+RUN  dnf -y update
+
+
+
+

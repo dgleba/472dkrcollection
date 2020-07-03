@@ -1,0 +1,31 @@
+2020-07-02_Thu_21.29-PM
+
+I edited engines and settings.
+
+error.
+
+
+albe@vamp398:/srv/dkr/472dkrcollection/522symmetric/symmetricdgmysq3$ dc up sym
+Creating symmetricdgmysq3_sym_1 ... done
+Attaching to symmetricdgmysq3_sym_1
+sym_1      | Starting SymmetricDS...
+sym_1      | Log output will be written to /app/syms/logs/symmetric.log
+sym_1      | [store01] - SymmetricEngineHolder - java.lang.IllegalStateException: Missing JDBC driver for 'com.mysql.jdbc.Driver '.  Either provide the JAR or use 'symadmin help module' command to find and install missing driver.
+sym_1      |    at org.jumpmind.db.util.BasicDataSourceFactory.create(BasicDataSourceFactory.java:82)
+sym_1      |    at org.jumpmind.symmetric.ClientSymmetricEngine.createDatabasePlatform(ClientSymmetricEngine.java:387)
+sym_1      |    at org.jumpmind.symmetric.ClientSymmetricEngine.createDatabasePlatform(ClientSymmetricEngine.java:341)
+sym_1      |    at org.jumpmind.symmetric.ClientSymmetricEngine.createDatabasePlatform(ClientSymmetricEngine.java:334)
+sym_1      |    at org.jumpmind.symmetric.AbstractSymmetricEngine.init(AbstractSymmetricEngine.java:316)
+sym_1      |    at org.jumpmind.symmetric.ClientSymmetricEngine.init(ClientSymmetricEngine.java:205)
+sym_1      |    at org.jumpmind.symmetric.web.ServerSymmetricEngine.init(ServerSymmetricEngine.java:80)
+sym_1      |    at org.jumpmind.symmetric.ClientSymmetricEngine.<init>(ClientSymmetricEngine.java:161)
+sym_1      |    at org.jumpmind.symmetric.web.ServerSymmetricEngine.<init>(ServerSymmetricEngine.java:59)
+sym_1      |    at org.jumpmind.symmetric.web.SymmetricEngineHolder.create(SymmetricEngineHolder.java:285)
+sym_1      |    at org.jumpmind.symmetric.web.SymmetricEngineHolder$EngineStarter.run(SymmetricEngineHolder.java:597)
+sym_1      |    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+sym_1      |    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+sym_1      |    at java.lang.Thread.run(Thread.java:748)
+sym_1      |
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping symmetricdgmysq3_sym_1 ... done
+albe@vamp398:/srv/dkr/472dkrcollection/522symmetric/symmetricdgmysq3$

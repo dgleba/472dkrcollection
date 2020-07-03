@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+
+  cent:
+    image: centos:8
+    command: bash -c "tail -f /dev/null"  

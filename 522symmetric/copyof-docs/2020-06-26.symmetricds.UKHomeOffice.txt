@@ -1,0 +1,305 @@
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  symmetricdsm3  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-28[Jun-Sun]17-12PM 
+
+
+cd /srv/test
+git clone https://github.com/dgleba/docker-symmetricds.git symmetricdsm3
+cd symmetricdsm3
+mv docker-compose.yml docker-compose-pg.yml
+
+#
+# # edit Dockerfile for newer driver than mysql-connector-java-5.1.45
+#
+
+
+echo '
+  adminer:
+    # connect with something like 10.4.1.228:14117/  use compose service name or ip:port for server while logging in.
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 14119:8080
+	  '>>docker-compose-mysql.yml
+	  
+
+make
+docker-compose -f docker-compose-mysql.yml  build
+
+docker-compose -f docker-compose-mysql.yml  up -d adminer 
+
+docker-compose -f docker-compose-mysql.yml  up    source
+
+
+# get new terminal
+docker-compose -f docker-compose-mysql.yml  up    symds_source
+
+
+_____________
+
+
+remove..
+	docker-compose -f docker-compose-mysql.yml down -v --remove-orphans
+    
+	docker-compose -f docker-compose-mysql.yml down -v --remove-orphans --rmi all
+    
+    
+
+
+
+docker-compose -f docker-compose-mysql.yml  exec   source bash
+
+docker-compose -f docker-compose-mysql.yml  exec -u root -w / symds_source bash
+ 
+docker exec -u 0 -w / -it symmetricdsm3_symds_source_1   bash
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  symmetricdsm2  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-28[Jun-Sun]17-12PM 
+
+
+cd /srv/test
+git clone https://github.com/UKHomeOffice/docker-symmetricds.git symmetricdsm2
+cd symmetricdsm2
+mv docker-compose.yml docker-compose-pg.yml
+make
+docker-compose -f docker-compose-mysql.yml  build
+
+echo '
+  adminer:
+    # connect with something like 10.4.1.228:14117/  use compose service name or ip:port for server while logging in.
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 14118:8080
+	  '>>docker-compose-mysql.yml
+	  
+
+docker-compose -f docker-compose-mysql.yml  up -d adminer 
+
+docker-compose -f docker-compose-mysql.yml  up    source
+
+# get new terminal
+docker-compose -f docker-compose-mysql.yml  up    symds_source
+
+# get new terminal
+
+remove..
+	docker-compose -f docker-compose-mysql.yml down -v --remove-orphans
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  symmetricdsm  mysql v5.6.42
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-28[Jun-Sun]17-12PM 
+
+
+cd /srv/test
+git clone https://github.com/UKHomeOffice/docker-symmetricds.git symmetricdsm
+cd symmetricdsm
+mv docker-compose.yml docker-compose-pg.yml
+make
+docker-compose -f docker-compose-mysql.yml  build
+
+echo '
+  adminer:
+    # 10.4.1.228:14117/  use source or 10.4.1.228:3306 for server while logging in.
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 14117:8080
+	  '>>docker-compose-mysql.yml
+	  
+
+docker-compose -f docker-compose-mysql.yml  up -d adminer 
+
+docker-compose -f docker-compose-mysql.yml  up    source
+
+# get new terminal
+docker-compose -f docker-compose-mysql.yml  up    symds_source
+
+# get new ter
+
+remove..
+	docker-compose -f docker-compose-mysql.yml down -v --remove-orphans
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  docker-symmetricds
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-26[Jun-Fri]19-30PM 
+
+
+cd /srv/test
+git clone https://github.com/UKHomeOffice/docker-symmetricds.git
+cd docker-symmetricds
+make
+docker-compose up
+
+_____________
+
+
+cd /srv/test
+git clone https://github.com/UKHomeOffice/docker-symmetricds.git
+
+z docker-symmetricds
+make
+docker-compose -f docker-compose-mysql.yml  build
+
+docker-compose -f docker-compose-mysql.yml  up
+
+
+docker-compose -f docker-compose-mysql.yml  down
+
+
+docker-compose -f docker-compose-mysql.yml  up -d adminer 
+
+docker-compose -f docker-compose-mysql.yml  build source
+docker-compose -f docker-compose-mysql.yml  up    source
+
+docker-compose -f docker-compose-mysql.yml  build symds_source
+docker-compose -f docker-compose-mysql.yml  up    symds_source
+
+docker-compose -f docker-compose-mysql.yml  up   symds_target target
+
+docker-compose -f docker-compose-p.yml down -v --remove-orphans
+
+
+z ds my
+docker-compose -f docker-compose-mysql.yml down -v --remove-orphans
+
+z ds pg
+
+docker-compose -f docker-compose-pg.yml down -v --remove-orphans
+
+z doc sy ds
+# docker-compose -f docker-compose-p.yml down -v --remove-orphans --rmi all
+
+
+docker-compose -f docker-compose-mysql.yml  exec symds_source sh
+
+docker-compose -f docker-compose-mysql.yml  exec symds_source /bin/bash
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-27[Jun-Sat]15-29PM 
+
+
+
+Complete!
+Loaded plugins: fastestmirror, ovl
+Cleaning repos: base extras updates
+Cleaning up list of fastest mirrors
+Removing intermediate container 4d493d363613
+ ---> 4a399bc61644
+Step 2/11 : RUN yum install -y -q epel-release  && yum install -y -q java-1.8.0-openjdk nmap-ncat openssl unzip jq  && yum update -y -q  && yum clean all  && rpm --rebuilddb  && useradd -rUm symds -u 10007 -d /app/  && chown -R symds:symds /app/
+ ---> Running in c51a0e81fd3c
+warning: /var/cache/yum/x86_64/7/epel/packages/jq-1.6-2.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY
+Public key for jq-1.6-2.el7.x86_64.rpm is not installed
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-11.noarch (@extras)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  pg 
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-27[Jun-Sat]15-34PM 
+
+
+
+cd /srv/test
+git clone https://github.com/UKHomeOffice/docker-symmetricds.git symmetricds-pg
+cd symmetricds-pg
+make
+docker-compose  build
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  mysql
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-29[Jun-Mon]09-14AM 
+
+
+
+cd /srv/test
+git clone https://github.com/UKHomeOffice/docker-symmetricds.git symmetricds-mysql
+cd symmetricds-mysql
+make
+mv docker-compose.yml docker-compose-pg.yml
+docker-compose -f docker-compose-mysql.yml  build
+
+docker-compose -f docker-compose-mysql.yml  up
+
+
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-27[Jun-Sat]23-40PM 
+
+
+
+
+at com.mysql.jdbc.Util.handleNewInstance(Util.java:425) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+
+
+2020-06-29_Mon_14.26-PM
+
+
+Installed:
+  mysql-connector-java.noarch 1:8.0.20-1.el7
+
+
+2020-06-29
+symds_source_1  | Caused by: java.security.UnrecoverableKeyException: Password verification failed
+symds_source_1  |       at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:790) ~[?:1.8.0_252]
+symds_source_1  |       at sun.security.provider.JavaKeyStore$JKS.engineLoad(JavaKeyStore.java:57) ~[?:1.8.0_252]
+symds_source_1  |       at sun.security.provider.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:224) ~[?:1.8.0_252]
+symds_source_1  |       at sun.security.provider.JavaKeyStore$DualFormatJKS.engineLoad(JavaKeyStore.java:71) ~[?:1.8.0_252]
+symds_source_1  |       at java.security.KeyStore.load(KeyStore.java:1445) ~[?:1.8.0_252]
+symds_source_1  |       at com.mysql.jdbc.ExportControlled.getSSLSocketFactoryDefaultOrConfigured(ExportControlled.java:428) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.ExportControlled.transformSocketToSSLSocket(ExportControlled.java:103) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.MysqlIO.negotiateSSLConnection(MysqlIO.java:4901) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2219) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2014) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776) ~[mysql-connector-java-5.1.45.jar:5.1.45]
+s
+
+
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@  
+#@  
+#@  
+#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-06-28[Jun-Sun]20-04PM 
+
+

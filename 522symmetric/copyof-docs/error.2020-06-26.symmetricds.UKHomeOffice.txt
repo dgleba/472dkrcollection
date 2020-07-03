@@ -1,0 +1,84 @@
+albe@vamp398:/srv/test/symmetricdsm$ docker-compose -f docker-compose-mysql.yml  up    symds_source
+Creating symmetricdsm_symds_source_1 ... done
+Attaching to symmetricdsm_symds_source_1
+symds_source_1  | Warning: There appears to be a bug in MySQL support.
+symds_source_1  | Waiting for database at source:3306...
+symds_source_1  | J
+vEnds_source_1  | 8.0.20
+   {�����XN8_](caching_sha2_passwordInitialising config in mysql...
+symds_source_1  | Adding config for test in mysql...
+PuTTYsymds_source_1  | SLF4J: The following set of substitute loggers may have been accessed
+symds_source_1  | SLF4J: during the initialization phase. Logging calls during this
+symds_source_1  | SLF4J: phase were not honored. However, subsequent logging calls to these
+symds_source_1  | SLF4J: loggers will work as normally expected.
+symds_source_1  | SLF4J: See also http://www.slf4j.org/codes.html#substituteLogger
+symds_source_1  | SLF4J: org.jumpmind.symmetric.AbstractSymmetricEngine
+symds_source_1  | 2020-06-28 22:19:50,001 INFO: [] - AbstractCommandLauncher - Option: name=engine, value={source}
+symds_source_1  | Sun Jun 28 22:19:50 UTC 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+symds_source_1  | -------------------------------------------------------------------------------
+symds_source_1  | An exception occurred.  Please see the following for details:
+symds_source_1  | -------------------------------------------------------------------------------
+symds_source_1  | java.security.UnrecoverableKeyException: Password verification failed
+symds_source_1  |       at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:790)
+symds_source_1  |  [wrapped] java.io.IOException: Keystore was tampered with, or password was incorrect
+symds_source_1  |       at sun.security.provider.JavaKeyStore.engineLoad(JavaKeyStore.java:792)
+symds_source_1  |       at sun.security.provider.JavaKeyStore$JKS.engineLoad(JavaKeyStore.java:57)
+symds_source_1  |       at sun.security.provider.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:224)
+symds_source_1  |       at sun.security.provider.JavaKeyStore$DualFormatJKS.engineLoad(JavaKeyStore.java:71)
+symds_source_1  |       at java.security.KeyStore.load(KeyStore.java:1445)
+symds_source_1  |       at com.mysql.jdbc.ExportControlled.getSSLSocketFactoryDefaultOrConfigured(ExportControlled.java:428)
+symds_source_1  |  [wrapped] com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot open JKS [Keystore was tampered with, or password was incorrect]
+symds_source_1  |       at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+symds_source_1  |       at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+symds_source_1  |       at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+symds_source_1  |       at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+symds_source_1  |       at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+symds_source_1  |       at com.mysql.jdbc.Util.getInstance(Util.java:408)
+symds_source_1  |       at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:919)
+symds_source_1  |       at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:898)
+symds_source_1  |       at com.mysql.jdbc.ExportControlled.getSSLSocketFactoryDefaultOrConfigured(ExportControlled.java:455)
+symds_source_1  |       at com.mysql.jdbc.ExportControlled.transformSocketToSSLSocket(ExportControlled.java:103)
+symds_source_1  |       at com.mysql.jdbc.MysqlIO.negotiateSSLConnection(MysqlIO.java:4901)
+symds_source_1  |       at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1659)
+symds_source_1  |       at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1226)
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2219)
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2014)
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+symds_source_1  |       at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+symds_source_1  |       at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+symds_source_1  |       at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+symds_source_1  |       at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+symds_source_1  |       at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+symds_source_1  |       at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+symds_source_1  |       at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+symds_source_1  |       at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+symds_source_1  |       at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+symds_source_1  |       at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+symds_source_1  |       at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+symds_source_1  |       at org.jumpmind.db.util.ResettableBasicDataSource.createPoolableConnectionFactory(ResettableBasicDataSource.java:74)
+symds_source_1  |  [wrapped] org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Cannot open JKS [Keystore was tampered with, or password was incorrect])
+symds_source_1  |       at org.jumpmind.db.util.ResettableBasicDataSource.createPoolableConnectionFactory(ResettableBasicDataSource.java:80)
+symds_source_1  |       at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+symds_source_1  |       at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+symds_source_1  |       at org.jumpmind.symmetric.AbstractCommandLauncher.testConnection(AbstractCommandLauncher.java:399)
+symds_source_1  |  [wrapped] java.lang.RuntimeException: org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Cannot open JKS [Keystore was tampered with, or password was incorrect])
+symds_source_1  |       at org.jumpmind.symmetric.AbstractCommandLauncher.testConnection(AbstractCommandLauncher.java:403)
+symds_source_1  |       at org.jumpmind.symmetric.AbstractCommandLauncher.getSymmetricEngine(AbstractCommandLauncher.java:387)
+symds_source_1  |       at org.jumpmind.symmetric.AbstractCommandLauncher.getSymmetricEngine(AbstractCommandLauncher.java:381)
+symds_source_1  |       at org.jumpmind.symmetric.SymmetricAdmin.createSymTables(SymmetricAdmin.java:564)
+symds_source_1  |       at org.jumpmind.symmetric.SymmetricAdmin.executeWithOptions(SymmetricAdmin.java:321)
+symds_source_1  |       at org.jumpmind.symmetric.AbstractCommandLauncher.execute(AbstractCommandLauncher.java:194)
+symds_source_1  |       at org.jumpmind.symmetric.SymmetricAdmin.main(SymmetricAdmin.java:145)
+symds_source_1  | -------------------------------------------------------------------------------
+symds_source_1  | SLF4J: The following set of substitute loggers may have been accessed
+symds_source_1  | SLF4J: during the initialization phase. Logging calls during this
+symds_source_1  | SLF4J: phase were not honored. However, subsequent logging calls to these
+symds_source_1  | SLF4J: loggers will work as normally expected.
+symds_source_1  | SLF4J: See also http://www.slf4j.org/codes.html#substituteLogger
+symds_source_1  | SLF4J: org.jumpmind.symmetric.AbstractSymmetricEngine
+symds_source_1  | 2020-06-28 22:19:51,096 INFO: [] - AbstractCommandLauncher - Option: name=engine, value={source}
+symds_source_1  | Sun Jun 28 22:19:51 UTC 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+symds_source_1  | -------------------------------------------------------------------------------
+symds_source_1  | An exception occurred.  Please see the following for details:
+s

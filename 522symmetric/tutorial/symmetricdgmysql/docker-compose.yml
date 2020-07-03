@@ -1,0 +1,55 @@
+version: "3.6"
+services:
+
+  sym:
+    build:
+      context: .
+    environment:
+      - HTTPS=FALSE
+      - GROUP_ID=store
+      - DB_HOST=store1
+      - DB_SSL=FALSE
+      - DB_TYPE=mysql
+      - DB_NAME=source
+      - DB_USER=root
+      - DB_PASS=user
+      - SYNC_URL=http://symds_source:31415/sync/source
+      - REPLICATE_TO=target
+      - REPLICATE_TABLES=test
+    expose: [8080,31415,31417]  
+    ports:
+      # - "18080:8080"
+      - "31415:31415"
+      # - "31417:31417"
+    volumes:
+      - ./engines/:/app/syms/engines
+      - ./datasys/:/app/syms/db
+      - ./conf/:/app/conf
+    #entrypoint: /app/conf/entry.sh 
+    #
+    # command: tail -f /app/symmetric-server/logs/symmetric.log
+    # command: bash -c "tail -f /dev/null" 
+    # command: /app/syms/bin/sym 
+    command: /app/conf/start.sh  
+
+  store1:
+    image: mysql:5.6
+    # build:
+    #   context: mysql-source
+    environment:
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+      - MYSQL_ROOT_PASSWORD=user
+      - MYSQL_DATABASE=store001
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./mysql-source/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
+
+  adminer:
+    # connect with something like 10.4.1.228:14117/  use compose service name or ip:port for server while logging in.
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 14119:8080

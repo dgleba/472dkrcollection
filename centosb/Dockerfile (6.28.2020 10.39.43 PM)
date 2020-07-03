@@ -1,0 +1,9 @@
+FROM centos:8
+
+RUN  dnf -y update
+RUN  dnf --enablerepo=mysql-connectors-community
+RUN  dnf -y install mysql-connector-java
+
+
+
+
