@@ -1,0 +1,9 @@
+2020-07-03
+
+status:
+
+
+purpose: upgrade centos from 7 to 8
+
+
+

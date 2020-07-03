@@ -1,0 +1,57 @@
+version: "3.6"
+services:
+
+  sym:
+    build:
+      context: .
+    environment:
+      - HTTPS=FALSE
+    # expose: [8080,31415,31417]  
+    ports:
+      # - "18080:8080"
+      - "31415:31415"
+      # - "31417:31417"
+    volumes:
+      - ./engines/:/app/syms/engines
+      - ./datasys/:/app/syms/db
+      - ./conf/:/app/conf
+    #entrypoint: /app/conf/entry.sh
+    entrypoint: bash /app/conf/wait2start.sh
+    #
+    # command: tail -f /app/symmetric-server/logs/symmetric.log
+    # command: bash -c "tail -f /dev/null" 
+    # command: /app/syms/bin/sym 
+    command: 'bash /app/conf/start.sh'
+
+  corp:
+    image: mysql:5.7
+    environment:
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+      - MYSQL_ROOT_PASSWORD=user
+      - MYSQL_DATABASE=itemdb
+    ports:
+      - "13306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - ./mysql-source/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
+  
+  store1:
+    image: mysql:8
+    environment:
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=user
+      - MYSQL_ROOT_PASSWORD=user
+      - MYSQL_DATABASE=itemdb
+    ports:
+      - "23306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    # volumes:
+    #   - ./mysql-source/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
+
+  adminer:
+    # connect with something like 10.4.1.228:14117/  use compose service name or ip:port for server while logging in.
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 14119:8080
