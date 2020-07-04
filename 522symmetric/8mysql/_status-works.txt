@@ -1,0 +1,12 @@
+2020-07-03
+
+status: works
+
+
+purpose: 
+-upgrade centos from 7 to 8. 
+-added waitforit.
+-added conf2. how to add more tables to the sync. 2020-07-03_Fri_21.26-PM.
+
+
+
