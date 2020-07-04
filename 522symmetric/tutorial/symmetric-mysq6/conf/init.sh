@@ -48,7 +48,7 @@ function cleanup {
 # set lock so that script will only run one instance..
 #
 
-LOCKDIR="/app/_0-init-has-run-marker-directory"
+LOCKDIR="/app2/_0-init-has-run-marker-directory"
 
 DIR=$LOCKDIR
 if [ -d "$DIR" ]; then

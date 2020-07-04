@@ -13,6 +13,17 @@ chmod +x conf/*.sh
 2.
 docker-compose build
 
+
+2b.
+Init.sh needs to run once to setup sym_ tables and initial settings. 
+
+If  `datasys/app2/_0-init-has-run-marker-directory exists`  It cannot run. 
+
+Run this if you do want to run init.sh...
+
+    docker-compose run --rm sym bash -c 'rmdir /app2/_0-init-has-run-marker-directory'
+
+
 3.
 docker-compose up 
 
@@ -34,7 +45,7 @@ Done. Now edits in item table in corp show up in store1.
 6.
 Use adminer to view the mysql databases 
 
-visit hostip:14119 to use adminer in your browser.
+visit hostIp:14119 to use adminer in your browser.
 
 use:
 system: mysql
