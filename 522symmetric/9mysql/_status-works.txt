@@ -4,6 +4,6 @@ status: works
 
 
 purpose: 
--added wildcard tables setting.
+-two way sync.
 
 

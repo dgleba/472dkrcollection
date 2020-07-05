@@ -1,4 +1,6 @@
-*.tgz
+
+/app2/_0-init-has-run-marker-directory
+_0-init-has-run-marker-directory*.tgz
 
 persistantData.json
 creds.py

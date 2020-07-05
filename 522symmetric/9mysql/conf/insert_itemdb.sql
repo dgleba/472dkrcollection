@@ -56,10 +56,16 @@ insert into sym_node_group_link (source_node_group_id, target_node_group_id, dat
 -- Routers
 ------------------------------------------------------------------------------
 
+
 -- Default router sends all data from corp to store 
 insert into sym_router 
-(router_id,source_node_group_id,target_node_group_id,router_type,create_time,last_update_time)
-values('corp_2_store', 'corp', 'store', 'default',current_timestamp, current_timestamp);
+      (router_id,      source_node_group_id, target_node_group_id,   router_type, create_time,      last_update_time)
+values('corp_2_store', 'corp',               'store',               'default',    current_timestamp, current_timestamp);
+
+insert into sym_router 
+      (router_id,      source_node_group_id, target_node_group_id,   router_type, create_time,      last_update_time)
+values('store_to_corp', 'store',               'corp',               'default',    current_timestamp, current_timestamp);
+
 
 
 ------------------------------------------------------------------------------
@@ -68,9 +74,8 @@ values('corp_2_store', 'corp', 'store', 'default',current_timestamp, current_tim
 
 -- Triggers for tables on "main" channel
 insert into sym_trigger 
-(trigger_id,source_table_name,channel_id,last_update_time,create_time)
-values('alltbl','*,!ates*','main0',current_timestamp,current_timestamp);
-
+      (trigger_id, source_table_name,      channel_id,    last_update_time,   create_time,       sync_on_incoming_batch )
+values('alltbl',     '*,!ates*' ,            'main0',     current_timestamp,  current_timestamp,          1            );
 
 ------------------------------------------------------------------------------
 -- Trigger Routers
@@ -78,7 +83,10 @@ values('alltbl','*,!ates*','main0',current_timestamp,current_timestamp);
 
 -- Send all items to all stores
 insert into sym_trigger_router 
-(trigger_id,router_id,initial_load_order,last_update_time,create_time)
-values('alltbl','corp_2_store', 100, current_timestamp, current_timestamp);
+      (trigger_id, router_id,        initial_load_order,  last_update_time,  create_time)
+values('alltbl',     'corp_2_store',    100,                current_timestamp, current_timestamp);
 
+insert into sym_trigger_router 
+      (trigger_id, router_id,        initial_load_order, last_update_time,  create_time)
+values('alltbl',     'store_to_corp',  100,                current_timestamp, current_timestamp);
 
