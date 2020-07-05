@@ -2,6 +2,17 @@
  
 #  Symmetricds replication two way - Mysql, corp and store1
 
+
+# Development Note
+
+The instructions below are geared to allow fewer steps to launch the system.
+The sym service waits for the two mysql databases to become available and then launches a one time init.sh.
+
+Maybe init.sh should be a seperate command since to run just the startup, the init.sh is run is run, which waits for the databases.
+
+There are other ways to handle startup. Maybe the way below is not the best.
+
+
 # Instructions.
 
 ```
@@ -29,7 +40,7 @@ Run this if you do want to run init.sh...
   if permissions don't allow the rmdir above, then run this..
 
     docker-compose up -d adminer corp store1 
-    # docker-compose run --rm sym bash -c 'rmdir /app2/_0-init-has-run-marker-directory'
+    # This may not be the best idea..  docker-compose run --rm sym bash -c 'rmdir /app2/_0-init-has-run-marker-directory'
     docker-compose run --rm sym bash -c 'chmod -R ugo+rwx /app2'
     rmdir datasys/app2/_0-init-has-run-marker-directory
 
