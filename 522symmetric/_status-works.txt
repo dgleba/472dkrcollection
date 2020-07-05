@@ -1,13 +1,16 @@
 
 
-See tutorial/mysq6. works.
+See tutorial/mysq9. works. two way sync replication.
 
+See tutorial/mysq8. works. one way with wildcard table spec.
+
+See tutorial/mysq6. works.
 
 See tutorial/mysq5 - has less features. works.
 
 
 
-2020-07-02
+2020-07-02 - 2020-07-04
 
 works.
 

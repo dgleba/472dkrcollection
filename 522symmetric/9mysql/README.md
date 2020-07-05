@@ -24,7 +24,14 @@ If  `datasys/app2/_0-init-has-run-marker-directory exists`  It cannot run.
 
 Run this if you do want to run init.sh...
 
-    docker-compose run --rm sym bash -c 'rmdir /app2/_0-init-has-run-marker-directory'
+    rmdir datasys/app2/_0-init-has-run-marker-directory
+
+  if permissions don't allow the rmdir above, then run this..
+
+    docker-compose up -d adminer corp store1 
+    # docker-compose run --rm sym bash -c 'rmdir /app2/_0-init-has-run-marker-directory'
+    docker-compose run --rm sym bash -c 'chmod -R ugo+rwx /app2'
+    rmdir datasys/app2/_0-init-has-run-marker-directory
 
 
 4.
@@ -71,9 +78,23 @@ password: user
 # More.
 
 ```
+
+1.
+
 # symmetric sync log.
 #
 docker-compose exec sym bash -c 'tail -f syms/logs/symmetric.log'
+
+
+2.
+
+Change schema of a table.
+
+    Change the schema of the table in corp using any way you chose to do it.
+
+    docker-compose exec sym bash -c 'syms/bin/symadmin --engine corp-000 sync-triggers ; syms/bin/symadmin --engine corp-000 send-schema --node 001 qissues'
+
+
 
 ```
 
