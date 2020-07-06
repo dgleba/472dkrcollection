@@ -16,7 +16,8 @@ services:
       - ./engines/:/app/syms/engines
       - ./datasys/db/:/app/syms/db
       - ./conf/:/app/conf
-      - ./datasys/app2/:/app2
+      # to make saving the init.sh marker file more permanent, uncomment the next line.
+      # - ./datasys/app2/:/app2
     #entrypoint: /app/conf/entry.sh
     entrypoint: bash /app/conf/wait2start.sh
     #
@@ -25,7 +26,7 @@ services:
     #command: bash -c "tail -f /dev/null" 
     command: 'bash /app/conf/start.sh'
 
-  corp:
+  sv30:
     image: mysql:5.7
     environment:
       - MYSQL_USER=user
@@ -38,7 +39,7 @@ services:
     volumes:
       - ./mysql-source/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
 
-  store1:
+  sv31:
     image: mysql:8
     environment:
       - MYSQL_USER=user

@@ -2,7 +2,8 @@
 set -e
 echo;echo running init.sh..
 
-set -vx
+set -vx # echo on
+set +vx # echo off
 
 # -----------------------------------------
 # -----------------------------------------

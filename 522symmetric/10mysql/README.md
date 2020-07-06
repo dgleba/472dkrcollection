@@ -56,7 +56,7 @@ Run this if you do want to run init.sh...
 # You may have to wait up a few minutes for all to be ready..
 #
 
-    docker-compose exec sym bash -c 'syms/bin/symadmin --engine corp-000 reload-node 001'
+    docker-compose exec sym bash -c 'syms/bin/symadmin --engine sv3-0-itemdb reload-node 1'
 
 
 It should say.. `Successfully enabled initial load for node 001`
@@ -75,7 +75,7 @@ visit hostIp:14119 to use adminer in your browser.
 
 use:
 system: mysql
-server: corp or store1
+server: sv30 or sv31
 username: root
 password: user
 

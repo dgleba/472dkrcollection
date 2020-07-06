@@ -34,14 +34,14 @@ echo   "cmd var is:  $cmd"
 # it will try for -t 299 seconds. it will continue 1 second after it starts. It will fail after 299 seconds.
 
 date
-bash /app/conf/wait-for-it.sh sv31:3306 -t 199 
+bash /app/conf/wait-for-it.sh store1:3306 -t 299 
 date
 echo --- --- past first wait.
 
 
 # chain to wait-for-it.. w3
 date
-bash /app/conf/wait-for-it.sh sv30:3306 -t 199 
+bash /app/conf/wait-for-it.sh corp:3306 -t 299 
 date
 echo --- --- --- past second wait.
 

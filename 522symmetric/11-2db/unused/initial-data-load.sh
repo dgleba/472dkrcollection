@@ -1,29 +1,30 @@
 #! /bin/env bash
 set -e
-echo;echo running init.sh..
+echo;echo running first load .sh..
 
 set -vx
 
 # -----------------------------------------
 # -----------------------------------------
 
-runinit () {
+firstload () {
 
-/app/syms/bin/symadmin --engine sv3-0-itemdb create-sym-tables
-
-#
-# use this: sftp://192.168.88.60/srv/dkr/472dkrcollection/522symmetric/tutorial/symmetric-mysq4/mysql-source/docker-entrypoint-initdb.d
-# rather than this..
-# /app/syms/bin/dbimport --engine corp-000 --format XML --alter-case /app/conf/create_sample.xml
-#
 
 #
-# create settings in SYM_ tables to define the replication
+# initial load of data from corp to store1
 #
-/app/syms/bin/dbimport --engine sv3-0-itemdb /app/conf/insert_itemdb.sql
-
-chmod -R ugo+rwx /app/syms/db 
-
+while [ $i -lt 50 ]
+do
+  echo "Number: $i"
+  ((i++))
+  echo sleeping about 20s before running store1 initial data load with - corp-000 reload-node 001 ..
+  sleep 20
+  /app/syms/bin/symadmin --engine corp-000 reload-node 001 | tee /app/symadmin-output.txt
+  echo exited with .. $?
+  if grep -q "Successfully" /app/symadmin-output.txt;  then
+    break
+  fi
+done
 
 
 mkdir -p $LOCKDIR
@@ -48,7 +49,7 @@ function cleanup {
 # set lock so that script will only run one instance..
 #
 
-LOCKDIR="/app2/_0-init-has-run-marker-directory"
+LOCKDIR="/app/0-first-data-load_has-run-marker-directory"
 
 DIR=$LOCKDIR
 if [ -d "$DIR" ]; then
@@ -59,10 +60,10 @@ else
   echo "Lockdir ${DIR} not found.. run init.sh this one time.."
     # cleanup if need be. # Works for SIGTERM and SIGINT(Ctrl-C)
     trap "cleanup" EXIT
-  runinit
+  firstload
 fi
 
 # -----------------------------------------
 
-echo End of init.sh.
+echo End of first load .sh.
 echo;

@@ -39,17 +39,17 @@ values('main0', 1, 10000, 1, 'main data set');
 ------------------------------------------------------------------------------
 
 -- insert into sym_node_group (node_group_id, description) values ('corp', 'master node');
-insert into sym_node_group (node_group_id, description) values ('sv3copy', 'a slave node');
+insert into sym_node_group (node_group_id, description) values ('store', 'a slave node');
 
 ------------------------------------------------------------------------------
 -- Node Group Links
 ------------------------------------------------------------------------------
 
 -- Corp sends changes to Store when Store pulls from Corp
-insert into sym_node_group_link (source_node_group_id, target_node_group_id, data_event_action) values ('sv3source', 'sv3copy', 'W');
+insert into sym_node_group_link (source_node_group_id, target_node_group_id, data_event_action) values ('corp', 'store', 'W');
 
 -- Store sends changes to Corp when Store pushes to Corp
-insert into sym_node_group_link (source_node_group_id, target_node_group_id, data_event_action) values ('sv3copy', 'sv3source', 'P');
+insert into sym_node_group_link (source_node_group_id, target_node_group_id, data_event_action) values ('store', 'corp', 'P');
 
 
 ------------------------------------------------------------------------------
@@ -60,11 +60,11 @@ insert into sym_node_group_link (source_node_group_id, target_node_group_id, dat
 -- Default router sends all data from corp to store 
 insert into sym_router 
       (router_id,      source_node_group_id, target_node_group_id,   router_type, create_time,      last_update_time)
-values('source2copy', 'sv3source',               'sv3copy',          'default',    current_timestamp, current_timestamp);
+values('corp_2_store', 'corp',               'store',               'default',    current_timestamp, current_timestamp);
 
 insert into sym_router 
       (router_id,      source_node_group_id, target_node_group_id,   router_type, create_time,      last_update_time)
-values('copy2source', 'sv3copy',               'sv3source',           'default',    current_timestamp, current_timestamp);
+values('store_to_corp', 'store',               'corp',               'default',    current_timestamp, current_timestamp);
 
 
 
@@ -84,9 +84,9 @@ values('alltbl',     '*,!ates*' ,            'main0',     current_timestamp,  cu
 -- Send all items to all stores
 insert into sym_trigger_router 
       (trigger_id, router_id,        initial_load_order,  last_update_time,  create_time)
-values('alltbl',     'source2copy',    100,                current_timestamp, current_timestamp);
+values('alltbl',     'corp_2_store',    100,                current_timestamp, current_timestamp);
 
 insert into sym_trigger_router 
       (trigger_id, router_id,        initial_load_order, last_update_time,  create_time)
-values('alltbl',     'copy2source',  100,                current_timestamp, current_timestamp);
+values('alltbl',     'store_to_corp',  100,                current_timestamp, current_timestamp);
 

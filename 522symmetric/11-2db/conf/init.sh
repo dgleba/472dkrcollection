@@ -2,14 +2,16 @@
 set -e
 echo;echo running init.sh..
 
-set -vx
+set -vx # echo on
+set +vx # echo off
 
 # -----------------------------------------
 # -----------------------------------------
 
 runinit () {
 
-/app/syms/bin/symadmin --engine sv3-0-itemdb create-sym-tables
+/app/syms/bin/symadmin --engine corp-000 create-sym-tables
+/app/syms/bin/symadmin --engine corp-qdb create-sym-tables
 
 #
 # use this: sftp://192.168.88.60/srv/dkr/472dkrcollection/522symmetric/tutorial/symmetric-mysq4/mysql-source/docker-entrypoint-initdb.d
@@ -20,7 +22,8 @@ runinit () {
 #
 # create settings in SYM_ tables to define the replication
 #
-/app/syms/bin/dbimport --engine sv3-0-itemdb /app/conf/insert_itemdb.sql
+/app/syms/bin/dbimport --engine corp-000 /app/conf/insert_itemdb.sql
+/app/syms/bin/dbimport --engine corp-qdb /app/conf/insert_itemdb.sql
 
 chmod -R ugo+rwx /app/syms/db 
 
