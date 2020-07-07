@@ -1,7 +1,9 @@
-2020-07-05
+2020-07-06
 
 status:  inwork
 
+errors registering.
+I think I don't have the naming correct yet.
 
 purpose: 
 -2 databases

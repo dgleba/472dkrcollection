@@ -17,3 +17,11 @@ works.
 item table in corp is replicated to store1
 
 
+=================================================
+
+does not worky
+
+10mysql - naming may be wrong
+
+11-2db - won't initialize
+
