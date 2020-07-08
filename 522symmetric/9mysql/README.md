@@ -2,6 +2,8 @@
  
 #  Symmetricds replication two way - Mysql, corp and store1
 
+It is two syc. Corp is the original database and store1 is replicated from corp. Store1 is empty before the replication starts.
+
 
 # Development Note
 
@@ -11,6 +13,8 @@ The `sym` service waits for the two mysql database servers to become available a
 Maybe `init`.sh should be a seperate command since to run just the startup, the init.sh  is also run, which waits for the databases. Maybe instead of using entrypoint, if everything was in command, then it could be completely overridden from command line.
 
 There are other ways to handle startup. Maybe the way below is not the best.
+
+
 
 
 
@@ -29,6 +33,35 @@ There are other ways to handle startup. Maybe the way below is not the best.
 
 
 3.
+
+edit these files to suit your needs..
+
+engines/corp-000.properties:33:db.url=jdbc:mysql://192.168.88.60:13306/itemdb?tinyInt1isBit=false&useSSL=false
+engines/store-001.properties:31:db.url=jdbc:mysql://192.168.88.60:23306/itemdb?tinyInt1isBit=false&useSSL=false
+
+Condider..
+    jdbc:mysql://192.168.88.60:13306/itemdb
+is..
+    jdbc:mysql://ip-of-mysql-server:port/database-to-sync
+
+To use this example, you may have to edit the ip address to suit your docker host.
+
+
+conf/insert_itemdb.sql:78:values('alltbl',  '*,!ates*' ,  'main0',  current_timestamp, current_timestamp, 1 );
+
+Above, '*,!ates*' says sync all tables in the configured itemdb except tables starting with ates.
+
+
+It uses wildcards.
+    See. 
+    https://www.symmetricds.org/doc/3.12/html/user-guide.html#_trigger_wildcards
+
+
+Edit passwords in docker-compose.yml
+
+
+
+3b.
 
     rmdir datasys/app2/_0-init-has-run-marker-directory
 
