@@ -1,0 +1,6 @@
+.docker-compose/
+.env.*
+.env
+x/
+/app2/_0-init-has-run-marker-directory
+_0-init-has-run-marker-directory
