@@ -1,0 +1,2 @@
+This is:
+     git clone git@github.com:UKHomeOffice/docker-symmetricds.git

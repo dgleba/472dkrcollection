@@ -10,7 +10,7 @@ It is two syc. Corp is the original database and store1 is replicated from corp.
 The instructions below are geared to allow fewer steps to launch the system during development.
 The `sym` service waits for the two mysql database servers to become available and then launches a one time `init.sh`.
 
-Maybe `init`.sh should be a seperate command since to run just the startup, the init.sh  is also run, which waits for the databases. Maybe instead of using entrypoint, if everything was in command, then it could be completely overridden from command line.
+Maybe `init.sh` should be a seperate command since to run just the startup, the init.sh  is also run, which waits for the databases. Maybe instead of using entrypoint, if everything was in command, then it could be completely overridden from command line.
 
 There are other ways to handle startup. Maybe the way below is not the best.
 
@@ -56,7 +56,7 @@ To use this example, you may have to edit the ip address to suit your docker hos
 
 conf/insert_itemdb.sql:78:values('alltbl',  '*,!ates*' ,  'main0',  current_timestamp, current_timestamp, 1 );
 
-Above, '*,!ates*' says sync all tables in the configured itemdb except tables starting with ates.
+Above, '*,!ates*' says sync all tables in the configured itemdb except tables starting with `ates`.
 
 
 It uses wildcards.
