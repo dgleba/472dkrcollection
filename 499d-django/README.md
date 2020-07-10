@@ -34,7 +34,7 @@ docker-compose build
 docker-compose run --rm djdev django-admin.py startproject djangoproj .
 
 # delete all docker images, containers, volumes, etc for this compose file
-   dkd --rmi all -v
+# careful..   dkd --rmi all -v
 
 
 docker-compose run --rm djdev python manage.py startapp polls
