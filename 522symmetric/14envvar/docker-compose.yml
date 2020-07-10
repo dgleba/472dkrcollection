@@ -6,6 +6,8 @@ services:
       context: .
     environment:
       - HTTPS=FALSE
+    env_file:
+      - .env.sym
     # expose: [31415,]  
     ports:
       #- "18080:8080"

@@ -18,7 +18,7 @@ There are other ways to handle startup. Maybe the way below is not the best.
 
 
 
-# Instructions.
+# Instructions to start it.
 
 ```
 
@@ -30,6 +30,13 @@ There are other ways to handle startup. Maybe the way below is not the best.
 2.
 
     docker-compose build
+
+
+3a.
+
+2020-07-10  indevelopment:
+
+    cp example.env.sym .env.sym
 
 
 3.
