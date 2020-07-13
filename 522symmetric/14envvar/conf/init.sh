@@ -21,7 +21,7 @@ runinit () {
 #
 # create settings in SYM_ tables to define the replication
 #
-/app/syms/bin/dbimport --engine corp-000 /app/conf/insert_itemdb.sql
+/app/syms/bin/dbimport --engine corp-000 /app/conf/insert_sym_settings.sql
 
 chmod -R ugo+rwx /app/syms/db 
 

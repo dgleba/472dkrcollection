@@ -1,13 +1,17 @@
+
+# write engine properties file
+
+cat << EOL > "./syms/engines/${CORP_ENGINE_NAME}.properties"
 rest.api.enable=true
-engine.name=corp-000
-group.id=corp
-external.id=000
-sync.url=http://localhost:31415/sync/corp-000
-registration.url=
-db.driver=com.mysql.jdbc.Driver
-db.url=jdbc:mysql://192.168.88.60:13306/itemdb?tinyInt1isBit=false&useSSL=false
-db.user=root
-db.password=user
+engine.name=${CORP_ENGINE_NAME}
+group.id=${CORP_GROUP_ID}
+external.id=${CORP_EXTERNAL_ID}
+sync.url=${SYNC_URL}/${CORP_ENGINE_NAME}
+registration.url=${CORP_REGISTRATION_URL}
+db.driver=${CORP_JDBC_DRIVER}
+db.url=jdbc:mysql://${CORP_DB_HOST}:${CORP_DB_PORT}/${CORP_DB_NAME}?${CORP_DB_OPTIONS}
+db.user=${CORP_DB_USER}
+db.password=${CORP_DB_PASSWORD}
 #
 # options
 #
@@ -25,3 +29,5 @@ auto.registration=true
 # When this node sends an initial load of data to another node, first send table create scripts.
 initial.load.create.first=true
 job.heartbeat.period.time.ms=18000
+EOL
+

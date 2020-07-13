@@ -10,6 +10,11 @@ find . -iname "*.sh" -exec bash -c 'chmod +x "$0"' {} \;
 chmod ugo+x $(find . -type d)
 
 
+#
+# I cannot figure another way to use env vars for engine properties files. So this silly way is being used..
+#
+source /app/conf/write-corp-prop.sh
+
 
 # init.sh will only run once. a marker directory is created after it runs.
 source /app/conf/init.sh

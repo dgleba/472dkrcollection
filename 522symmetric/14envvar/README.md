@@ -54,6 +54,8 @@ is..
 To use this example, you may have to edit the ip address to suit your docker host.
 
 
+Tables in db to sync:
+
 conf/insert_itemdb.sql:78:values('alltbl',  '*,!ates*' ,  'main0',  current_timestamp, current_timestamp, 1 );
 
 Above, '*,!ates*' says sync all tables in the configured itemdb except tables starting with `ates`.
