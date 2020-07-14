@@ -1,5 +1,5 @@
 
-want pwd without full path
+want pwd without full path for use in volume name like  ../sysdata/$PWD-mysqldata
 
 https://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-a-bash-script
 

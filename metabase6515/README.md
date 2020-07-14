@@ -1,5 +1,6 @@
 # 2020-07-14
 
+# Upgrade from v0.25.2
 
 ## Transfer data from pd3
 
@@ -31,26 +32,6 @@ set metabase to v26.3 in docker compose yml file
 dc up mb
 ```
 
-```
-mb_1       | 07-14 14:39:11 ERROR generic-sql.query-processor :: Failed to set timezone:
-mb_1       |  SQLException:
-mb_1       |  Message: Unknown or incorrect time zone: 'US/Eastern'
-mb_1       |  SQLState: HY000
-mb_1       |  Error Code: 1298
-
-mb_1       | 07-14 14:50:30 ERROR generic-sql.query-processor :: Failed to set timezone:
-mb_1       |  SQLException:
-mb_1       |  Message: Connections could not be acquired from the underlying database!
-mb_1       |  SQLState: null
-mb_1       |  Error Code: 0
-mb_1       |
-mb_1       | SQLException:
-mb_1       |  Message: An SQLException was provoked by the following failure: com.mchange.v2.resourcepool.ResourcePoolException: A ResourcePool cannot acquire a new resource -- the factory or source appears to be down.
-mb_1       |  SQLState: null
-mb_1       |  Error Code: 0
-mb_1
-
-```
 
 ## Upgrade again
 
@@ -60,7 +41,25 @@ set metabase to v30.4 in docker compose yml file
 dc up mb
 ```
 
+## Upgrade to 35.4
 
+do the last upgrade.
+
+
+## Fix errors.
+
+fix errors with db hosts being localhost. should be 10.4.1.231.
+
+fix TZ errors.
+
+Fixup general settings.
+
+address all errors in logs.
+
+
+# Done.
+
+done.
 
 
 
@@ -78,7 +77,7 @@ dc up mb
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-# @  older...
+# @  older - do not use...
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2020-07-14[Jul-Tue]09-40AM 
 
