@@ -1,0 +1,325 @@
+Attaching to metabase6515_mb_1, metabase6515_adminer_1, metabase6515_dbm_1
+[33madminer_1  |[0m 2020-07-14T14:52:52.871068853Z PHP 7.3.11 Development Server started at Tue Jul 14 14:52:52 2020
+[33madminer_1  |[0m 2020-07-14T15:04:21.809963257Z Listening on http://[::]:8080
+[33madminer_1  |[0m 2020-07-14T15:04:21.810032857Z Document root is /var/www/html
+[33madminer_1  |[0m 2020-07-14T15:04:21.810057457Z Press Ctrl-C to quit.
+[36mmb_1       |[0m 2020-07-14T14:53:13.895169678Z 07-14 14:53:13 [1mINFO metabase.util[0m :: Loading Metabase...
+[36mmb_1       |[0m 2020-07-14T14:53:29.608693507Z 07-14 14:53:29 [1mINFO util.encryption[0m :: Saved credentials encryption is DISABLED for this Metabase instance. 🔓 
+[36mmb_1       |[0m 2020-07-14T14:53:29.608760308Z For more information, see https://www.metabase.com/docs/latest/operations-guide/start.html#encrypting-your-database-connection-details-at-rest
+[36mmb_1       |[0m 2020-07-14T14:53:58.350721830Z 07-14 14:53:58 [1mINFO metabase.core[0m :: Starting Metabase in STANDALONE mode
+[36mmb_1       |[0m 2020-07-14T14:53:58.441294354Z 07-14 14:53:58 [1mINFO metabase.core[0m :: Launching Embedded Jetty Webserver with config: 
+[36mmb_1       |[0m 2020-07-14T14:53:58.441364255Z  {:port 3000, :host "0.0.0.0"}
+[36mmb_1       |[0m 2020-07-14T14:53:58.441389455Z 
+[36mmb_1       |[0m 2020-07-14T14:53:58.712265722Z 07-14 14:53:58 [1mINFO metabase.core[0m :: Starting Metabase version v0.30.4 (8bf182f release-0.30.4) ...
+[36mmb_1       |[0m 2020-07-14T14:53:58.713744833Z 07-14 14:53:58 [1mINFO metabase.core[0m :: System timezone is 'GMT' ...
+[36mmb_1       |[0m 2020-07-14T14:54:04.061069619Z WARNING: any? already refers to: #'clojure.core/any? in namespace: monger.collection, being replaced by: #'monger.collection/any?
+[36mmb_1       |[0m 2020-07-14T14:54:04.512602333Z 07-14 14:54:04 [1mINFO metabase.core[0m :: Setting up and migrating Metabase DB. Please sit tight, this may take a minute...
+[36mmb_1       |[0m 2020-07-14T14:54:04.516410264Z 07-14 14:54:04 [1mINFO metabase.db[0m :: [36mVerifying mysql Database Connection ...[0m
+[36mmb_1       |[0m 2020-07-14T14:54:08.347532439Z 07-14 14:54:08 [1mINFO metabase.db[0m :: Verify Database Connection ...  ✅
+[36mmb_1       |[0m 2020-07-14T14:54:08.350235161Z 07-14 14:54:08 [1mINFO metabase.db[0m :: Running Database Migrations...
+[36mmb_1       |[0m 2020-07-14T14:54:08.406376510Z Tue Jul 14 14:54:08 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:54:08.900620569Z 07-14 14:54:08 [1mINFO metabase.db[0m :: Setting up Liquibase...
+[36mmb_1       |[0m 2020-07-14T14:54:08.958252730Z Tue Jul 14 14:54:08 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:54:09.261335858Z 07-14 14:54:09 [1mINFO metabase.db[0m :: Liquibase is ready.
+[36mmb_1       |[0m 2020-07-14T14:54:09.263134272Z 07-14 14:54:09 [1mINFO metabase.db[0m :: Checking if Database has unrun migrations...
+[36mmb_1       |[0m 2020-07-14T14:54:18.453326329Z 07-14 14:54:18 [1mINFO metabase.db[0m :: Database has unrun migrations. Waiting for migration lock to be cleared...
+[36mmb_1       |[0m 2020-07-14T14:54:19.391469452Z 07-14 14:54:19 [1mINFO metabase.db[0m :: Migration lock is cleared. Running migrations...
+[36mmb_1       |[0m 2020-07-14T14:55:23.163817474Z 07-14 14:55:23 [1mINFO metabase.db[0m :: Database Migrations Current ...  ✅
+[36mmb_1       |[0m 2020-07-14T14:55:23.435297468Z com.mchange.v2.cfg.DelayedLogItem [ level -> FINE, text -> "The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.", exception -> null]
+[36mmb_1       |[0m 2020-07-14T14:55:24.581690735Z 07-14 14:55:24 [1mINFO db.migrations[0m :: Running all necessary data migrations, this may take a minute.
+[36mmb_1       |[0m 2020-07-14T14:55:24.883178273Z Tue Jul 14 14:55:24 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:55:24.892613649Z Tue Jul 14 14:55:24 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:55:24.905714455Z Tue Jul 14 14:55:24 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:55:25.816645420Z 07-14 14:55:25 [1mINFO db.migrations[0m :: Running data migration 'populate-card-database-id'...
+[36mmb_1       |[0m 2020-07-14T14:55:26.438216746Z 07-14 14:55:26 [1mWARN db.migrations[0m :: Cleaning up orphaned Question '(MCS) Count rows by day for CMMid is a number not a name', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:26.643272304Z 07-14 14:55:26 [1mWARN db.migrations[0m :: Cleaning up orphaned Question 'Latest cmm data', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:26.850496579Z 07-14 14:55:26 [1mWARN db.migrations[0m :: Cleaning up orphaned Question 'Largest SQL_ID', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:26.961842880Z 07-14 14:55:26 [1mWARN db.migrations[0m :: Cleaning up orphaned Question 'Count rows by day for CMMid is a number not a name (innodb)', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:27.058573162Z 07-14 14:55:27 [1mWARN db.migrations[0m :: Cleaning up orphaned Question 'Graph a feature (innodb)', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:27.177410023Z 07-14 14:55:27 [1mWARN db.migrations[0m :: Cleaning up orphaned Question 'CMM row count by CMM - last 2 days', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:27.350456523Z 07-14 14:55:27 [1mWARN db.migrations[0m :: Cleaning up orphaned Question 'CMM', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:27.555282279Z 07-14 14:55:27 [1mWARN db.migrations[0m :: Cleaning up orphaned Question '2421 - 96 CMM', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:27.892599907Z 07-14 14:55:27 [1mWARN db.migrations[0m :: Cleaning up orphaned Question '2421-966', associated to a now deleted database
+[36mmb_1       |[0m 2020-07-14T14:55:28.114048998Z 07-14 14:55:28 [1mINFO db.migrations[0m :: Running data migration 'migrate-humanization-setting'...
+[36mmb_1       |[0m 2020-07-14T14:55:28.356873162Z 07-14 14:55:28 [1mINFO models.humanization[0m :: Now using simple table name humanization.
+[36mmb_1       |[0m 2020-07-14T14:55:34.462730662Z 07-14 14:55:34 [1mINFO db.migrations[0m :: Running data migration 'mark-category-fields-as-list'...
+[36mmb_1       |[0m 2020-07-14T14:55:34.826218404Z 07-14 14:55:34 [1mINFO db.migrations[0m :: Running data migration 'add-legacy-sql-directive-to-bigquery-sql-cards'...
+[36mmb_1       |[0m 2020-07-14T14:55:34.849438892Z 07-14 14:55:34 [1mINFO db.migrations[0m :: Running data migration 'clear-ldap-user-local-passwords'...
+[36mmb_1       |[0m 2020-07-14T14:55:34.911153091Z 07-14 14:55:34 [1mINFO db.migrations[0m :: Running data migration 'add-migrated-collections'...
+[36mmb_1       |[0m 2020-07-14T14:55:35.755472525Z 07-14 14:55:35 [1mINFO db.migrations[0m :: Moving instances of Dashboard that arent in a Collection to {1} Collection {2}
+[36mmb_1       |[0m 2020-07-14T14:55:36.239387942Z 07-14 14:55:36 [1mINFO db.migrations[0m :: Moving instances of Pulse that arent in a Collection to {1} Collection {2}
+[36mmb_1       |[0m 2020-07-14T14:55:36.624047256Z 07-14 14:55:36 [1mINFO db.migrations[0m :: Moving instances of Card that arent in a Collection to {1} Collection {2}
+[36mmb_1       |[0m 2020-07-14T14:55:36.743519123Z 07-14 14:55:36 [1mINFO db.migrations[0m :: Finished running data migrations.
+[36mmb_1       |[0m 2020-07-14T14:55:36.792918923Z 07-14 14:55:36 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.notifications[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:36.865682212Z 07-14 14:55:36 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.metabot-lifecycle[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:36.916831526Z 07-14 14:55:36 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.dependencies[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:36.954592732Z 07-14 14:55:36 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.activity-feed[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:36.985224880Z 07-14 14:55:36 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.last-login[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:37.014420016Z 07-14 14:55:37 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.revision[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:37.034116376Z 07-14 14:55:37 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.sync-database[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:37.054061637Z 07-14 14:55:37 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.view-log[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:37.065129727Z 07-14 14:55:37 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.driver-notifications[0m 👂
+[36mmb_1       |[0m 2020-07-14T14:55:37.427116957Z Tue Jul 14 14:55:37 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:55:37.432573702Z Tue Jul 14 14:55:37 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:55:37.443511990Z Tue Jul 14 14:55:37 GMT 2020 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
+[36mmb_1       |[0m 2020-07-14T14:55:38.040596224Z 07-14 14:55:38 [1mINFO metabase.task[0m :: Loading tasks namespace: [34mmetabase.task.send-anonymous-stats[0m 📆
+[36mmb_1       |[0m 2020-07-14T14:55:38.221323188Z 07-14 14:55:38 [1mINFO metabase.task[0m :: Loading tasks namespace: [34mmetabase.task.sync-databases[0m 📆
+[36mmb_1       |[0m 2020-07-14T14:55:40.605238592Z 07-14 14:55:40 [1mINFO metabase.task[0m :: Loading tasks namespace: [34mmetabase.task.upgrade-checks[0m 📆
+[36mmb_1       |[0m 2020-07-14T14:55:40.677381676Z 07-14 14:55:40 [1mINFO metabase.task[0m :: Loading tasks namespace: [34mmetabase.task.follow-up-emails[0m 📆
+[36mmb_1       |[0m 2020-07-14T14:55:40.845707540Z 07-14 14:55:40 [1mINFO metabase.task[0m :: Loading tasks namespace: [34mmetabase.task.DynamicClassLoadHelper[0m 📆
+[36mmb_1       |[0m 2020-07-14T14:55:40.853972107Z 07-14 14:55:40 [1mINFO metabase.task[0m :: Loading tasks namespace: [34mmetabase.task.send-pulses[0m 📆
+[36mmb_1       |[0m 2020-07-14T14:55:41.114049413Z 07-14 14:55:41 [1mINFO metabase.core[0m :: Metabase Initialization COMPLETE
+[36mmb_1       |[0m 2020-07-14T15:00:01.232277367Z 07-14 15:00:01 [1mDEBUG sync.util[0m :: Sync operations in flight: {:sync-metadata #{2}}
+[36mmb_1       |[0m 2020-07-14T15:00:01.245665578Z 07-14 15:00:01 [1mINFO sync.util[0m :: [35mSTARTING: Sync metadata for mysql Database 2 'ProdRpt'[0m
+[36mmb_1       |[0m 2020-07-14T15:00:01.297743509Z 07-14 15:00:01 [1mDEBUG sync.util[0m :: [35mSTARTING: step 'sync-timezone' for mysql Database 2 'ProdRpt'[0m
+[36mmb_1       |[0m 2020-07-14T15:00:30.754206857Z 07-14 15:00:30 [1mERROR generic-sql.query-processor[0m :: Failed to set timezone: 
+[36mmb_1       |[0m 2020-07-14T15:00:30.754475260Z  SQLException:
+[36mmb_1       |[0m 2020-07-14T15:00:30.754508660Z  Message: Connections could not be acquired from the underlying database!
+[36mmb_1       |[0m 2020-07-14T15:00:30.754532060Z  SQLState: null
+[36mmb_1       |[0m 2020-07-14T15:00:30.754622961Z  Error Code: 0
+[36mmb_1       |[0m 2020-07-14T15:00:30.755158565Z 
+[36mmb_1       |[0m 2020-07-14T15:00:59.856692902Z SQLException:
+[36mmb_1       |[0m 2020-07-14T15:00:59.856773202Z  Message: Connections could not be acquired from the underlying database!
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768592331Z 2020-07-14T14:35:24.715194Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768716532Z 2020-07-14T14:35:24.729100Z 0 [Note] mysqld (mysqld 5.7.27) starting as process 1 ...
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768742632Z 2020-07-14T14:35:24.767400Z 0 [Note] InnoDB: PUNCH HOLE support available
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768764633Z 2020-07-14T14:35:24.767468Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768786233Z 2020-07-14T14:35:24.767490Z 0 [Note] InnoDB: Uses event mutexes
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768821833Z 2020-07-14T14:35:24.767511Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768844633Z 2020-07-14T14:35:24.767531Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768866234Z 2020-07-14T14:35:24.767550Z 0 [Note] InnoDB: Using Linux native AIO
+[32mdbm_1      |[0m 2020-07-14T14:35:24.771059253Z 2020-07-14T14:35:24.768632Z 0 [Note] InnoDB: Number of pools: 1
+[32mdbm_1      |[0m 2020-07-14T14:35:24.771136654Z 2020-07-14T14:35:24.769073Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[32mdbm_1      |[0m 2020-07-14T14:35:24.792670548Z 2020-07-14T14:35:24.787983Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[32mdbm_1      |[0m 2020-07-14T14:35:24.851425979Z 2020-07-14T14:35:24.850510Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[32mdbm_1      |[0m 2020-07-14T14:35:24.858644344Z 2020-07-14T14:35:24.858249Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[32mdbm_1      |[0m 2020-07-14T14:35:24.879690434Z 2020-07-14T14:35:24.878191Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+[32mdbm_1      |[0m 2020-07-14T14:35:24.998804009Z 2020-07-14T14:35:24.998042Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+[32mdbm_1      |[0m 2020-07-14T14:35:24.999404215Z 2020-07-14T14:35:24.999077Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+[32mdbm_1      |[0m 2020-07-14T14:35:25.081173653Z 2020-07-14T14:35:25.080427Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.094271171Z 2020-07-14T14:35:25.092484Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.094409072Z 2020-07-14T14:35:25.092671Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.094440973Z 2020-07-14T14:35:25.093795Z 0 [Note] InnoDB: Waiting for purge to start
+[32mdbm_1      |[0m 2020-07-14T14:35:25.144846028Z 2020-07-14T14:35:25.144239Z 0 [Note] InnoDB: 5.7.27 started; log sequence number 81819422
+[32mdbm_1      |[0m 2020-07-14T14:35:25.145452733Z 2020-07-14T14:35:25.145142Z 0 [Note] Plugin 'FEDERATED' is disabled.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.145689535Z 2020-07-14T14:35:25.145183Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+[32mdbm_1      |[0m 2020-07-14T14:35:25.193234664Z 2020-07-14T14:35:25.192755Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.205179072Z 2020-07-14T14:35:25.204862Z 0 [Warning] CA certificate ca.pem is self signed.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253667410Z 2020-07-14T14:35:25.253258Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253733310Z 2020-07-14T14:35:25.253470Z 0 [Note] IPv6 is available.
+[36mmb_1       |[0m 2020-07-14T15:00:59.856799302Z  SQLState: null
+[36mmb_1       |[0m 2020-07-14T15:00:59.856822003Z  Error Code: 0
+[36mmb_1       |[0m 2020-07-14T15:00:59.858922120Z 07-14 15:00:59 [1mERROR generic-sql.query-processor[0m :: nil
+[36mmb_1       |[0m 2020-07-14T15:00:59.869834711Z 07-14 15:00:59 [1mWARN sync-metadata.sync-timezone[0m :: Error syncing database timezone
+[36mmb_1       |[0m 2020-07-14T15:00:59.869890111Z java.lang.Exception: Error querying database 'ProdRpt' for current time
+[36mmb_1       |[0m 2020-07-14T15:00:59.869915011Z 	at metabase.driver$make_current_db_time_fn$fn__28542$fn__28543.invoke(driver.clj:408)
+[36mmb_1       |[0m 2020-07-14T15:00:59.869938412Z 	at metabase.driver$make_current_db_time_fn$fn__28542.invoke(driver.clj:400)
+[36mmb_1       |[0m 2020-07-14T15:00:59.869961312Z 	at metabase.driver$fn__28357$G__28209__28364.invoke(driver.clj:104)
+[36mmb_1       |[0m 2020-07-14T15:00:59.869984012Z 	at metabase.sync.sync_metadata.sync_timezone$fn__41942$sync_timezone_BANG___41947$fn__41948.invoke(sync_timezone.clj:20)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870007212Z 	at metabase.sync.sync_metadata.sync_timezone$fn__41942$sync_timezone_BANG___41947.invoke(sync_timezone.clj:13)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870030212Z 	at metabase.sync.util$fn__35787$run_step_with_metadata__35792$fn__35796$fn__35798.invoke(util.clj:350)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870053413Z 	at metabase.sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invokeStatic(util.clj:98)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870076213Z 	at metabase.sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invoke(util.clj:92)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870099313Z 	at metabase.sync.util$with_start_and_finish_debug_logging.invokeStatic(util.clj:115)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870122013Z 	at metabase.sync.util$with_start_and_finish_debug_logging.invoke(util.clj:112)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870144513Z 	at metabase.sync.util$fn__35787$run_step_with_metadata__35792$fn__35796.invoke(util.clj:347)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870167614Z 	at metabase.sync.util$fn__35787$run_step_with_metadata__35792.invoke(util.clj:342)
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253907512Z 2020-07-14T14:35:25.253513Z 0 [Note]   - '::' resolves to '::';
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253936712Z 2020-07-14T14:35:25.253626Z 0 [Note] Server socket created on IP: '::'.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.269447952Z 2020-07-14T14:35:25.268895Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.378504637Z 2020-07-14T14:35:25.378142Z 0 [Note] Event Scheduler: Loaded 0 events
+[32mdbm_1      |[0m 2020-07-14T14:35:25.379152743Z 2020-07-14T14:35:25.378896Z 0 [Note] mysqld: ready for connections.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.379188043Z Version: '5.7.27'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+[32mdbm_1      |[0m 2020-07-14T14:35:26.237661392Z 2020-07-14T14:35:26.237268Z 0 [Note] InnoDB: Buffer pool(s) load completed at 200714 14:35:26
+[32mdbm_1      |[0m 2020-07-14T14:52:23.734857368Z 2020-07-14T14:52:23.733500Z 19 [Note] Aborted connection 19 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.734939369Z 2020-07-14T14:52:23.733530Z 17 [Note] Aborted connection 17 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.734965769Z 2020-07-14T14:52:23.733948Z 18 [Note] Aborted connection 18 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.734989269Z 2020-07-14T14:52:23.733980Z 16 [Note] Aborted connection 16 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.735012169Z 2020-07-14T14:52:23.734418Z 15 [Note] Aborted connection 15 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738142494Z 2020-07-14T14:52:23.735284Z 14 [Note] Aborted connection 14 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738197194Z 2020-07-14T14:52:23.735611Z 13 [Note] Aborted connection 13 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738223595Z 2020-07-14T14:52:23.735948Z 11 [Note] Aborted connection 11 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738247695Z 2020-07-14T14:52:23.736216Z 10 [Note] Aborted connection 10 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738306495Z 2020-07-14T14:52:23.736524Z 9 [Note] Aborted connection 9 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738332596Z 2020-07-14T14:52:23.736565Z 12 [Note] Aborted connection 12 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870190714Z 	at metabase.sync.util$fn__35871$run_sync_operation__35876$fn__35877$fn__35878.invoke(util.clj:397)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870213414Z 	at clojure.core$mapv$fn__8088.invoke(core.clj:6832)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870235814Z 	at clojure.lang.PersistentVector.reduce(PersistentVector.java:341)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870354915Z 	at clojure.core$reduce.invokeStatic(core.clj:6747)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870389115Z 	at clojure.core$mapv.invokeStatic(core.clj:6823)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870433516Z 	at clojure.core$mapv.invoke(core.clj:6823)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870457316Z 	at metabase.sync.util$fn__35871$run_sync_operation__35876$fn__35877.invoke(util.clj:397)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870480216Z 	at metabase.sync.util$fn__35871$run_sync_operation__35876.invoke(util.clj:391)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870502416Z 	at metabase.sync.sync_metadata$fn__42198$sync_db_metadata_BANG___42203$fn__42204$fn__42205.invoke(sync_metadata.clj:51)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870525417Z 	at metabase.sync.util$do_with_error_handling.invokeStatic(util.clj:143)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870550717Z 	at metabase.sync.util$do_with_error_handling.invoke(util.clj:138)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870573117Z 	at metabase.sync.util$do_with_error_handling.invokeStatic(util.clj:141)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870595417Z 	at metabase.sync.util$do_with_error_handling.invoke(util.clj:138)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870626717Z 	at clojure.core$partial$fn__5561.invoke(core.clj:2615)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870649818Z 	at metabase.driver$fn__28461.invokeStatic(driver.clj:288)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738355696Z 2020-07-14T14:52:23.736912Z 7 [Note] Aborted connection 7 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738398096Z 2020-07-14T14:52:23.736964Z 8 [Note] Aborted connection 8 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738422196Z 2020-07-14T14:52:23.737281Z 6 [Note] Aborted connection 6 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.739070201Z 2020-07-14T14:52:23.738743Z 5 [Note] Aborted connection 5 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:04:22.415352236Z 2020-07-14T15:04:22.413024Z 27 [Note] Aborted connection 27 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870671718Z 	at metabase.driver$fn__28461.invoke(driver.clj:288)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870693418Z 	at metabase.driver$fn__28396$G__28203__28405.invoke(driver.clj:104)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870714718Z 	at metabase.sync.util$sync_in_context$fn__35693.invoke(util.clj:134)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870736218Z 	at metabase.sync.util$with_db_logging_disabled$fn__35690.invoke(util.clj:125)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870758418Z 	at metabase.sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invokeStatic(util.clj:98)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870780419Z 	at metabase.sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invoke(util.clj:92)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870842519Z 	at metabase.sync.util$with_start_and_finish_logging$fn__35679.invoke(util.clj:110)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870865319Z 	at metabase.sync.util$with_sync_events$fn__35674.invoke(util.clj:84)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870887420Z 	at metabase.sync.util$with_duplicate_ops_prevented$fn__35665.invoke(util.clj:63)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870909320Z 	at metabase.sync.util$do_sync_operation.invokeStatic(util.clj:162)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870930620Z 	at metabase.sync.util$do_sync_operation.invoke(util.clj:159)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870952520Z 	at metabase.sync.sync_metadata$fn__42198$sync_db_metadata_BANG___42203$fn__42204.invoke(sync_metadata.clj:50)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870974820Z 	at metabase.sync.sync_metadata$fn__42198$sync_db_metadata_BANG___42203.invoke(sync_metadata.clj:47)
+[36mmb_1       |[0m 2020-07-14T15:00:59.870997220Z 	at metabase.task.sync_databases.SyncAndAnalyzeDatabase.execute(sync_databases.clj:36)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871019021Z 	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871054421Z 	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871172922Z Caused by: java.lang.Exception: Connections could not be acquired from the underlying database!
+[36mmb_1       |[0m 2020-07-14T15:00:59.871219322Z 	at metabase.driver.generic_sql.query_processor$do_with_try_catch.invokeStatic(query_processor.clj:522)
+[32mdbm_1      |[0m 2020-07-14T15:04:22.415485337Z 2020-07-14T15:04:22.413415Z 26 [Note] Aborted connection 26 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:04:22.415518137Z 2020-07-14T15:04:22.413784Z 25 [Note] Aborted connection 25 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:04:23.056679217Z 2020-07-14T15:04:23.052269Z 0 [Note] Giving 0 client threads a chance to die gracefully
+[32mdbm_1      |[0m 2020-07-14T15:04:23.059792043Z 2020-07-14T15:04:23.052381Z 0 [Note] Shutting down slave threads
+[32mdbm_1      |[0m 2020-07-14T15:04:23.059859143Z 2020-07-14T15:04:23.052403Z 0 [Note] Forcefully disconnecting 0 remaining clients
+[32mdbm_1      |[0m 2020-07-14T15:04:23.059884243Z 2020-07-14T15:04:23.052427Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+[32mdbm_1      |[0m 2020-07-14T15:04:23.059908844Z 2020-07-14T15:04:23.052722Z 0 [Note] Binlog end
+[32mdbm_1      |[0m 2020-07-14T15:04:23.059943144Z 2020-07-14T15:04:23.056791Z 0 [Note] Shutting down plugin 'ngram'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060013145Z 2020-07-14T15:04:23.056934Z 0 [Note] Shutting down plugin 'partition'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060039945Z 2020-07-14T15:04:23.056996Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060063745Z 2020-07-14T15:04:23.057077Z 0 [Note] Shutting down plugin 'ARCHIVE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060087445Z 2020-07-14T15:04:23.057097Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060111145Z 2020-07-14T15:04:23.057320Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060134746Z 2020-07-14T15:04:23.057397Z 0 [Note] Shutting down plugin 'MyISAM'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060157946Z 2020-07-14T15:04:23.057432Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060181546Z 2020-07-14T15:04:23.057473Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060205446Z 2020-07-14T15:04:23.057493Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060228946Z 2020-07-14T15:04:23.057562Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060251947Z 2020-07-14T15:04:23.057581Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060275447Z 2020-07-14T15:04:23.057598Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060339847Z 2020-07-14T15:04:23.057638Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060365448Z 2020-07-14T15:04:23.057657Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060388748Z 2020-07-14T15:04:23.057726Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060411448Z 2020-07-14T15:04:23.057745Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060434048Z 2020-07-14T15:04:23.057763Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060743151Z 2020-07-14T15:04:23.057803Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060802851Z 2020-07-14T15:04:23.057823Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060825951Z 2020-07-14T15:04:23.057891Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060849152Z 2020-07-14T15:04:23.057911Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060872352Z 2020-07-14T15:04:23.057929Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060895152Z 2020-07-14T15:04:23.057970Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060917952Z 2020-07-14T15:04:23.057989Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.060940652Z 2020-07-14T15:04:23.058058Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061009553Z 2020-07-14T15:04:23.058155Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061033853Z 2020-07-14T15:04:23.058179Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061057353Z 2020-07-14T15:04:23.058197Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061080454Z 2020-07-14T15:04:23.058273Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061103054Z 2020-07-14T15:04:23.058291Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061125554Z 2020-07-14T15:04:23.058309Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061148054Z 2020-07-14T15:04:23.058351Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061170654Z 2020-07-14T15:04:23.058430Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061192954Z 2020-07-14T15:04:23.058449Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061215655Z 2020-07-14T15:04:23.058466Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061238655Z 2020-07-14T15:04:23.058507Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061261055Z 2020-07-14T15:04:23.058527Z 0 [Note] Shutting down plugin 'InnoDB'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.061283355Z 2020-07-14T15:04:23.058903Z 0 [Note] InnoDB: FTS optimize thread exiting.
+[32mdbm_1      |[0m 2020-07-14T15:04:23.065218588Z 2020-07-14T15:04:23.059708Z 0 [Note] InnoDB: Starting shutdown...
+[32mdbm_1      |[0m 2020-07-14T15:04:23.161167193Z 2020-07-14T15:04:23.160238Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+[32mdbm_1      |[0m 2020-07-14T15:04:23.161944900Z 2020-07-14T15:04:23.161506Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 200714 15:04:23
+[32mdbm_1      |[0m 2020-07-14T15:04:24.760168910Z 2020-07-14T15:04:24.759736Z 0 [Note] InnoDB: Shutdown completed; log sequence number 88386863
+[32mdbm_1      |[0m 2020-07-14T15:04:24.770049093Z 2020-07-14T15:04:24.769486Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+[32mdbm_1      |[0m 2020-07-14T15:04:24.770179894Z 2020-07-14T15:04:24.769590Z 0 [Note] Shutting down plugin 'MEMORY'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.770209494Z 2020-07-14T15:04:24.769617Z 0 [Note] Shutting down plugin 'CSV'
+[36mmb_1       |[0m 2020-07-14T15:00:59.871243623Z 	at metabase.driver.generic_sql.query_processor$do_with_try_catch.invoke(query_processor.clj:514)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871305223Z 	at metabase.driver.generic_sql.query_processor$execute_query.invokeStatic(query_processor.clj:574)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871331623Z 	at metabase.driver.generic_sql.query_processor$execute_query.invoke(query_processor.clj:570)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871356923Z 	at clojure.lang.Var.invoke(Var.java:385)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871379424Z 	at metabase.driver$fn__28422$G__28229__28429.invoke(driver.clj:104)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871401424Z 	at metabase.driver$make_current_db_time_fn$fn__28542$fn__28543.invoke(driver.clj:402)
+[36mmb_1       |[0m 2020-07-14T15:00:59.871423124Z 	... 42 more
+[36mmb_1       |[0m 2020-07-14T15:00:59.911513257Z 07-14 15:00:59 [1mDEBUG sync.util[0m :: [35mFINISHED: step 'sync-timezone' for mysql Database 2 'ProdRpt' (59 s)[0m
+[36mmb_1       |[0m 2020-07-14T15:00:59.928089795Z 07-14 15:00:59 [1mDEBUG sync.util[0m :: [35mSTARTING: step 'sync-tables' for mysql Database 2 'ProdRpt'[0m
+[36mmb_1       |[0m 2020-07-14T15:01:29.778755872Z 07-14 15:01:29 [1mERROR sync.util[0m :: [31mError running sync step: Connections could not be acquired from the underlying database!
+[36mmb_1       |[0m 2020-07-14T15:01:29.778830873Z ("driver.generic_sql$describe_database.invokeStatic(generic_sql.clj:366)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.778882873Z  "driver.generic_sql$describe_database.invoke(generic_sql.clj:362)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.778909073Z  "driver$fn__28264$G__28215__28271.invoke(driver.clj:104)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.778930874Z  "sync.fetch_metadata$fn__40989$db_metadata__40994$fn__40995.invoke(fetch_metadata.clj:13)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.778953074Z  "sync.fetch_metadata$fn__40989$db_metadata__40994.invoke(fetch_metadata.clj:10)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.778974974Z  "sync.sync_metadata.tables$fn__42094$db_metadata__42099$fn__42100.invoke(tables.clj:127)"
+[32mdbm_1      |[0m 2020-07-14T15:04:24.770233094Z 2020-07-14T15:04:24.769639Z 0 [Note] Shutting down plugin 'sha256_password'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.770256294Z 2020-07-14T15:04:24.769656Z 0 [Note] Shutting down plugin 'mysql_native_password'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.772055610Z 2020-07-14T15:04:24.771730Z 0 [Note] Shutting down plugin 'binlog'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.780429780Z 2020-07-14T15:04:24.779530Z 0 [Note] mysqld: Shutdown complete
+[32mdbm_1      |[0m 2020-07-14T15:04:24.780521481Z 
+[36mmb_1       |[0m 2020-07-14T15:01:29.778996574Z  "sync.sync_metadata.tables$fn__42094$db_metadata__42099.invoke(tables.clj:124)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779018174Z  "sync.sync_metadata.tables$fn__42154$sync_tables_BANG___42159$fn__42160.invoke(tables.clj:144)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779039875Z  "sync.sync_metadata.tables$fn__42154$sync_tables_BANG___42159.invoke(tables.clj:139)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779061475Z  "sync.util$fn__35787$run_step_with_metadata__35792$fn__35796$fn__35798.invoke(util.clj:350)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779083275Z  "sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invokeStatic(util.clj:98)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779105075Z  "sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invoke(util.clj:92)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779126875Z  "sync.util$with_start_and_finish_debug_logging.invokeStatic(util.clj:115)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779334677Z  "sync.util$with_start_and_finish_debug_logging.invoke(util.clj:112)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779373177Z  "sync.util$fn__35787$run_step_with_metadata__35792$fn__35796.invoke(util.clj:347)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779423978Z  "sync.util$fn__35787$run_step_with_metadata__35792.invoke(util.clj:342)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779447978Z  "sync.util$fn__35871$run_sync_operation__35876$fn__35877$fn__35878.invoke(util.clj:397)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779470378Z  "sync.util$fn__35871$run_sync_operation__35876$fn__35877.invoke(util.clj:397)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779492078Z  "sync.util$fn__35871$run_sync_operation__35876.invoke(util.clj:391)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779513778Z  "sync.sync_metadata$fn__42198$sync_db_metadata_BANG___42203$fn__42204$fn__42205.invoke(sync_metadata.clj:51)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779535779Z  "sync.util$do_with_error_handling.invokeStatic(util.clj:143)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779557279Z  "sync.util$do_with_error_handling.invoke(util.clj:138)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779579179Z  "sync.util$do_with_error_handling.invokeStatic(util.clj:141)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779600479Z  "sync.util$do_with_error_handling.invoke(util.clj:138)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779625879Z  "driver$fn__28461.invokeStatic(driver.clj:288)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779647780Z  "driver$fn__28461.invoke(driver.clj:288)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779668980Z  "driver$fn__28396$G__28203__28405.invoke(driver.clj:104)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779690280Z  "sync.util$sync_in_context$fn__35693.invoke(util.clj:134)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779711980Z  "sync.util$with_db_logging_disabled$fn__35690.invoke(util.clj:125)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779733480Z  "sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invokeStatic(util.clj:98)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779756181Z  "sync.util$with_start_and_finish_logging_SINGLEQUOTE_.invoke(util.clj:92)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779777681Z  "sync.util$with_start_and_finish_logging$fn__35679.invoke(util.clj:110)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779798881Z  "sync.util$with_sync_events$fn__35674.invoke(util.clj:84)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779820481Z  "sync.util$with_duplicate_ops_prevented$fn__35665.invoke(util.clj:63)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779841981Z  "sync.util$do_sync_operation.invokeStatic(util.clj:162)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779863681Z  "sync.util$do_sync_operation.invoke(util.clj:159)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779885682Z  "sync.sync_metadata$fn__42198$sync_db_metadata_BANG___42203$fn__42204.invoke(sync_metadata.clj:50)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779907582Z  "sync.sync_metadata$fn__42198$sync_db_metadata_BANG___42203.invoke(sync_metadata.clj:47)"
+[36mmb_1       |[0m 2020-07-14T15:01:29.779929382Z  "task.sync_databases.SyncAndAnalyzeDatabase.execute(sync_databases.clj:36)")
+[36mmb_1       |[0m 2020-07-14T15:01:29.779951482Z [0m
+[36mmb_1       |[0m 2020-07-14T15:01:29.796657121Z 07-14 15:01:29 [1mINFO sync.util[0m :: [35mFINISHED: Sync metadata for mysql Database 2 'ProdRpt' (1 mins)[0m
+[36mmb_1       |[0m 2020-07-14T15:01:29.811097441Z 07-14 15:01:29 [1mDEBUG sync.util[0m :: Sync operations in flight: {:analyze #{2}}
+[36mmb_1       |[0m 2020-07-14T15:01:29.816576887Z 07-14 15:01:29 [1mINFO sync.util[0m :: [35mSTARTING: Analyze data for mysql Database 2 'ProdRpt'[0m
+[36mmb_1       |[0m 2020-07-14T15:01:29.874981373Z 07-14 15:01:29 [1mDEBUG sync.util[0m :: [35mSTARTING: step 'fingerprint-fields' for mysql Database 2 'ProdRpt'[0m
+[36mmb_1       |[0m 2020-07-14T15:01:30.080704086Z 07-14 15:01:30 [1mINFO middleware.cache[0m :: Using query processor cache backend: [34m:db[0m 💾
+[36mmb_1       |[0m 2020-07-14T15:02:03.130079439Z 07-14 15:02:03 [1mERROR generic-sql.query-processor[0m :: Failed to set timezone: 
+[36mmb_1       |[0m 2020-07-14T15:02:03.130166039Z  SQLException:
+[36mmb_1       |[0m 2020-07-14T15:02:03.130200240Z  Message: Connections could not be acquired from the underlying database!
+[36mmb_1       |[0m 2020-07-14T15:02:03.130223540Z  SQLState: null
+[36mmb_1       |[0m 2020-07-14T15:02:03.130245840Z  Error Code: 0
+[36mmb_1       |[0m 2020-07-14T15:02:03.130338441Z 
+[36mmb_1       |[0m 2020-07-14T15:02:03.158068172Z SQLException:
+[36mmb_1       |[0m 2020-07-14T15:02:03.158276774Z  Message: Connections could not be acquired from the underlying database!
+[36mmb_1       |[0m 2020-07-14T15:02:03.158301774Z  SQLState: null
+[36mmb_1       |[0m 2020-07-14T15:02:03.158324074Z  Error Code: 0
+[36mmb_1       |[0m 2020-07-14T15:02:03.160140389Z 07-14 15:02:03 [1mERROR generic-sql.query-processor[0m :: nil
+[36mmb_1       |[0m 2020-07-14T15:02:32.418323141Z 07-14 15:02:32 [1mERROR generic-sql.query-processor[0m :: Failed to set timezone: 
+[36mmb_1       |[0m 2020-07-14T15:02:32.418443842Z  SQLException:
+[36mmb_1       |[0m 2020-07-14T15:02:32.418468943Z  Message: Connections could not be acquired from the underlying database!
+[36mmb_1       |[0m 2020-07-14T15:02:32.418491843Z  SQLState: null
+[36mmb_1       |[0m 2020-07-14T15:02:32.418513743Z  Error Code: 0
+[36mmb_1       |[0m 2020-07-14T15:02:32.418535643Z 
+[36mmb_1       |[0m 2020-07-14T15:02:32.421419367Z SQLException:
+[36mmb_1       |[0m 2020-07-14T15:02:32.421497268Z  Message: An SQLException was provoked by the following failure: com.mchange.v2.resourcepool.ResourcePoolException: A ResourcePool cannot acquire a new resource -- the factory or source appears to be down.
+[36mmb_1       |[0m 2020-07-14T15:02:32.421599669Z  SQLState: null
+[36mmb_1       |[0m 2020-07-14T15:02:32.421626869Z  Error Code: 0
+[36mmb_1       |[0m 2020-07-14T15:02:32.422978480Z 07-14 15:02:32 [1mERROR generic-sql.query-processor[0m :: nil
+[36mmb_1       |[0m 2020-07-14T15:03:01.599397890Z 07-14 15:03:01 [1mERROR generic-sql.query-processor[0m :: Failed to set timezone: 
+[36mmb_1       |[0m 2020-07-14T15:03:01.599455190Z  SQLException:
+[36mmb_1       |[0m 2020-07-14T15:03:01.599469190Z  Message: Connections could not be acquired from the underlying database!
+[36mmb_1       |[0m 2020-07-14T15:03:01.599498590Z  SQLState: null
+[36mmb_1       |[0m 2020-07-14T15:03:01.599511191Z  Error Code: 0
+[36mmb_1       |[0m 2020-07-14T15:03:01.599523091Z 
+[36mmb_1       |[0m 2020-07-14T15:04:21.816308710Z 07-14 15:04:21 [1mINFO metabase.core[0m :: Metabase Shutting Down ...
+[36mmb_1       |[0m 2020-07-14T15:04:21.855339537Z 07-14 15:04:21 [1mINFO metabase.core[0m :: Metabase Shutdown COMPLETE

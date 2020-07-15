@@ -4,6 +4,9 @@
 status: inwork
 
 
+Comment: i don't like the long list of env vars. I think I may switch to a template approach.
+
+
 purpose: 
 - use env vars
 
