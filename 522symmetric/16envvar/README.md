@@ -2,8 +2,9 @@
  
 #  Symmetricds replication two way - Mysql, corp and store1
 
-It is two syc. Corp is the original database and store1 is replicated from corp. Store1 is empty before the replication starts.
+It is two way sync. Corp is the original database and store1 is replicated from corp. Store1 is empty before the replication starts.
 
+Corp and store are internal names. The actual db names are configured. It's like saying Master and slave, but much more politicially correct.
 
 # Development Note
 
@@ -32,20 +33,18 @@ There are other ways to handle startup. Maybe the way below is not the best.
     docker-compose build
 
 
-3a.
-
-2020-07-10  indevelopment:
+3.
 
     cp example.env.sym .env.sym
 
-
-3.
-
-edit these files to suit your needs..
+4.
 
 edit .env.sym if needed.
 
-./conf/corp-000.template.properties
+edit these files to suit your needs..
+
+    ./conf/corp-000.template.properties
+    ./conf/store-001.template.properties
 
 Condider..
     jdbc:mysql://192.168.88.60:13306/itemdb
@@ -67,11 +66,11 @@ It uses wildcards.
     https://www.symmetricds.org/doc/3.12/html/user-guide.html#_trigger_wildcards
 
 
-Edit passwords in docker-compose.yml
+Edit any passwords, etc. in docker-compose.yml
 
 
 
-3b.
+5.
 
 You may need to do this if it is configured in the volumes of the sym service in docker-compose.yml..
 
@@ -90,11 +89,11 @@ If permissions don't allow the rmdir above, then run this..
 
 
 
-4.
+6.
 
     docker-compose up 
 
-5.
+7.
 
 # Initial load store node with data from corp
 #
@@ -108,12 +107,12 @@ It should say.. `Successfully enabled initial load for node 001`
 If not, then try again in a minute. I might not be ready yet.
 
 
-6.
+8.
 
 Done. Now edits in  corp show up or store1 are replicated to the other.
 
 
-7.
+9.
 
 Use adminer to view the mysql databases 
 
@@ -150,6 +149,8 @@ Change schema of a table.
     Change the schema of the table in corp using any way you chose to do it.
 
     docker-compose exec sym bash -c 'syms/bin/symadmin --engine corp-000 sync-triggers ; syms/bin/symadmin --engine corp-000 send-schema --node 001 qissues'
+
+where `qissues` it the table modified.
 
 
 

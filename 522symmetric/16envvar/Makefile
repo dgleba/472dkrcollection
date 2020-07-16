@@ -9,6 +9,7 @@ sysh:
 	docker-compose  run --rm sym bash
 
 
+# this doesn't stay, as I cant run the actual container directly since it has an error.
 fixinit:
 	# docker-compose  run  sym bash -c 'mkdir -p "/app2/_0-init-has-run-marker-directory"'
 	docker-compose  exec  sym bash -c 'mkdir -p "/app2/_0-init-has-run-marker-directory"'

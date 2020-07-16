@@ -15,11 +15,14 @@ services:
       # - "31416:31416"
       # - "31417:31417"
     volumes:
-      - ./engines/:/app/syms/engines
+      # Uncomment next line to view generated engine files. Don't edit them directly. Just look at them.
+      # - ./engines/:/app/syms/engines
       - ./datasys/db/:/app/syms/db
       - ./conf/:/app/conf
       # /app2 remains in container after restart, but if need be, to make saving the init.sh marker file more permanent, uncomment the next line.
       - ./datasys/app2/:/app2
+    #
+    # I had lots of fun learning about entrypoint and cmd with these...
     # entrypoint: /app/conf/entry.sh
     # entrypoint: bash /app/conf/wait2start.sh
     #
@@ -38,7 +41,7 @@ services:
       - MYSQL_DATABASE=itemdb
     ports:
       - "13306:3306"
-    command: --default-authentication-plugin=mysql_native_password
+    command: --default-authentication-plugin=mysql_native_password --explicit_defaults_for_timestamp 
     volumes:
       - ./mysql-source/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/
 
