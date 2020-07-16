@@ -1,0 +1,9 @@
+2020-07-16
+
+
+status: inwork
+
+
+purpose: 
+- use env var in .properties files
+

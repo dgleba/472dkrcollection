@@ -4,6 +4,9 @@
 status: inwork
 
 
+ideas: generates engine .properties files using bash and env vars.
+
+
 Comment: i don't like the long list of env vars. I think I may switch to a template approach.
 
 
