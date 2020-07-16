@@ -1,7 +1,12 @@
 2020-07-16
 
 
-status: inwork
+status: noworky
+
+https://sourceforge.net/p/symmetricds/discussion/739235/thread/44093f2375/
+
+java.sql.SQLException: Access denied for user 'root'@'192.168.0.1' (using password: YES)
+
 
 
 purpose: 

@@ -1,0 +1,13 @@
+2020-07-16
+
+
+status: work i think.
+
+
+ideas: generates engine .properties files using bash, template and env vars.
+
+
+purpose: 
+- use env vars
+- use template for engine properties files as I can't figure out how to use env vars directly in the engine file.
+
