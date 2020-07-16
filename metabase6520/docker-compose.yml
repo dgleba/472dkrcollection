@@ -7,7 +7,7 @@ services:
     image: metabase/metabase:v0.35.4
     restart: always
     ports:
-      - "6515:3000"
+      - "6520:3000"
     volumes:
       - ./data/mbdata:/mbdata
     env_file:
@@ -26,12 +26,12 @@ services:
     env_file:
       - .env
     ports:
-      - "6516:3306"
+      - "6521:3306"
     volumes:
       - ./sysdata/mysqldata/:/var/lib/mysql/ # folder for mysql's internal data files.
       - ./code:/code # folder for scripts, etc.
       - ./data/dbm/:/data/dbm # folder for exported data, etc.
-    command:  --explicit_defaults_for_timestamp --default-authentication-plugin=mysql_native_password
+    command:  --explicit_defaults_for_timestamp --default-authentication-plugin=mysql_native_password --innodb-file-per-table=1
     logging:
       driver: "json-file"
       options:
@@ -43,6 +43,6 @@ services:
     image: adminer:4.7
     restart: always
     ports:
-      - 6517:8080
+      - 6522:8080
 
 

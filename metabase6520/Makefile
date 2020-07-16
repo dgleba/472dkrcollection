@@ -4,6 +4,17 @@
 # Usage example:  make impa
 
 
+delmysqldata:
+	# Careful !!!!!!!!!!!!!!
+	echo sleeping 10..; sleep 10
+	docker-compose run --rm dbm \
+	bash -c 'export fold=/var/lib/mysql; chmod -R ugo+rwx "$${fold}"; ";'
+
+
+perm3:
+	docker-compose exec dbm \
+	bash -c 'export fold=/data; chmod -R ug+rwx "$${fold}"; chown -R 1000:33 "$${fold}";'
+
 
 tz:
 	# load timezone tables
@@ -17,8 +28,8 @@ impa:
 	# access denied...  docker exec -i metabase6152_mysql6152_1 mysql -uroot -p"$$MYSQL_ROOT_PASSWORD"  < /srv/dkr/data6152/metabasedb_mysqldump.sql
 	# works..
 	docker-compose   exec  dbm sh -c 'exec mysql  --user=root   \
-    -p"$$MYSQL_ROOT_PASSWORD" < /data/dbm/metabasedb_mysqldump_typ1.sql '
-  
+		-p"$$MYSQL_ROOT_PASSWORD" < /data/dbm/metabasedb_mysqldump_typ1.sql '
+
 
 
 mysh:
