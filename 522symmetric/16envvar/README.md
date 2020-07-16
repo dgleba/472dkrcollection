@@ -177,3 +177,33 @@ Try again in a minute. It might not be ready.
 It should say.. `Successfully enabled initial load for node 001`
 
 
+
+## 2.
+
+```
+sym_1      | [corp-000] - RegistrationService - Cannot register a client node unless a node group link exists so the registering node can receive configuration updates.  Please add a group link where the source group id is corp and the target group id is store
+sym_1      | [corp-000] - RegistrationUriHandler - store:001:? was not allowed to register.
+sym_1      | [store-001] - RegistrationService - Waiting for registration to be accepted by the server. Registration is not open.
+
+```
+
+Try step 5 in instructions above.
+
+
+## 3.
+
+```
+sym_1      | [store-001] - TriggerRouterService - Could not find any database tables matching '*,!ates*' in the datasource that is configured
+```
+
+This is normal. Step 7 in instructions may not have been run yet.
+
+
+
+## 4.
+
+```
+store1_1   | mbind: Operation not permitted
+```
+
+The mbind message is a mysql thing and not a problem.
