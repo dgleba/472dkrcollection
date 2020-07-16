@@ -1,0 +1,1022 @@
+Attaching to metabase6515_mb_1, metabase6515_adminer_1, metabase6515_dbm_1
+[36mmb_1       |[0m 07-14 15:39:56 [1mDEBUG plugins.classloader[0m :: Using NEWLY CREATED classloader as shared context classloader: clojure.lang.DynamicClassLoader@459f703f
+[36mmb_1       |[0m 07-14 15:39:57 [1mINFO metabase.util[0m :: Loading Metabase...
+[36mmb_1       |[0m 07-14 15:39:57 [1mINFO metabase.util[0m :: Maximum memory available to JVM: 1.9 GB
+[36mmb_1       |[0m 07-14 15:40:22 [1mINFO util.encryption[0m :: Saved credentials encryption is DISABLED for this Metabase instance. 🔓 
+[36mmb_1       |[0m  For more information, see https://metabase.com/docs/latest/operations-guide/encrypting-database-details-at-rest.html
+[36mmb_1       |[0m 07-14 15:40:35 [1mWARN metabase.core[0m :: WARNING: You have enabled namespace tracing, which could log sensitive information like db passwords.
+[36mmb_1       |[0m 07-14 15:40:35 [1mINFO metabase.core[0m :: Starting Metabase in STANDALONE mode
+[36mmb_1       |[0m 07-14 15:40:35 [1mINFO metabase.server[0m :: Launching Embedded Jetty Webserver with config: 
+[33madminer_1  |[0m PHP 7.3.11 Development Server started at Tue Jul 14 14:52:52 2020
+[33madminer_1  |[0m Listening on http://[::]:8080
+[33madminer_1  |[0m Document root is /var/www/html
+[33madminer_1  |[0m Press Ctrl-C to quit.
+[33madminer_1  |[0m PHP 7.3.11 Development Server started at Tue Jul 14 15:31:47 2020
+[33madminer_1  |[0m Listening on http://[::]:8080
+[33madminer_1  |[0m Document root is /var/www/html
+[33madminer_1  |[0m Press Ctrl-C to quit.
+[33madminer_1  |[0m PHP 7.3.11 Development Server started at Tue Jul 14 15:39:47 2020
+[33madminer_1  |[0m Listening on http://[::]:8080
+[33madminer_1  |[0m Document root is /var/www/html
+[33madminer_1  |[0m Press Ctrl-C to quit.
+[36mmb_1       |[0m  {:port 3000, :host "0.0.0.0"}
+[36mmb_1       |[0m 
+[36mmb_1       |[0m 07-14 15:40:35 [1mINFO metabase.core[0m :: Starting Metabase version v0.35.4 (b3080fa release-0.35.x) ...
+[36mmb_1       |[0m 07-14 15:40:36 [1mINFO metabase.core[0m :: System info:
+[36mmb_1       |[0m  {"file.encoding" "UTF-8",
+[36mmb_1       |[0m  "java.runtime.name" "OpenJDK Runtime Environment",
+[36mmb_1       |[0m  "java.runtime.version" "11.0.7+10",
+[36mmb_1       |[0m  "java.vendor" "AdoptOpenJDK",
+[36mmb_1       |[0m  "java.vendor.url" "https://adoptopenjdk.net/",
+[36mmb_1       |[0m  "java.version" "11.0.7",
+[36mmb_1       |[0m  "java.vm.name" "OpenJDK 64-Bit Server VM",
+[36mmb_1       |[0m  "java.vm.version" "11.0.7+10",
+[36mmb_1       |[0m  "os.name" "Linux",
+[36mmb_1       |[0m  "os.version" "4.4.0-159-generic",
+[36mmb_1       |[0m  "user.language" "en",
+[36mmb_1       |[0m  "user.timezone" "GMT"}
+[32mdbm_1      |[0m 2020-07-14T14:35:24.715194Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[32mdbm_1      |[0m 2020-07-14T14:35:24.729100Z 0 [Note] mysqld (mysqld 5.7.27) starting as process 1 ...
+[33mmetabase6515_adminer_1 exited with code 0
+[0m[32mdbm_1      |[0m 2020-07-14T14:35:24.767400Z 0 [Note] InnoDB: PUNCH HOLE support available
+[32mdbm_1      |[0m 2020-07-14T14:35:24.767468Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[32mdbm_1      |[0m 2020-07-14T14:35:24.767490Z 0 [Note] InnoDB: Uses event mutexes
+[32mdbm_1      |[0m 2020-07-14T14:35:24.767511Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[32mdbm_1      |[0m 2020-07-14T14:35:24.767531Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[32mdbm_1      |[0m 2020-07-14T14:35:24.767550Z 0 [Note] InnoDB: Using Linux native AIO
+[32mdbm_1      |[0m 2020-07-14T14:35:24.768632Z 0 [Note] InnoDB: Number of pools: 1
+[32mdbm_1      |[0m 2020-07-14T14:35:24.769073Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[32mdbm_1      |[0m 2020-07-14T14:35:24.787983Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[32mdbm_1      |[0m 2020-07-14T14:35:24.850510Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[32mdbm_1      |[0m 2020-07-14T14:35:24.858249Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[32mdbm_1      |[0m 2020-07-14T14:35:24.878191Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+[32mdbm_1      |[0m 2020-07-14T14:35:24.998042Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+[32mdbm_1      |[0m 2020-07-14T14:35:24.999077Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+[32mdbm_1      |[0m 2020-07-14T14:35:25.080427Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.092484Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.092671Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.093795Z 0 [Note] InnoDB: Waiting for purge to start
+[32mdbm_1      |[0m 2020-07-14T14:35:25.144239Z 0 [Note] InnoDB: 5.7.27 started; log sequence number 81819422
+[32mdbm_1      |[0m 2020-07-14T14:35:25.145142Z 0 [Note] Plugin 'FEDERATED' is disabled.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.145183Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+[32mdbm_1      |[0m 2020-07-14T14:35:25.192755Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.204862Z 0 [Warning] CA certificate ca.pem is self signed.
+[36mmb_1       |[0m 
+[36mmb_1       |[0m 07-14 15:40:36 [1mINFO metabase.plugins[0m :: Loading plugins in /plugins...
+[36mmb_1       |[0m [32mExtract file /modules/sparksql.metabase-driver.jar -> /plugins/sparksql.metabase-driver.jar took 1.7 s[0m
+[36mmb_1       |[0m [32mExtract file /modules/bigquery.metabase-driver.jar -> /plugins/bigquery.metabase-driver.jar took 20.1 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/sqlserver.metabase-driver.jar -> /plugins/sqlserver.metabase-driver.jar took 30.5 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/sqlite.metabase-driver.jar -> /plugins/sqlite.metabase-driver.jar took 140.3 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/vertica.metabase-driver.jar -> /plugins/vertica.metabase-driver.jar took 3.1 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/redshift.metabase-driver.jar -> /plugins/redshift.metabase-driver.jar took 59.9 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/presto.metabase-driver.jar -> /plugins/presto.metabase-driver.jar took 8.4 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/druid.metabase-driver.jar -> /plugins/druid.metabase-driver.jar took 17.3 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/mongo.metabase-driver.jar -> /plugins/mongo.metabase-driver.jar took 113.6 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/google.metabase-driver.jar -> /plugins/google.metabase-driver.jar took 25.4 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/oracle.metabase-driver.jar -> /plugins/oracle.metabase-driver.jar took 3.0 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/snowflake.metabase-driver.jar -> /plugins/snowflake.metabase-driver.jar took 630.8 ms[0m
+[36mmb_1       |[0m [32mExtract file /modules/googleanalytics.metabase-driver.jar -> /plugins/googleanalytics.metabase-driver.jar took 20.0 ms[0m
+[36mmb_1       |[0m 07-14 15:40:39 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :sqlite...[0m
+[36mmb_1       |[0m 07-14 15:40:40 [1mINFO driver.impl[0m :: [34mRegistered abstract driver :sql[0m  🚚
+[36mmb_1       |[0m [32mLoad driver :sql took 554.3 ms[0m
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253258Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253470Z 0 [Note] IPv6 is available.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253513Z 0 [Note]   - '::' resolves to '::';
+[32mdbm_1      |[0m 2020-07-14T14:35:25.253626Z 0 [Note] Server socket created on IP: '::'.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.268895Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mdbm_1      |[0m 2020-07-14T14:35:25.378142Z 0 [Note] Event Scheduler: Loaded 0 events
+[32mdbm_1      |[0m 2020-07-14T14:35:25.378896Z 0 [Note] mysqld: ready for connections.
+[32mdbm_1      |[0m Version: '5.7.27'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+[32mdbm_1      |[0m 2020-07-14T14:35:26.237268Z 0 [Note] InnoDB: Buffer pool(s) load completed at 200714 14:35:26
+[36mmb_1       |[0m 07-14 15:40:40 [1mINFO driver.impl[0m :: [34mRegistered abstract driver :sql-jdbc[0m (parents: [:sql]) 🚚
+[36mmb_1       |[0m [32mLoad driver :sql-jdbc took 1.0 s[0m
+[36mmb_1       |[0m 07-14 15:40:40 [1mINFO driver.impl[0m :: [34mRegistered driver :sqlite[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Plugin 'Metabase BigQuery Driver' depends on plugin 'Metabase Google Drivers Shared Dependencies'
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Metabase BigQuery Driver dependency {:plugin Metabase Google Drivers Shared Dependencies} satisfied? false
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: [33mPlugins with unsatisfied deps: ["Metabase BigQuery Driver"][0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Plugin 'Metabase Google Analytics Driver' depends on plugin 'Metabase Google Drivers Shared Dependencies'
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Metabase Google Analytics Driver dependency {:plugin Metabase Google Drivers Shared Dependencies} satisfied? false
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: [33mPlugins with unsatisfied deps: ["Metabase Google Analytics Driver" "Metabase BigQuery Driver"][0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :redshift...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :postgres[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m [32mLoad driver :postgres took 127.3 ms[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :redshift[0m (parents: [:postgres]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :druid...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :druid[0m  🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: [31mMetabase cannot initialize plugin Metabase Oracle Driver due to required dependencies.[0m Metabase requires the Oracle JDBC driver in order to connect to Oracle databases, but we can't ship it as part of Metabase due to licensing restrictions. See https://metabase.com/docs/latest/administration-guide/databases/oracle.html for more details.
+[36mmb_1       |[0m 
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Metabase Oracle Driver dependency {:class oracle.jdbc.OracleDriver} satisfied? false
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: [33mPlugins with unsatisfied deps: ["Metabase Google Analytics Driver" "Metabase Oracle Driver" "Metabase BigQuery Driver"][0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :sqlserver...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :sqlserver[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :google...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered abstract driver :google[0m  🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Metabase Google Analytics Driver dependency {:plugin Metabase Google Drivers Shared Dependencies} satisfied? true
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Metabase BigQuery Driver dependency {:plugin Metabase Google Drivers Shared Dependencies} satisfied? true
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.initialize[0m :: [33mDependencies satisfied; these plugins will now be loaded: ["Metabase BigQuery Driver" "Metabase Google Analytics Driver"][0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :bigquery...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :bigquery[0m (parents: [:sql :google]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :googleanalytics...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :googleanalytics[0m (parents: [:google]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :mongo...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :mongo[0m  🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: [31mMetabase cannot initialize plugin Metabase Vertica Driver due to required dependencies.[0m Metabase requires the Vertica JDBC driver in order to connect to Vertica databases, but we can't ship it as part of Metabase due to licensing restrictions. See https://metabase.com/docs/latest/administration-guide/databases/vertica.html for more details.
+[36mmb_1       |[0m 
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: Metabase Vertica Driver dependency {:class com.vertica.jdbc.Driver} satisfied? false
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO plugins.dependencies[0m :: [33mPlugins with unsatisfied deps: ["Metabase Vertica Driver" "Metabase Oracle Driver"][0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :snowflake...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :snowflake[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :presto...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :presto[0m (parents: [:sql]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :hive-like...[0m
+[32mdbm_1      |[0m 2020-07-14T14:52:23.733500Z 19 [Note] Aborted connection 19 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.733530Z 17 [Note] Aborted connection 17 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.733948Z 18 [Note] Aborted connection 18 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.733980Z 16 [Note] Aborted connection 16 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.734418Z 15 [Note] Aborted connection 15 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.735284Z 14 [Note] Aborted connection 14 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.735611Z 13 [Note] Aborted connection 13 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.735948Z 11 [Note] Aborted connection 11 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.736216Z 10 [Note] Aborted connection 10 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.736524Z 9 [Note] Aborted connection 9 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.736565Z 12 [Note] Aborted connection 12 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.736912Z 7 [Note] Aborted connection 7 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.736964Z 8 [Note] Aborted connection 8 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.737281Z 6 [Note] Aborted connection 6 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T14:52:23.738743Z 5 [Note] Aborted connection 5 to db: 'metabasedb' user: 'muser' host: '192.168.112.3' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:04:22.413024Z 27 [Note] Aborted connection 27 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered abstract driver :hive-like[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mDEBUG plugins.lazy-loaded-driver[0m :: [35mRegistering lazy loading driver :sparksql...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :sparksql[0m (parents: [:hive-like]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :h2[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [34mRegistered driver :mysql[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO metabase.core[0m :: Setting up and migrating Metabase DB. Please sit tight, this may take a minute...
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO metabase.db[0m :: [36mVerifying mysql Database Connection ...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [33mInitializing driver :sql...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [33mInitializing driver :sql-jdbc...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO driver.impl[0m :: [33mInitializing driver :mysql...[0m
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO metabase.db[0m :: Successfully verified MySQL 5.7.27 application database connection. ✅
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO metabase.db[0m :: Running Database Migrations...
+[36mmb_1       |[0m 07-14 15:40:41 [1mINFO metabase.db[0m :: Setting up Liquibase...
+[36mmb_1       |[0m 07-14 15:40:42 [1mINFO metabase.db[0m :: Liquibase is ready.
+[36mmb_1       |[0m 07-14 15:40:42 [1mINFO db.liquibase[0m :: Checking if Database has unrun migrations...
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mINFO db.liquibase[0m :: Database has unrun migrations. Waiting for migration lock to be cleared...
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mINFO db.liquibase[0m :: Migration lock is cleared. Running migrations...
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:40:46 [1mWARN changelog.DatabaseChangeLog[0m :: modifyDataType will lose primary key/autoincrement/not null settings for mysql.  Use <sql> and re-specify all configuration if this is the case
+[36mmb_1       |[0m 07-14 15:41:22 [1mINFO metabase.db[0m :: Database Migrations Current ...  ✅
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO db.migrations[0m :: Running all necessary data migrations, this may take a minute.
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO db.migrations[0m :: Finished running data migrations.
+[36mmb_1       |[0m [32mDatabase setup took 41.7 s[0m
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.activity-feed[0m 👂
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.dependencies[0m 👂
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.driver-notifications[0m 👂
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.last-login[0m 👂
+[32mdbm_1      |[0m 2020-07-14T15:04:22.413415Z 26 [Note] Aborted connection 26 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:04:22.413784Z 25 [Note] Aborted connection 25 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:04:23.052269Z 0 [Note] Giving 0 client threads a chance to die gracefully
+[32mdbm_1      |[0m 2020-07-14T15:04:23.052381Z 0 [Note] Shutting down slave threads
+[32mdbm_1      |[0m 2020-07-14T15:04:23.052403Z 0 [Note] Forcefully disconnecting 0 remaining clients
+[32mdbm_1      |[0m 2020-07-14T15:04:23.052427Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+[32mdbm_1      |[0m 2020-07-14T15:04:23.052722Z 0 [Note] Binlog end
+[32mdbm_1      |[0m 2020-07-14T15:04:23.056791Z 0 [Note] Shutting down plugin 'ngram'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.056934Z 0 [Note] Shutting down plugin 'partition'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.056996Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057077Z 0 [Note] Shutting down plugin 'ARCHIVE'
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.metabot-lifecycle[0m 👂
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.notifications[0m 👂
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.revision[0m 👂
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.sync-database[0m 👂
+[36mmb_1       |[0m 07-14 15:41:23 [1mINFO metabase.events[0m :: Starting events listener: [34mmetabase.events.view-log[0m 👂
+[36mmb_1       |[0m 07-14 15:41:24 [1mINFO metabase.task[0m :: Initializing task [32mSyncDatabases[0m 📆
+[36mmb_1       |[0m 07-14 15:41:25 [1mINFO metabase.task[0m :: Initializing task [32mCheckForNewVersions[0m 📆
+[36mmb_1       |[0m 07-14 15:41:25 [1mINFO metabase.task[0m :: Initializing task [32mSendAnonymousUsageStats[0m 📆
+[36mmb_1       |[0m 07-14 15:41:25 [1mINFO metabase.task[0m :: Initializing task [32mSendAbandomentEmails[0m 📆
+[36mmb_1       |[0m 07-14 15:41:25 [1mINFO metabase.task[0m :: Initializing task [32mSendPulses[0m 📆
+[36mmb_1       |[0m 07-14 15:41:26 [1mINFO metabase.task[0m :: Initializing task [32mSendFollowUpEmails[0m 📆
+[36mmb_1       |[0m 07-14 15:41:26 [1mINFO metabase.task[0m :: Initializing task [32mTaskHistoryCleanup[0m 📆
+[36mmb_1       |[0m 07-14 15:41:26 [1mINFO metabase.core[0m :: Metabase Initialization COMPLETE
+[36mmb_1       |[0m 07-14 15:42:00 [1mWARN middleware.log[0m :: [31mDELETE /api/session 404 39.4 ms (1 DB calls) 
+[36mmb_1       |[0m "Not found."
+[36mmb_1       |[0m [0m
+[36mmb_1       |[0m 07-14 15:42:00 [1mDEBUG middleware.log[0m :: [31mGET /api/activity 401 20.9 ms (0 DB calls) 
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057097Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057320Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057397Z 0 [Note] Shutting down plugin 'MyISAM'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057432Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+[36mmb_1       |[0m "Unauthenticated"
+[36mmb_1       |[0m [0m
+[36mmb_1       |[0m 07-14 15:42:00 [1mDEBUG middleware.log[0m :: [31mGET /api/activity/recent_views 401 25.4 ms (0 DB calls) 
+[36mmb_1       |[0m "Unauthenticated"
+[36mmb_1       |[0m [0m
+[36mmb_1       |[0m 07-14 15:42:00 [1mWARN middleware.log[0m :: [31mGET /api/setup/admin_checklist 403 37.3 ms (0 DB calls) 
+[36mmb_1       |[0m "You don't have permissions to do that."
+[36mmb_1       |[0m [0m
+[36mmb_1       |[0m 07-14 15:42:03 [1mDEBUG middleware.log[0m :: [32mPOST /api/session 200 415.8 ms (2 DB calls) App DB connections: 1/4 Jetty threads: 3/50 (4 idle, 0 queued) (41 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:04 [1mDEBUG middleware.log[0m :: [32mGET /api/user/current 200 781.0 ms (7 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (41 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:04 [1mDEBUG middleware.log[0m :: [32mGET /api/activity/recent_views 200 189.1 ms (1 DB calls) App DB connections: 1/4 Jetty threads: 5/50 (2 idle, 0 queued) (42 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:05 [1mDEBUG middleware.log[0m :: [32mGET /api/setup/admin_checklist 200 283.3 ms (11 DB calls) App DB connections: 0/4 Jetty threads: 5/50 (2 idle, 0 queued) (42 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:05 [1mDEBUG middleware.log[0m :: [32mGET /api/activity 200 328.1 ms (6 DB calls) App DB connections: 0/4 Jetty threads: 4/50 (2 idle, 0 queued) (44 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:07 [1mDEBUG middleware.log[0m :: [32mGET /api/dashboard 200 207.9 ms (5 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (44 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:13 [1mDEBUG middleware.log[0m :: [32mGET /api/dashboard/46 200 366.6 ms (9 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (44 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:13 [1mERROR sql-jdbc.execute[0m :: Failed to set timezone 'US/Eastern' for :mysql database
+[36mmb_1       |[0m java.sql.SQLException: (conn=2146) Unknown or incorrect time zone: 'US/Eastern'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057473Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057493Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057562Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057581Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057598Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057638Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057657Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057726Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057745Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057763Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057803Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057823Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057891Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057911Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057929Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057970Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.057989Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:262)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getException(ExceptionMapper.java:164)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:258)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:349)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.execute(MariaDbStatement.java:484)
+[36mmb_1       |[0m 	at com.mchange.v2.c3p0.impl.NewProxyStatement.execute(NewProxyStatement.java:75)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invokeStatic(execute.clj:128)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invoke(execute.clj:113)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invokeStatic(execute.clj:160)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invoke(execute.clj:155)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:239)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invokeStatic(execute.clj:386)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invoke(execute.clj:377)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invokeStatic(sql_jdbc.clj:49)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invoke(sql_jdbc.clj:47)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:244)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invokeStatic(context.clj:59)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invoke(context.clj:48)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invokeStatic(default.clj:69)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invoke(default.clj:67)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invokeStatic(context.clj:45)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invoke(context.clj:39)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invokeStatic(reducible.clj:34)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invoke(reducible.clj:31)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.mbql_to_native$mbql__GT_native$fn__43149.invoke(mbql_to_native.clj:26)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.check_features$check_features$fn__42463.invoke(check_features.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.optimize_datetime_filters$optimize_datetime_filters$fn__43314.invoke(optimize_datetime_filters.clj:133)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.wrap_value_literals$wrap_value_literals$fn__47282.invoke(wrap_value_literals.clj:137)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.annotate$add_column_info$fn__41084.invoke(annotate.clj:577)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.permissions$check_query_permissions$fn__42338.invoke(permissions.clj:64)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.pre_alias_aggregations$pre_alias_aggregations$fn__43813.invoke(pre_alias_aggregations.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cumulative_aggregations$handle_cumulative_aggregations$fn__42536.invoke(cumulative_aggregations.clj:61)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_joins$resolve_joins$fn__44345.invoke(resolve_joins.clj:183)
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058058Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058155Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058179Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058197Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058273Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058291Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058309Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058351Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058430Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058449Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058466Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058507Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058527Z 0 [Note] Shutting down plugin 'InnoDB'
+[32mdbm_1      |[0m 2020-07-14T15:04:23.058903Z 0 [Note] InnoDB: FTS optimize thread exiting.
+[32mdbm_1      |[0m 2020-07-14T15:04:23.059708Z 0 [Note] InnoDB: Starting shutdown...
+[32mdbm_1      |[0m 2020-07-14T15:04:23.160238Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+[32mdbm_1      |[0m 2020-07-14T15:04:23.161506Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 200714 15:04:23
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_joins$add_implicit_joins$fn__39271.invoke(add_implicit_joins.clj:245)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.limit$limit$fn__43135.invoke(limit.clj:38)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.format_rows$format_rows$fn__43116.invoke(format_rows.clj:81)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.desugar$desugar$fn__42602.invoke(desugar.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.binning$update_binning_strategy$fn__41628.invoke(binning.clj:229)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_fields$resolve_fields$fn__42144.invoke(resolve_fields.clj:24)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_dimension_projections$add_remapping$fn__38807.invoke(add_dimension_projections.clj:270)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_clauses$add_implicit_clauses$fn__39027.invoke(add_implicit_clauses.clj:147)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_source_metadata$add_source_metadata_for_source_queries$fn__39420.invoke(add_source_metadata.clj:105)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.reconcile_breakout_and_order_by_bucketing$reconcile_breakout_and_order_by_bucketing$fn__44010.invoke(reconcile_breakout_and_order_by_bucketing.clj:98)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.auto_bucket_datetimes$auto_bucket_datetimes$fn__41269.invoke(auto_bucket_datetimes.clj:125)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_source_table$resolve_source_tables$fn__42191.invoke(resolve_source_table.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.parameters$substitute_parameters$fn__43795.invoke(parameters.clj:97)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_referenced$resolve_referenced_card_resources$fn__42243.invoke(resolve_referenced.clj:80)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.expand_macros$expand_macros$fn__42858.invoke(expand_macros.clj:158)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_timezone_info$add_timezone_info$fn__39451.invoke(add_timezone_info.clj:15)
+[32mdbm_1      |[0m 2020-07-14T15:04:24.759736Z 0 [Note] InnoDB: Shutdown completed; log sequence number 88386863
+[32mdbm_1      |[0m 2020-07-14T15:04:24.769486Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+[32mdbm_1      |[0m 2020-07-14T15:04:24.769590Z 0 [Note] Shutting down plugin 'MEMORY'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.769617Z 0 [Note] Shutting down plugin 'CSV'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.769639Z 0 [Note] Shutting down plugin 'sha256_password'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.769656Z 0 [Note] Shutting down plugin 'mysql_native_password'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.771730Z 0 [Note] Shutting down plugin 'binlog'
+[32mdbm_1      |[0m 2020-07-14T15:04:24.779530Z 0 [Note] mysqld: Shutdown complete
+[32mdbm_1      |[0m 
+[32mdbm_1      |[0m 2020-07-14T15:31:47.699053Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[32mdbm_1      |[0m 2020-07-14T15:31:47.704726Z 0 [Note] mysqld (mysqld 5.7.27) starting as process 1 ...
+[32mdbm_1      |[0m 2020-07-14T15:31:47.733225Z 0 [Note] InnoDB: PUNCH HOLE support available
+[32mdbm_1      |[0m 2020-07-14T15:31:47.733332Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[32mdbm_1      |[0m 2020-07-14T15:31:47.733357Z 0 [Note] InnoDB: Uses event mutexes
+[32mdbm_1      |[0m 2020-07-14T15:31:47.733380Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[32mdbm_1      |[0m 2020-07-14T15:31:47.733402Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[32mdbm_1      |[0m 2020-07-14T15:31:47.733423Z 0 [Note] InnoDB: Using Linux native AIO
+[32mdbm_1      |[0m 2020-07-14T15:31:47.734294Z 0 [Note] InnoDB: Number of pools: 1
+[32mdbm_1      |[0m 2020-07-14T15:31:47.734655Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[32mdbm_1      |[0m 2020-07-14T15:31:47.750932Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[32mdbm_1      |[0m 2020-07-14T15:31:47.845756Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[32mdbm_1      |[0m 2020-07-14T15:31:47.856070Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[32mdbm_1      |[0m 2020-07-14T15:31:47.870452Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+[32mdbm_1      |[0m 2020-07-14T15:31:47.919183Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+[32mdbm_1      |[0m 2020-07-14T15:31:47.919831Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+[32mdbm_1      |[0m 2020-07-14T15:31:47.952669Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+[32mdbm_1      |[0m 2020-07-14T15:31:47.955818Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+[32mdbm_1      |[0m 2020-07-14T15:31:47.956135Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+[32mdbm_1      |[0m 2020-07-14T15:31:47.957204Z 0 [Note] InnoDB: Waiting for purge to start
+[32mdbm_1      |[0m 2020-07-14T15:31:48.007823Z 0 [Note] InnoDB: 5.7.27 started; log sequence number 88386863
+[32mdbm_1      |[0m 2020-07-14T15:31:48.009119Z 0 [Note] Plugin 'FEDERATED' is disabled.
+[32mdbm_1      |[0m 2020-07-14T15:31:48.010177Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+[32mdbm_1      |[0m 2020-07-14T15:31:48.046498Z 0 [Note] InnoDB: Buffer pool(s) load completed at 200714 15:31:48
+[32mdbm_1      |[0m 2020-07-14T15:31:48.067324Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+[32mdbm_1      |[0m 2020-07-14T15:31:48.094656Z 0 [Warning] CA certificate ca.pem is self signed.
+[32mdbm_1      |[0m 2020-07-14T15:31:48.100386Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+[32mdbm_1      |[0m 2020-07-14T15:31:48.100775Z 0 [Note] IPv6 is available.
+[32mdbm_1      |[0m 2020-07-14T15:31:48.101129Z 0 [Note]   - '::' resolves to '::';
+[32mdbm_1      |[0m 2020-07-14T15:31:48.101580Z 0 [Note] Server socket created on IP: '::'.
+[32mdbm_1      |[0m 2020-07-14T15:31:48.106676Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[32mdbm_1      |[0m 2020-07-14T15:31:48.469879Z 0 [Note] Event Scheduler: Loaded 0 events
+[32mdbm_1      |[0m 2020-07-14T15:31:48.470669Z 0 [Note] mysqld: ready for connections.
+[32mdbm_1      |[0m Version: '5.7.27'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+[32mdbm_1      |[0m 2020-07-14T15:37:20.402314Z 7 [Note] Aborted connection 7 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:37:20.402610Z 10 [Note] Aborted connection 10 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:37:20.402789Z 6 [Note] Aborted connection 6 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:37:20.403088Z 5 [Note] Aborted connection 5 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:37:20.403155Z 9 [Note] Aborted connection 9 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:37:21.066515Z 0 [Note] Giving 0 client threads a chance to die gracefully
+[32mdbm_1      |[0m 2020-07-14T15:37:21.066586Z 0 [Note] Shutting down slave threads
+[32mdbm_1      |[0m 2020-07-14T15:37:21.066605Z 0 [Note] Forcefully disconnecting 0 remaining clients
+[32mdbm_1      |[0m 2020-07-14T15:37:21.066627Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+[32mdbm_1      |[0m 2020-07-14T15:37:21.066828Z 0 [Note] Binlog end
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068206Z 0 [Note] Shutting down plugin 'ngram'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068233Z 0 [Note] Shutting down plugin 'partition'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068249Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068266Z 0 [Note] Shutting down plugin 'ARCHIVE'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068282Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068339Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068356Z 0 [Note] Shutting down plugin 'MyISAM'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068383Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068399Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068414Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.splice_params_in_response$splice_params_in_response$fn__47166.invoke(splice_params_in_response.clj:32)
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068428Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068568Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068589Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068604Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068619Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068633Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068647Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068662Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068676Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068690Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068704Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068718Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068732Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068746Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068761Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068775Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068789Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068803Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068817Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021$fn__44025.invoke(resolve_database_and_driver.clj:33)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invokeStatic(driver.clj:61)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invoke(driver.clj:57)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021.invoke(resolve_database_and_driver.clj:27)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.fetch_source_query$resolve_card_id_source_tables$fn__43064.invoke(fetch_source_query.clj:243)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175$fn__47176.invoke(store.clj:11)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invokeStatic(store.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invoke(store.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175.invoke(store.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$maybe_return_cached_results$fn__42120.invoke(cache.clj:209)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.validate$validate_query$fn__47184.invoke(validate.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.normalize_query$normalize$fn__43162.invoke(normalize_query.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_rows_truncated$add_rows_truncated$fn__39289.invoke(add_rows_truncated.clj:36)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.results_metadata$record_and_return_metadata_BANG_$fn__47151.invoke(results_metadata.clj:128)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.constraints$add_default_userland_constraints$fn__42479.invoke(constraints.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.process_userland_query$process_userland_query$fn__43884.invoke(process_userland_query.clj:136)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.catch_exceptions$catch_exceptions$fn__42422.invoke(catch_exceptions.clj:174)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$thunk__38091.invoke(reducible.clj:101)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$fn__38093.invoke(reducible.clj:106)
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068831Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+[36mmb_1       |[0m 	at clojure.core$binding_conveyor_fn$fn__5754.invoke(core.clj:2030)
+[36mmb_1       |[0m 	at clojure.lang.AFn.call(AFn.java:18)
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068845Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068859Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068873Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068887Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068915Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068931Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068945Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.068959Z 0 [Note] Shutting down plugin 'InnoDB'
+[32mdbm_1      |[0m 2020-07-14T15:37:21.069308Z 0 [Note] InnoDB: FTS optimize thread exiting.
+[32mdbm_1      |[0m 2020-07-14T15:37:21.069624Z 0 [Note] InnoDB: Starting shutdown...
+[32mdbm_1      |[0m 2020-07-14T15:37:21.170032Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+[32mdbm_1      |[0m 2020-07-14T15:37:21.170680Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 200714 15:37:21
+[36mmb_1       |[0m 	at java.base/java.lang.Thread.run(Unknown Source)
+[36mmb_1       |[0m Caused by: java.sql.SQLException: Unknown or incorrect time zone: 'US/Eastern'
+[32mdbm_1      |[0m 2020-07-14T15:37:22.696691Z 0 [Note] InnoDB: Shutdown completed; log sequence number 88882584
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1599)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1461)
+[32mdbm_1      |[0m 2020-07-14T15:37:22.704846Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1424)
+[32mdbm_1      |[0m 2020-07-14T15:37:22.704955Z 0 [Note] Shutting down plugin 'MEMORY'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:178)
+[32mdbm_1      |[0m 2020-07-14T15:37:22.704978Z 0 [Note] Shutting down plugin 'CSV'
+[32mdbm_1      |[0m 2020-07-14T15:37:22.704996Z 0 [Note] Shutting down plugin 'sha256_password'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:343)
+[32mdbm_1      |[0m 2020-07-14T15:37:22.705012Z 0 [Note] Shutting down plugin 'mysql_native_password'
+[36mmb_1       |[0m 	... 71 more
+[32mdbm_1      |[0m 2020-07-14T15:37:22.705765Z 0 [Note] Shutting down plugin 'binlog'
+[32mdbm_1      |[0m 2020-07-14T15:37:22.708847Z 0 [Note] mysqld: Shutdown complete
+[36mmb_1       |[0m 07-14 15:42:13 [1mERROR sql-jdbc.execute[0m :: Failed to set timezone 'US/Eastern' for :mysql database
+[32mdbm_1      |[0m 
+[32mdbm_1      |[0m 2020-07-14T15:39:48.537780Z 0 [Warning] TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option (see documentation for more details).
+[32mdbm_1      |[0m 2020-07-14T15:39:48.544100Z 0 [Note] mysqld (mysqld 5.7.27) starting as process 1 ...
+[36mmb_1       |[0m java.sql.SQLException: (conn=2145) Unknown or incorrect time zone: 'US/Eastern'
+[32mdbm_1      |[0m 2020-07-14T15:39:48.552995Z 0 [Note] InnoDB: PUNCH HOLE support available
+[32mdbm_1      |[0m 2020-07-14T15:39:48.553045Z 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+[32mdbm_1      |[0m 2020-07-14T15:39:48.553063Z 0 [Note] InnoDB: Uses event mutexes
+[32mdbm_1      |[0m 2020-07-14T15:39:48.553079Z 0 [Note] InnoDB: GCC builtin __atomic_thread_fence() is used for memory barrier
+[32mdbm_1      |[0m 2020-07-14T15:39:48.553095Z 0 [Note] InnoDB: Compressed tables use zlib 1.2.11
+[32mdbm_1      |[0m 2020-07-14T15:39:48.553111Z 0 [Note] InnoDB: Using Linux native AIO
+[32mdbm_1      |[0m 2020-07-14T15:39:48.553823Z 0 [Note] InnoDB: Number of pools: 1
+[32mdbm_1      |[0m 2020-07-14T15:39:48.554114Z 0 [Note] InnoDB: Using CPU crc32 instructions
+[32mdbm_1      |[0m 2020-07-14T15:39:48.559174Z 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:262)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.591153Z 0 [Note] InnoDB: Completed initialization of buffer pool
+[32mdbm_1      |[0m 2020-07-14T15:39:48.597379Z 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
+[32mdbm_1      |[0m 2020-07-14T15:39:48.616728Z 0 [Note] InnoDB: Highest supported file format is Barracuda.
+[32mdbm_1      |[0m 2020-07-14T15:39:48.659382Z 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+[32mdbm_1      |[0m 2020-07-14T15:39:48.659533Z 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+[32mdbm_1      |[0m 2020-07-14T15:39:48.706489Z 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
+[32mdbm_1      |[0m 2020-07-14T15:39:48.709368Z 0 [Note] InnoDB: 96 redo rollback segment(s) found. 96 redo rollback segment(s) are active.
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getException(ExceptionMapper.java:164)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.709404Z 0 [Note] InnoDB: 32 non-redo rollback segment(s) are active.
+[32mdbm_1      |[0m 2020-07-14T15:39:48.714197Z 0 [Note] InnoDB: Waiting for purge to start
+[32mdbm_1      |[0m 2020-07-14T15:39:48.764644Z 0 [Note] InnoDB: 5.7.27 started; log sequence number 88882584
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:258)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.765179Z 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:349)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.765479Z 0 [Note] Plugin 'FEDERATED' is disabled.
+[32mdbm_1      |[0m 2020-07-14T15:39:48.787818Z 0 [Note] InnoDB: Buffer pool(s) load completed at 200714 15:39:48
+[32mdbm_1      |[0m 2020-07-14T15:39:48.789110Z 0 [Note] Found ca.pem, server-cert.pem and server-key.pem in data directory. Trying to enable SSL support using them.
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.execute(MariaDbStatement.java:484)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.789895Z 0 [Warning] CA certificate ca.pem is self signed.
+[32mdbm_1      |[0m 2020-07-14T15:39:48.794693Z 0 [Note] Server hostname (bind-address): '*'; port: 3306
+[36mmb_1       |[0m 	at com.mchange.v2.c3p0.impl.NewProxyStatement.execute(NewProxyStatement.java:75)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invokeStatic(execute.clj:128)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.795158Z 0 [Note] IPv6 is available.
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invoke(execute.clj:113)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invokeStatic(execute.clj:160)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.795273Z 0 [Note]   - '::' resolves to '::';
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invoke(execute.clj:155)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:239)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.795535Z 0 [Note] Server socket created on IP: '::'.
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invokeStatic(execute.clj:386)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invoke(execute.clj:377)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.802575Z 0 [Warning] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invokeStatic(sql_jdbc.clj:49)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.839213Z 0 [Note] Event Scheduler: Loaded 0 events
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invoke(sql_jdbc.clj:47)
+[32mdbm_1      |[0m 2020-07-14T15:39:48.841431Z 0 [Note] mysqld: ready for connections.
+[32mdbm_1      |[0m Version: '5.7.27'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server (GPL)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:244)
+[32mdbm_1      |[0m 2020-07-14T15:48:32.609271Z 14 [Note] Aborted connection 14 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invokeStatic(context.clj:59)
+[32mdbm_1      |[0m 2020-07-14T15:48:32.609722Z 12 [Note] Aborted connection 12 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:48:32.609961Z 11 [Note] Aborted connection 11 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:48:32.610323Z 13 [Note] Aborted connection 13 to db: 'metabasedb' user: 'muser' host: '192.168.112.4' (Got an error reading communication packets)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.264895Z 0 [Note] Giving 0 client threads a chance to die gracefully
+[32mdbm_1      |[0m 2020-07-14T15:48:33.265004Z 0 [Note] Shutting down slave threads
+[32mdbm_1      |[0m 2020-07-14T15:48:33.265020Z 0 [Note] Forcefully disconnecting 0 remaining clients
+[32mdbm_1      |[0m 2020-07-14T15:48:33.265039Z 0 [Note] Event Scheduler: Purging the queue. 0 events
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invoke(context.clj:48)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.265153Z 0 [Note] Binlog end
+[32mdbm_1      |[0m 2020-07-14T15:48:33.267937Z 0 [Note] Shutting down plugin 'ngram'
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invokeStatic(default.clj:69)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invoke(default.clj:67)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invokeStatic(context.clj:45)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.267965Z 0 [Note] Shutting down plugin 'partition'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.267981Z 0 [Note] Shutting down plugin 'BLACKHOLE'
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invoke(context.clj:39)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invokeStatic(reducible.clj:34)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.267997Z 0 [Note] Shutting down plugin 'ARCHIVE'
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invoke(reducible.clj:31)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.mbql_to_native$mbql__GT_native$fn__43149.invoke(mbql_to_native.clj:26)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268010Z 0 [Note] Shutting down plugin 'PERFORMANCE_SCHEMA'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.check_features$check_features$fn__42463.invoke(check_features.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.optimize_datetime_filters$optimize_datetime_filters$fn__43314.invoke(optimize_datetime_filters.clj:133)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268065Z 0 [Note] Shutting down plugin 'MRG_MYISAM'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.wrap_value_literals$wrap_value_literals$fn__47282.invoke(wrap_value_literals.clj:137)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.annotate$add_column_info$fn__41084.invoke(annotate.clj:577)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.permissions$check_query_permissions$fn__42338.invoke(permissions.clj:64)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.pre_alias_aggregations$pre_alias_aggregations$fn__43813.invoke(pre_alias_aggregations.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cumulative_aggregations$handle_cumulative_aggregations$fn__42536.invoke(cumulative_aggregations.clj:61)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_joins$resolve_joins$fn__44345.invoke(resolve_joins.clj:183)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268080Z 0 [Note] Shutting down plugin 'MyISAM'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_joins$add_implicit_joins$fn__39271.invoke(add_implicit_joins.clj:245)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.limit$limit$fn__43135.invoke(limit.clj:38)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268104Z 0 [Note] Shutting down plugin 'INNODB_SYS_VIRTUAL'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.format_rows$format_rows$fn__43116.invoke(format_rows.clj:81)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.desugar$desugar$fn__42602.invoke(desugar.clj:22)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268119Z 0 [Note] Shutting down plugin 'INNODB_SYS_DATAFILES'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.binning$update_binning_strategy$fn__41628.invoke(binning.clj:229)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_fields$resolve_fields$fn__42144.invoke(resolve_fields.clj:24)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_dimension_projections$add_remapping$fn__38807.invoke(add_dimension_projections.clj:270)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_clauses$add_implicit_clauses$fn__39027.invoke(add_implicit_clauses.clj:147)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268132Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESPACES'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268145Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN_COLS'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_source_metadata$add_source_metadata_for_source_queries$fn__39420.invoke(add_source_metadata.clj:105)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268158Z 0 [Note] Shutting down plugin 'INNODB_SYS_FOREIGN'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268172Z 0 [Note] Shutting down plugin 'INNODB_SYS_FIELDS'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.reconcile_breakout_and_order_by_bucketing$reconcile_breakout_and_order_by_bucketing$fn__44010.invoke(reconcile_breakout_and_order_by_bucketing.clj:98)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.auto_bucket_datetimes$auto_bucket_datetimes$fn__41269.invoke(auto_bucket_datetimes.clj:125)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268185Z 0 [Note] Shutting down plugin 'INNODB_SYS_COLUMNS'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268198Z 0 [Note] Shutting down plugin 'INNODB_SYS_INDEXES'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_source_table$resolve_source_tables$fn__42191.invoke(resolve_source_table.clj:46)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268211Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLESTATS'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268224Z 0 [Note] Shutting down plugin 'INNODB_SYS_TABLES'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.parameters$substitute_parameters$fn__43795.invoke(parameters.clj:97)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268237Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_TABLE'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_referenced$resolve_referenced_card_resources$fn__42243.invoke(resolve_referenced.clj:80)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.expand_macros$expand_macros$fn__42858.invoke(expand_macros.clj:158)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_timezone_info$add_timezone_info$fn__39451.invoke(add_timezone_info.clj:15)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.splice_params_in_response$splice_params_in_response$fn__47166.invoke(splice_params_in_response.clj:32)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021$fn__44025.invoke(resolve_database_and_driver.clj:33)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268249Z 0 [Note] Shutting down plugin 'INNODB_FT_INDEX_CACHE'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268262Z 0 [Note] Shutting down plugin 'INNODB_FT_CONFIG'
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invokeStatic(driver.clj:61)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invoke(driver.clj:57)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268275Z 0 [Note] Shutting down plugin 'INNODB_FT_BEING_DELETED'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021.invoke(resolve_database_and_driver.clj:27)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.fetch_source_query$resolve_card_id_source_tables$fn__43064.invoke(fetch_source_query.clj:243)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175$fn__47176.invoke(store.clj:11)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268288Z 0 [Note] Shutting down plugin 'INNODB_FT_DELETED'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268301Z 0 [Note] Shutting down plugin 'INNODB_FT_DEFAULT_STOPWORD'
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invokeStatic(store.clj:46)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268314Z 0 [Note] Shutting down plugin 'INNODB_METRICS'
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invoke(store.clj:40)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268327Z 0 [Note] Shutting down plugin 'INNODB_TEMP_TABLE_INFO'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175.invoke(store.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$maybe_return_cached_results$fn__42120.invoke(cache.clj:209)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.validate$validate_query$fn__47184.invoke(validate.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.normalize_query$normalize$fn__43162.invoke(normalize_query.clj:22)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268340Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_POOL_STATS'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_rows_truncated$add_rows_truncated$fn__39289.invoke(add_rows_truncated.clj:36)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.results_metadata$record_and_return_metadata_BANG_$fn__47151.invoke(results_metadata.clj:128)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.constraints$add_default_userland_constraints$fn__42479.invoke(constraints.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.process_userland_query$process_userland_query$fn__43884.invoke(process_userland_query.clj:136)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268353Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE_LRU'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268366Z 0 [Note] Shutting down plugin 'INNODB_BUFFER_PAGE'
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.catch_exceptions$catch_exceptions$fn__42422.invoke(catch_exceptions.clj:174)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268379Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX_RESET'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268392Z 0 [Note] Shutting down plugin 'INNODB_CMP_PER_INDEX'
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$thunk__38091.invoke(reducible.clj:101)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268404Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM_RESET'
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$fn__38093.invoke(reducible.clj:106)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268417Z 0 [Note] Shutting down plugin 'INNODB_CMPMEM'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268430Z 0 [Note] Shutting down plugin 'INNODB_CMP_RESET'
+[36mmb_1       |[0m 	at clojure.core$binding_conveyor_fn$fn__5754.invoke(core.clj:2030)
+[36mmb_1       |[0m 	at clojure.lang.AFn.call(AFn.java:18)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268443Z 0 [Note] Shutting down plugin 'INNODB_CMP'
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268455Z 0 [Note] Shutting down plugin 'INNODB_LOCK_WAITS'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268469Z 0 [Note] Shutting down plugin 'INNODB_LOCKS'
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268482Z 0 [Note] Shutting down plugin 'INNODB_TRX'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268494Z 0 [Note] Shutting down plugin 'InnoDB'
+[36mmb_1       |[0m 	at java.base/java.lang.Thread.run(Unknown Source)
+[36mmb_1       |[0m Caused by: java.sql.SQLException: Unknown or incorrect time zone: 'US/Eastern'
+[32mdbm_1      |[0m 2020-07-14T15:48:33.268767Z 0 [Note] InnoDB: FTS optimize thread exiting.
+[32mdbm_1      |[0m 2020-07-14T15:48:33.269859Z 0 [Note] InnoDB: Starting shutdown...
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1599)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.370540Z 0 [Note] InnoDB: Dumping buffer pool(s) to /var/lib/mysql/ib_buffer_pool
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1461)
+[32mdbm_1      |[0m 2020-07-14T15:48:33.376369Z 0 [Note] InnoDB: Buffer pool(s) dump completed at 200714 15:48:33
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1424)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:178)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:343)
+[36mmb_1       |[0m 	... 71 more
+[36mmb_1       |[0m 07-14 15:42:13 [1mERROR sql-jdbc.execute[0m :: Failed to set timezone 'US/Eastern' for :mysql database
+[36mmb_1       |[0m java.sql.SQLException: (conn=2147) Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:262)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getException(ExceptionMapper.java:164)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.517980Z 0 [Note] InnoDB: Shutdown completed; log sequence number 162020710
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:258)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:349)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.522966Z 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.execute(MariaDbStatement.java:484)
+[36mmb_1       |[0m 	at com.mchange.v2.c3p0.impl.NewProxyStatement.execute(NewProxyStatement.java:75)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invokeStatic(execute.clj:128)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invoke(execute.clj:113)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invokeStatic(execute.clj:160)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invoke(execute.clj:155)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:239)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invokeStatic(execute.clj:386)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.523049Z 0 [Note] Shutting down plugin 'MEMORY'
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invoke(execute.clj:377)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invokeStatic(sql_jdbc.clj:49)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.523071Z 0 [Note] Shutting down plugin 'CSV'
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invoke(sql_jdbc.clj:47)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:244)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invokeStatic(context.clj:59)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.523090Z 0 [Note] Shutting down plugin 'sha256_password'
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invoke(context.clj:48)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invokeStatic(default.clj:69)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.523105Z 0 [Note] Shutting down plugin 'mysql_native_password'
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invoke(default.clj:67)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invokeStatic(context.clj:45)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.524576Z 0 [Note] Shutting down plugin 'binlog'
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invoke(context.clj:39)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invokeStatic(reducible.clj:34)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invoke(reducible.clj:31)
+[32mdbm_1      |[0m 2020-07-14T15:48:34.529655Z 0 [Note] mysqld: Shutdown complete
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.mbql_to_native$mbql__GT_native$fn__43149.invoke(mbql_to_native.clj:26)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.check_features$check_features$fn__42463.invoke(check_features.clj:42)
+[32mdbm_1      |[0m 
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.optimize_datetime_filters$optimize_datetime_filters$fn__43314.invoke(optimize_datetime_filters.clj:133)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.wrap_value_literals$wrap_value_literals$fn__47282.invoke(wrap_value_literals.clj:137)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.annotate$add_column_info$fn__41084.invoke(annotate.clj:577)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.permissions$check_query_permissions$fn__42338.invoke(permissions.clj:64)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.pre_alias_aggregations$pre_alias_aggregations$fn__43813.invoke(pre_alias_aggregations.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cumulative_aggregations$handle_cumulative_aggregations$fn__42536.invoke(cumulative_aggregations.clj:61)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_joins$resolve_joins$fn__44345.invoke(resolve_joins.clj:183)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_joins$add_implicit_joins$fn__39271.invoke(add_implicit_joins.clj:245)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.limit$limit$fn__43135.invoke(limit.clj:38)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.format_rows$format_rows$fn__43116.invoke(format_rows.clj:81)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.desugar$desugar$fn__42602.invoke(desugar.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.binning$update_binning_strategy$fn__41628.invoke(binning.clj:229)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_fields$resolve_fields$fn__42144.invoke(resolve_fields.clj:24)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_dimension_projections$add_remapping$fn__38807.invoke(add_dimension_projections.clj:270)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_clauses$add_implicit_clauses$fn__39027.invoke(add_implicit_clauses.clj:147)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_source_metadata$add_source_metadata_for_source_queries$fn__39420.invoke(add_source_metadata.clj:105)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.reconcile_breakout_and_order_by_bucketing$reconcile_breakout_and_order_by_bucketing$fn__44010.invoke(reconcile_breakout_and_order_by_bucketing.clj:98)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.auto_bucket_datetimes$auto_bucket_datetimes$fn__41269.invoke(auto_bucket_datetimes.clj:125)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_source_table$resolve_source_tables$fn__42191.invoke(resolve_source_table.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.parameters$substitute_parameters$fn__43795.invoke(parameters.clj:97)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_referenced$resolve_referenced_card_resources$fn__42243.invoke(resolve_referenced.clj:80)
+[32mmetabase6515_dbm_1 exited with code 0
+[0m[36mmb_1       |[0m 	at metabase.query_processor.middleware.expand_macros$expand_macros$fn__42858.invoke(expand_macros.clj:158)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_timezone_info$add_timezone_info$fn__39451.invoke(add_timezone_info.clj:15)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.splice_params_in_response$splice_params_in_response$fn__47166.invoke(splice_params_in_response.clj:32)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021$fn__44025.invoke(resolve_database_and_driver.clj:33)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invokeStatic(driver.clj:61)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invoke(driver.clj:57)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021.invoke(resolve_database_and_driver.clj:27)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.fetch_source_query$resolve_card_id_source_tables$fn__43064.invoke(fetch_source_query.clj:243)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175$fn__47176.invoke(store.clj:11)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invokeStatic(store.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invoke(store.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175.invoke(store.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$maybe_return_cached_results$fn__42120.invoke(cache.clj:209)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.validate$validate_query$fn__47184.invoke(validate.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.normalize_query$normalize$fn__43162.invoke(normalize_query.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_rows_truncated$add_rows_truncated$fn__39289.invoke(add_rows_truncated.clj:36)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.results_metadata$record_and_return_metadata_BANG_$fn__47151.invoke(results_metadata.clj:128)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.constraints$add_default_userland_constraints$fn__42479.invoke(constraints.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.process_userland_query$process_userland_query$fn__43884.invoke(process_userland_query.clj:136)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.catch_exceptions$catch_exceptions$fn__42422.invoke(catch_exceptions.clj:174)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$thunk__38091.invoke(reducible.clj:101)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$fn__38093.invoke(reducible.clj:106)
+[36mmb_1       |[0m 	at clojure.core$binding_conveyor_fn$fn__5754.invoke(core.clj:2030)
+[36mmb_1       |[0m 	at clojure.lang.AFn.call(AFn.java:18)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.lang.Thread.run(Unknown Source)
+[36mmb_1       |[0m Caused by: java.sql.SQLException: Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1599)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1461)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1424)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:178)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:343)
+[36mmb_1       |[0m 	... 71 more
+[36mmb_1       |[0m 07-14 15:42:19 [1mDEBUG middleware.log[0m :: [32mPOST /api/card/762/query 202 [ASYNC: completed] 6.0 s (7 DB calls) App DB connections: 1/4 Jetty threads: 2/50 (4 idle, 0 queued) (55 total active threads) Queries in flight: 2 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:27 [1mDEBUG middleware.log[0m :: [32mPOST /api/card/764/query 202 [ASYNC: completed] 14.4 s (8 DB calls) App DB connections: 1/4 Jetty threads: 2/50 (4 idle, 0 queued) (58 total active threads) Queries in flight: 1 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:30 [1mDEBUG middleware.log[0m :: [32mPOST /api/card/814/query 202 [ASYNC: completed] 17.7 s (7 DB calls) App DB connections: 0/4 Jetty threads: 2/50 (4 idle, 0 queued) (59 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:42:59 [1mINFO driver.impl[0m :: [33mInitializing driver :h2...[0m
+[36mmb_1       |[0m 07-14 15:42:59 [1mINFO driver.impl[0m :: [33mInitializing driver :sqlserver...[0m
+[36mmb_1       |[0m 07-14 15:42:59 [1mINFO plugins.classloader[0m :: Added URL file:/plugins/sqlserver.metabase-driver.jar to classpath
+[36mmb_1       |[0m 07-14 15:42:59 [1mDEBUG plugins.init-steps[0m :: [34mLoading plugin namespace metabase.driver.sqlserver...[0m
+[36mmb_1       |[0m 07-14 15:42:59 [1mINFO driver.impl[0m :: [34mRegistered driver :sqlserver[0m (parents: [:sql-jdbc]) 🚚
+[36mmb_1       |[0m 07-14 15:43:00 [1mDEBUG plugins.jdbc-proxy[0m :: [34mRegistering JDBC proxy driver for class com.microsoft.sqlserver.jdbc.SQLServerDriver...[0m
+[36mmb_1       |[0m [32m[35mLoad lazy loading driver :sqlserver[0m took 897.5 ms[0m
+[36mmb_1       |[0m 07-14 15:43:02 [1mDEBUG middleware.log[0m :: [32mGET /api/database 200 4.6 s (58 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (59 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:43:03 [1mDEBUG middleware.log[0m :: [32mGET /api/card/762 200 19.1 ms (6 DB calls) App DB connections: 1/4 Jetty threads: 3/50 (4 idle, 0 queued) (59 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:43:03 [1mINFO api.card[0m :: Question's average execution duration is 5.8 s; using 'magic' TTL of 58.0 s 💾
+[36mmb_1       |[0m 07-14 15:43:03 [1mDEBUG middleware.log[0m :: [32mGET /api/database/7/fields 200 145.4 ms (6 DB calls) App DB connections: 0/4 Jetty threads: 4/50 (2 idle, 0 queued) (60 total active threads) Queries in flight: 1 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:43:04 [1mERROR sql-jdbc.execute[0m :: Failed to set timezone 'US/Eastern' for :mysql database
+[36mmb_1       |[0m java.sql.SQLException: (conn=2146) Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:262)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getException(ExceptionMapper.java:164)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:258)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:349)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.execute(MariaDbStatement.java:484)
+[36mmb_1       |[0m 	at com.mchange.v2.c3p0.impl.NewProxyStatement.execute(NewProxyStatement.java:75)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invokeStatic(execute.clj:128)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invoke(execute.clj:113)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invokeStatic(execute.clj:160)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invoke(execute.clj:155)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:239)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invokeStatic(execute.clj:386)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invoke(execute.clj:377)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invokeStatic(sql_jdbc.clj:49)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invoke(sql_jdbc.clj:47)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:244)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invokeStatic(context.clj:59)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invoke(context.clj:48)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invokeStatic(default.clj:69)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invoke(default.clj:67)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invokeStatic(context.clj:45)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invoke(context.clj:39)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invokeStatic(reducible.clj:34)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invoke(reducible.clj:31)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.mbql_to_native$mbql__GT_native$fn__43149.invoke(mbql_to_native.clj:26)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.check_features$check_features$fn__42463.invoke(check_features.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.optimize_datetime_filters$optimize_datetime_filters$fn__43314.invoke(optimize_datetime_filters.clj:133)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.wrap_value_literals$wrap_value_literals$fn__47282.invoke(wrap_value_literals.clj:137)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.annotate$add_column_info$fn__41084.invoke(annotate.clj:577)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.permissions$check_query_permissions$fn__42338.invoke(permissions.clj:64)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.pre_alias_aggregations$pre_alias_aggregations$fn__43813.invoke(pre_alias_aggregations.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cumulative_aggregations$handle_cumulative_aggregations$fn__42536.invoke(cumulative_aggregations.clj:61)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_joins$resolve_joins$fn__44345.invoke(resolve_joins.clj:183)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_joins$add_implicit_joins$fn__39271.invoke(add_implicit_joins.clj:245)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.limit$limit$fn__43135.invoke(limit.clj:38)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.format_rows$format_rows$fn__43116.invoke(format_rows.clj:81)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.desugar$desugar$fn__42602.invoke(desugar.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.binning$update_binning_strategy$fn__41628.invoke(binning.clj:229)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_fields$resolve_fields$fn__42144.invoke(resolve_fields.clj:24)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_dimension_projections$add_remapping$fn__38807.invoke(add_dimension_projections.clj:270)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_clauses$add_implicit_clauses$fn__39027.invoke(add_implicit_clauses.clj:147)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_source_metadata$add_source_metadata_for_source_queries$fn__39420.invoke(add_source_metadata.clj:105)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.reconcile_breakout_and_order_by_bucketing$reconcile_breakout_and_order_by_bucketing$fn__44010.invoke(reconcile_breakout_and_order_by_bucketing.clj:98)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.auto_bucket_datetimes$auto_bucket_datetimes$fn__41269.invoke(auto_bucket_datetimes.clj:125)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_source_table$resolve_source_tables$fn__42191.invoke(resolve_source_table.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.parameters$substitute_parameters$fn__43795.invoke(parameters.clj:97)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_referenced$resolve_referenced_card_resources$fn__42243.invoke(resolve_referenced.clj:80)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.expand_macros$expand_macros$fn__42858.invoke(expand_macros.clj:158)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_timezone_info$add_timezone_info$fn__39451.invoke(add_timezone_info.clj:15)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.splice_params_in_response$splice_params_in_response$fn__47166.invoke(splice_params_in_response.clj:32)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021$fn__44025.invoke(resolve_database_and_driver.clj:33)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invokeStatic(driver.clj:61)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invoke(driver.clj:57)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021.invoke(resolve_database_and_driver.clj:27)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.fetch_source_query$resolve_card_id_source_tables$fn__43064.invoke(fetch_source_query.clj:243)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175$fn__47176.invoke(store.clj:11)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invokeStatic(store.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invoke(store.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175.invoke(store.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$run_query_with_cache.invokeStatic(cache.clj:182)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$run_query_with_cache.invoke(cache.clj:173)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$maybe_return_cached_results$fn__42120.invoke(cache.clj:208)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.validate$validate_query$fn__47184.invoke(validate.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.normalize_query$normalize$fn__43162.invoke(normalize_query.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_rows_truncated$add_rows_truncated$fn__39289.invoke(add_rows_truncated.clj:36)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.results_metadata$record_and_return_metadata_BANG_$fn__47151.invoke(results_metadata.clj:128)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.constraints$add_default_userland_constraints$fn__42479.invoke(constraints.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.process_userland_query$process_userland_query$fn__43884.invoke(process_userland_query.clj:136)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.catch_exceptions$catch_exceptions$fn__42422.invoke(catch_exceptions.clj:174)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$thunk__38091.invoke(reducible.clj:101)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$fn__38093.invoke(reducible.clj:106)
+[36mmb_1       |[0m 	at clojure.core$binding_conveyor_fn$fn__5754.invoke(core.clj:2030)
+[36mmb_1       |[0m 	at clojure.lang.AFn.call(AFn.java:18)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.lang.Thread.run(Unknown Source)
+[36mmb_1       |[0m Caused by: java.sql.SQLException: Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1599)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1461)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1424)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:178)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:343)
+[36mmb_1       |[0m 	... 73 more
+[36mmb_1       |[0m 07-14 15:43:04 [1mWARN routes.index[0m :: Locale 'en' not found.
+[36mmb_1       |[0m 07-14 15:43:08 [1mINFO middleware.cache[0m :: Query took 4.3 s to run; miminum for cache eligibility is 60.0 s
+[36mmb_1       |[0m 07-14 15:43:08 [1mDEBUG middleware.log[0m :: [32mPOST /api/card/762/query 202 [ASYNC: completed] 4.5 s (7 DB calls) App DB connections: 0/4 Jetty threads: 2/50 (4 idle, 0 queued) (62 total active threads) Queries in flight: 1 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:44:20 [1mWARN middleware.log[0m :: [31mGET /api/label 404 3.3 ms (0 DB calls) 
+[36mmb_1       |[0m "API endpoint does not exist."
+[36mmb_1       |[0m [0m
+[36mmb_1       |[0m 07-14 15:44:20 [1mDEBUG middleware.log[0m :: [32mGET /api/collection 200 142.1 ms (3 DB calls) App DB connections: 1/4 Jetty threads: 4/50 (2 idle, 0 queued) (57 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:44:22 [1mDEBUG middleware.log[0m :: [32mGET /api/card 200 2.3 s (6 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (3 idle, 0 queued) (58 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:33 [1mDEBUG middleware.log[0m :: [32mGET /api/session/properties 200 68.8 ms (2 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:42 [1mDEBUG middleware.log[0m :: [32mGET /api/session/properties 200 30.0 ms (2 DB calls) App DB connections: 0/4 Jetty threads: 4/50 (4 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:49 [1mDEBUG middleware.log[0m :: [32mGET /api/session/properties 200 56.3 ms (2 DB calls) App DB connections: 2/4 Jetty threads: 5/50 (3 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:49 [1mDEBUG middleware.log[0m :: [32mGET /api/user/current 200 70.7 ms (3 DB calls) App DB connections: 0/4 Jetty threads: 5/50 (3 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:49 [1mDEBUG middleware.log[0m :: [32mGET /api/database 200 56.2 ms (3 DB calls) App DB connections: 0/4 Jetty threads: 4/50 (4 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:49 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/root/items 200 180.2 ms (6 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:49 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/root 200 14.8 ms (2 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (5 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:50 [1mDEBUG middleware.log[0m :: [32mGET /api/database 200 47.8 ms (3 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (5 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:46:52 [1mDEBUG middleware.log[0m :: [32mGET /api/automagic-dashboards/database/49/candidates 200 1.8 s (6 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (5 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:05 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/44 200 28.4 ms (3 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (5 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:05 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/44/items 200 33.3 ms (8 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (5 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:22 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/root 200 115.8 ms (2 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (5 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:34 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/2 200 17.3 ms (3 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:34 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/2/items 200 42.9 ms (8 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:48 [1mDEBUG middleware.log[0m :: [32mGET /api/card/762 200 43.2 ms (6 DB calls) App DB connections: 2/4 Jetty threads: 5/50 (1 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:48 [1mDEBUG middleware.log[0m :: [32mGET /api/alert/question/762 200 27.7 ms (1 DB calls) App DB connections: 0/4 Jetty threads: 5/50 (2 idle, 0 queued) (61 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:48 [1mINFO api.card[0m :: Question's average execution duration is 5.7 s; using 'magic' TTL of 57.0 s 💾
+[36mmb_1       |[0m 07-14 15:47:49 [1mERROR sql-jdbc.execute[0m :: Failed to set timezone 'US/Eastern' for :mysql database
+[36mmb_1       |[0m java.sql.SQLException: (conn=2146) Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:262)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getException(ExceptionMapper.java:164)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:258)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:349)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.execute(MariaDbStatement.java:484)
+[36mmb_1       |[0m 	at com.mchange.v2.c3p0.impl.NewProxyStatement.execute(NewProxyStatement.java:75)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invokeStatic(execute.clj:128)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invoke(execute.clj:113)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invokeStatic(execute.clj:160)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invoke(execute.clj:155)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:239)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invokeStatic(execute.clj:386)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invoke(execute.clj:377)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invokeStatic(sql_jdbc.clj:49)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invoke(sql_jdbc.clj:47)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:244)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invokeStatic(context.clj:59)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invoke(context.clj:48)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invokeStatic(default.clj:69)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invoke(default.clj:67)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invokeStatic(context.clj:45)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invoke(context.clj:39)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invokeStatic(reducible.clj:34)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invoke(reducible.clj:31)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.mbql_to_native$mbql__GT_native$fn__43149.invoke(mbql_to_native.clj:26)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.check_features$check_features$fn__42463.invoke(check_features.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.optimize_datetime_filters$optimize_datetime_filters$fn__43314.invoke(optimize_datetime_filters.clj:133)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.wrap_value_literals$wrap_value_literals$fn__47282.invoke(wrap_value_literals.clj:137)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.annotate$add_column_info$fn__41084.invoke(annotate.clj:577)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.permissions$check_query_permissions$fn__42338.invoke(permissions.clj:64)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.pre_alias_aggregations$pre_alias_aggregations$fn__43813.invoke(pre_alias_aggregations.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cumulative_aggregations$handle_cumulative_aggregations$fn__42536.invoke(cumulative_aggregations.clj:61)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_joins$resolve_joins$fn__44345.invoke(resolve_joins.clj:183)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_joins$add_implicit_joins$fn__39271.invoke(add_implicit_joins.clj:245)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.limit$limit$fn__43135.invoke(limit.clj:38)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.format_rows$format_rows$fn__43116.invoke(format_rows.clj:81)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.desugar$desugar$fn__42602.invoke(desugar.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.binning$update_binning_strategy$fn__41628.invoke(binning.clj:229)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_fields$resolve_fields$fn__42144.invoke(resolve_fields.clj:24)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_dimension_projections$add_remapping$fn__38807.invoke(add_dimension_projections.clj:270)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_clauses$add_implicit_clauses$fn__39027.invoke(add_implicit_clauses.clj:147)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_source_metadata$add_source_metadata_for_source_queries$fn__39420.invoke(add_source_metadata.clj:105)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.reconcile_breakout_and_order_by_bucketing$reconcile_breakout_and_order_by_bucketing$fn__44010.invoke(reconcile_breakout_and_order_by_bucketing.clj:98)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.auto_bucket_datetimes$auto_bucket_datetimes$fn__41269.invoke(auto_bucket_datetimes.clj:125)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_source_table$resolve_source_tables$fn__42191.invoke(resolve_source_table.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.parameters$substitute_parameters$fn__43795.invoke(parameters.clj:97)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_referenced$resolve_referenced_card_resources$fn__42243.invoke(resolve_referenced.clj:80)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.expand_macros$expand_macros$fn__42858.invoke(expand_macros.clj:158)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_timezone_info$add_timezone_info$fn__39451.invoke(add_timezone_info.clj:15)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.splice_params_in_response$splice_params_in_response$fn__47166.invoke(splice_params_in_response.clj:32)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021$fn__44025.invoke(resolve_database_and_driver.clj:33)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invokeStatic(driver.clj:61)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invoke(driver.clj:57)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021.invoke(resolve_database_and_driver.clj:27)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.fetch_source_query$resolve_card_id_source_tables$fn__43064.invoke(fetch_source_query.clj:243)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175$fn__47176.invoke(store.clj:11)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invokeStatic(store.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invoke(store.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175.invoke(store.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$run_query_with_cache.invokeStatic(cache.clj:182)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$run_query_with_cache.invoke(cache.clj:173)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$maybe_return_cached_results$fn__42120.invoke(cache.clj:208)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.validate$validate_query$fn__47184.invoke(validate.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.normalize_query$normalize$fn__43162.invoke(normalize_query.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_rows_truncated$add_rows_truncated$fn__39289.invoke(add_rows_truncated.clj:36)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.results_metadata$record_and_return_metadata_BANG_$fn__47151.invoke(results_metadata.clj:128)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.constraints$add_default_userland_constraints$fn__42479.invoke(constraints.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.process_userland_query$process_userland_query$fn__43884.invoke(process_userland_query.clj:136)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.catch_exceptions$catch_exceptions$fn__42422.invoke(catch_exceptions.clj:174)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$thunk__38091.invoke(reducible.clj:101)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$fn__38093.invoke(reducible.clj:106)
+[36mmb_1       |[0m 	at clojure.core$binding_conveyor_fn$fn__5754.invoke(core.clj:2030)
+[36mmb_1       |[0m 	at clojure.lang.AFn.call(AFn.java:18)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.lang.Thread.run(Unknown Source)
+[36mmb_1       |[0m Caused by: java.sql.SQLException: Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1599)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1461)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1424)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:178)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:343)
+[36mmb_1       |[0m 	... 73 more
+[36mmb_1       |[0m 07-14 15:47:49 [1mDEBUG middleware.log[0m :: [32mGET /api/database 200 634.8 ms (22 DB calls) App DB connections: 0/4 Jetty threads: 4/50 (2 idle, 0 queued) (62 total active threads) Queries in flight: 1 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:49 [1mDEBUG middleware.log[0m :: [32mGET /api/database 200 1.2 s (4 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (3 idle, 0 queued) (60 total active threads) Queries in flight: 1 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:51 [1mINFO middleware.cache[0m :: Query took 2.6 s to run; miminum for cache eligibility is 60.0 s
+[36mmb_1       |[0m 07-14 15:47:51 [1mDEBUG middleware.log[0m :: [32mPOST /api/card/762/query 202 [ASYNC: completed] 2.8 s (7 DB calls) App DB connections: 1/4 Jetty threads: 2/50 (4 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:47:55 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/2 200 41.0 ms (3 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:48:02 [1mDEBUG middleware.log[0m :: [32mGET /api/card/720 200 18.2 ms (6 DB calls) App DB connections: 1/4 Jetty threads: 3/50 (4 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:48:02 [1mDEBUG middleware.log[0m :: [32mGET /api/alert/question/720 200 6.2 ms (1 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (62 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:48:02 [1mERROR sql-jdbc.execute[0m :: Failed to set timezone 'US/Eastern' for :mysql database
+[36mmb_1       |[0m java.sql.SQLException: (conn=2146) Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.get(ExceptionMapper.java:262)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.util.exceptions.ExceptionMapper.getException(ExceptionMapper.java:164)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:258)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:349)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.execute(MariaDbStatement.java:484)
+[36mmb_1       |[0m 	at com.mchange.v2.c3p0.impl.NewProxyStatement.execute(NewProxyStatement.java:75)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invokeStatic(execute.clj:128)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$set_time_zone_if_supported_BANG_.invoke(execute.clj:113)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invokeStatic(execute.clj:160)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$fn__70769.invoke(execute.clj:155)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:239)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invokeStatic(execute.clj:386)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc.execute$execute_reducible_query.invoke(execute.clj:377)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invokeStatic(sql_jdbc.clj:49)
+[36mmb_1       |[0m 	at metabase.driver.sql_jdbc$fn__73052.invoke(sql_jdbc.clj:47)
+[36mmb_1       |[0m 	at clojure.lang.MultiFn.invoke(MultiFn.java:244)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invokeStatic(context.clj:59)
+[36mmb_1       |[0m 	at metabase.query_processor.context$executef.invoke(context.clj:48)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invokeStatic(default.clj:69)
+[36mmb_1       |[0m 	at metabase.query_processor.context.default$default_runf.invoke(default.clj:67)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invokeStatic(context.clj:45)
+[36mmb_1       |[0m 	at metabase.query_processor.context$runf.invoke(context.clj:39)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invokeStatic(reducible.clj:34)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$pivot.invoke(reducible.clj:31)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.mbql_to_native$mbql__GT_native$fn__43149.invoke(mbql_to_native.clj:26)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.check_features$check_features$fn__42463.invoke(check_features.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.optimize_datetime_filters$optimize_datetime_filters$fn__43314.invoke(optimize_datetime_filters.clj:133)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.wrap_value_literals$wrap_value_literals$fn__47282.invoke(wrap_value_literals.clj:137)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.annotate$add_column_info$fn__41084.invoke(annotate.clj:577)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.permissions$check_query_permissions$fn__42338.invoke(permissions.clj:64)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.pre_alias_aggregations$pre_alias_aggregations$fn__43813.invoke(pre_alias_aggregations.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cumulative_aggregations$handle_cumulative_aggregations$fn__42536.invoke(cumulative_aggregations.clj:61)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_joins$resolve_joins$fn__44345.invoke(resolve_joins.clj:183)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_joins$add_implicit_joins$fn__39271.invoke(add_implicit_joins.clj:245)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.limit$limit$fn__43135.invoke(limit.clj:38)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.format_rows$format_rows$fn__43116.invoke(format_rows.clj:81)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.desugar$desugar$fn__42602.invoke(desugar.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.binning$update_binning_strategy$fn__41628.invoke(binning.clj:229)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_fields$resolve_fields$fn__42144.invoke(resolve_fields.clj:24)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_dimension_projections$add_remapping$fn__38807.invoke(add_dimension_projections.clj:270)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_implicit_clauses$add_implicit_clauses$fn__39027.invoke(add_implicit_clauses.clj:147)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_source_metadata$add_source_metadata_for_source_queries$fn__39420.invoke(add_source_metadata.clj:105)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.reconcile_breakout_and_order_by_bucketing$reconcile_breakout_and_order_by_bucketing$fn__44010.invoke(reconcile_breakout_and_order_by_bucketing.clj:98)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.auto_bucket_datetimes$auto_bucket_datetimes$fn__41269.invoke(auto_bucket_datetimes.clj:125)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_source_table$resolve_source_tables$fn__42191.invoke(resolve_source_table.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.parameters$substitute_parameters$fn__43795.invoke(parameters.clj:97)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_referenced$resolve_referenced_card_resources$fn__42243.invoke(resolve_referenced.clj:80)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.expand_macros$expand_macros$fn__42858.invoke(expand_macros.clj:158)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_timezone_info$add_timezone_info$fn__39451.invoke(add_timezone_info.clj:15)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.splice_params_in_response$splice_params_in_response$fn__47166.invoke(splice_params_in_response.clj:32)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021$fn__44025.invoke(resolve_database_and_driver.clj:33)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invokeStatic(driver.clj:61)
+[36mmb_1       |[0m 	at metabase.driver$do_with_driver.invoke(driver.clj:57)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.resolve_database_and_driver$resolve_database_and_driver$fn__44021.invoke(resolve_database_and_driver.clj:27)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.fetch_source_query$resolve_card_id_source_tables$fn__43064.invoke(fetch_source_query.clj:243)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175$fn__47176.invoke(store.clj:11)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invokeStatic(store.clj:46)
+[36mmb_1       |[0m 	at metabase.query_processor.store$do_with_store.invoke(store.clj:40)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.store$initialize_store$fn__47175.invoke(store.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.cache$maybe_return_cached_results$fn__42120.invoke(cache.clj:209)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.validate$validate_query$fn__47184.invoke(validate.clj:10)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.normalize_query$normalize$fn__43162.invoke(normalize_query.clj:22)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.add_rows_truncated$add_rows_truncated$fn__39289.invoke(add_rows_truncated.clj:36)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.results_metadata$record_and_return_metadata_BANG_$fn__47151.invoke(results_metadata.clj:128)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.constraints$add_default_userland_constraints$fn__42479.invoke(constraints.clj:42)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.process_userland_query$process_userland_query$fn__43884.invoke(process_userland_query.clj:136)
+[36mmb_1       |[0m 	at metabase.query_processor.middleware.catch_exceptions$catch_exceptions$fn__42422.invoke(catch_exceptions.clj:174)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$thunk__38091.invoke(reducible.clj:101)
+[36mmb_1       |[0m 	at metabase.query_processor.reducible$async_qp$qp_STAR___38090$fn__38093.invoke(reducible.clj:106)
+[36mmb_1       |[0m 	at clojure.core$binding_conveyor_fn$fn__5754.invoke(core.clj:2030)
+[36mmb_1       |[0m 	at clojure.lang.AFn.call(AFn.java:18)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[36mmb_1       |[0m 	at java.base/java.lang.Thread.run(Unknown Source)
+[36mmb_1       |[0m Caused by: java.sql.SQLException: Unknown or incorrect time zone: 'US/Eastern'
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1599)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1461)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1424)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:178)
+[36mmb_1       |[0m 	at org.mariadb.jdbc.MariaDbStatement.executeInternal(MariaDbStatement.java:343)
+[36mmb_1       |[0m 	... 71 more
+[36mmb_1       |[0m 07-14 15:48:06 [1mDEBUG middleware.log[0m :: [32mPOST /api/card/720/query 202 [ASYNC: completed] 4.5 s (7 DB calls) App DB connections: 1/4 Jetty threads: 2/50 (4 idle, 0 queued) (63 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:48:13 [1mDEBUG middleware.log[0m :: [32mGET /api/collection/2 200 20.8 ms (3 DB calls) App DB connections: 0/4 Jetty threads: 3/50 (4 idle, 0 queued) (63 total active threads) Queries in flight: 0 (0 queued)[0m
+[36mmb_1       |[0m 07-14 15:48:32 [1mINFO metabase.core[0m :: Metabase Shutting Down ...
+[36mmb_1       |[0m 07-14 15:48:32 [1mINFO metabase.server[0m :: Shutting Down Embedded Jetty Webserver
+[36mmb_1       |[0m 07-14 15:48:32 [1mINFO metabase.core[0m :: Metabase Shutdown COMPLETE
+[36mmetabase6515_mb_1 exited with code 143
+[0m

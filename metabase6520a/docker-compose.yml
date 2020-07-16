@@ -1,0 +1,48 @@
+version: "3.6"
+
+services:
+  mb:
+    # image: metabase/metabase:v0.26.2
+    # image: metabase/metabase:v0.30.4
+    image: metabase/metabase:v0.35.4
+    restart: always
+    ports:
+      - "6520:3000"
+    volumes:
+      - ./data/mbdata:/mbdata
+    env_file:
+      - .env
+    depends_on:
+      - dbm
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "60"
+
+  dbm:
+    image: mysql:5.7
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "6521:3306"
+    volumes:
+      - ./sysdata/mysqldata/:/var/lib/mysql/ # folder for mysql's internal data files.
+      - ./code:/code # folder for scripts, etc.
+      - ./data/dbm/:/data/dbm # folder for exported data, etc.
+    command:  --explicit_defaults_for_timestamp --default-authentication-plugin=mysql_native_password --innodb-file-per-table=1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "20"
+
+  adminer:
+    # 10.4.1.231:6117/  use db or 10.4.1.228:3308 for server while logging in.
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 6522:8080
+
+
