@@ -1,4 +1,8 @@
 
+16envvar works. two way replication with env var for many settings.
+
+
+See tutorial/mysq12. works. two way sync replication.
 
 See tutorial/mysq9. works. two way sync replication.
 
