@@ -2,7 +2,7 @@
  
 #  Symmetricds replication two way - Mysql, corp and store1
 
-It is two syc. Corp is the original database and store1 is replicated from corp. Store1 is empty before the replication starts.
+It is two way sync. Corp is the original database and store1 is replicated from corp. Store1 is empty before the replication starts.
 
 
 # Development Note
