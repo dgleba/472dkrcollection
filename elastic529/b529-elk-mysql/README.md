@@ -11,21 +11,46 @@ open files in editor and adjust if necessary.
 
 dc=docker-compose
 
-bash bsh
-dc 
-bash rsh
+
+# Build and run
+    bash bsh
+
+ 
+# bash rsh
 
 
 
 ```
 
-If you get errors.
+# Troubleshooting Problems
+
+If you get errors. erase all images, containers, volumes and rebuild.
+
+```
+	patrn=528-elk-mysql
+	echo searching images like .. $1
+	 docker images | grep "${patrn}"
+   sleep 6
+	docker images | grep "${patrn}" | awk '{print $1 ":" $2}' | xargs docker rmi   # delete image.
+	
+
+dc=docker-compose
+
+dc down -v --remove-orphans
+
+```
+
 
 
 # Ref:
 
 [remote "origin"]
 	url = https://github.com/xiaochunping/docker-logstash-input-jdbc-plugin-mysql
+
+
+
+
+
 
 
 #

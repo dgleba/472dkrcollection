@@ -1,0 +1,22 @@
+
+
+with
+
+ELK_VERSION=6.8.11
+
+MYSQL_CONNECT_VER=8.0.20
+
+
+error..
+
+
+rufus-scheduler intercepted an error:
+logstash_1       |   2020   job:
+logstash_1       |   2020     Rufus::Scheduler::CronJob "* * * * *" {}
+logstash_1       |   2020   error:
+logstash_1       |   2020     2020
+logstash_1       |   2020     LogStash::PluginLoadingError
+logstash_1       |   2020     unable to load mysql-connector-java.jar from :jdbc_driver_library, no such file to load -- mysql-connector-java
+logstash_1       |   2020       /usr/share/logstash/vendor/bundle/jruby/2.5.0/gems/logstash-input-jdbc-4.3.19/lib/logstash/plugin_mixins/jdbc/jdbc.rb:152:in `block in load_driver_jars'
+logstash_1       |   2020       org/jruby/RubyArray.java:1792:in `each'
+

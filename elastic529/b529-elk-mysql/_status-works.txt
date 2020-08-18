@@ -1,0 +1,8 @@
+works with 
+
+
+# works
+ELK_VERSION=6.6.2
+# works
+MYSQL_CONNECT_VER=8.0.20
+

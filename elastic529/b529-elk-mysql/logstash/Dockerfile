@@ -41,7 +41,8 @@ RUN echo $ELK_VERSION
 
 ARG MYSQL_CONNECT_VER
 RUN echo "${MYSQL_CONNECT_VER}"
-RUN echo $MYSQL_CONNECT_VER
+RUN echo $MYSQL_CONNECT_VER, $PWD
+Run pwd
 
 # add mysql driver 
 COPY ./mysql-connector-java-"${MYSQL_CONNECT_VER}"/mysql-connector-java-"${MYSQL_CONNECT_VER}".jar /usr/share/logstash/mysql-connector-java.jar
