@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+echo ~----------~----------Startingb $HOSTNAME, pwd: `pwd`, "${BASH_SOURCE[0]}" $(date +" %Y-%m-%d_%H.%M.%S")
+date ; set +vx  ; set -vx ; # echo off, then echo on
+#
+set -vx
+
+function tmout()
+{
+    echo
+    s=120 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow-keys to continue or Ctrl-c to cancel...." -t $s -d $'\e'; echo;echo;
+}
+
+
+# docker-compose up -d dbm adminer 
+# tmout
+# docker-compose up -d elastic 
+# tmout
+docker-compose up 
+
+# docker-compose logs -tf 
+
+

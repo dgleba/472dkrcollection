@@ -1,0 +1,102 @@
+
+version: '3.6'
+services:
+  dbm:
+    image: mysql:5.7
+    ports: 
+      - 23306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=example
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=admin
+    volumes:
+      #- mysql_data:/var/lib/mysql
+      - ./mysql-init/:/docker-entrypoint-initdb.d/
+    networks: 
+      - logstash_network
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", ping", "-h", "localhost"]
+      interval: 1m30s
+      timeout: 20s
+      retries: 3
+      start_period: 60s
+
+  adminer:
+    # 10.4.1.231:6117/
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 14123:8080
+    networks: 
+      - logstash_network
+
+  elasticsearch:
+    #image: docker.elastic.co/elasticsearch/elasticsearch:6.4.0
+    image: elasticsearch:${ELK_VERSION}
+    ports:
+      - 9300:9300
+      - 9200:9200
+    environment:
+      - transport.host=127.0.0.1
+      - cluster.name=docker-cluster
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - logstash_network
+    healthcheck:
+      test: ["CMD", "ping", "-c 3" , "localhost"]
+      timeout: 20s
+      retries: 3
+      # coax elastic to wait for others. May need waitforit.sh.
+    depends_on: 
+      - adminer
+      - dbm
+
+  kibana:
+    #image: docker.elastic.co/kibana/kibana:6.4.0
+    image: kibana:${ELK_VERSION}
+    ports:
+      - 5601:5601
+    networks:
+      - logstash_network
+    depends_on: 
+      - elasticsearch
+
+  logstash:
+    build:
+      context: ./logstash
+      args:
+        - ELK_VERSION
+        - MYSQL_CONNECT_VER
+    environment:
+      # having some difficulty passing env var to dockerfile. Trying things..
+      - MYSQL_CONNECT_VER=8.0.19
+      - LOGSTASH_JDBC_URL=jdbc:mysql://dbm:3306/poemdb?useSSL=false
+      - LOGSTASH_JDBC_DRIVER=com.mysql.jdbc.Driver
+      - LOGSTASH_JDBC_DRIVER_JAR_LOCATION=mysql-connector-java.jar
+      - LOGSTASH_JDBC_USERNAME=admin
+      - LOGSTASH_JDBC_PASSWORD=admin
+    env_file:
+      - .env
+    ports: 
+      - 9600:9600
+      - 5044:5044
+    networks:
+      - logstash_network
+    volumes: 
+      - ./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    depends_on: 
+      - elasticsearch
+      - kibana
+      - dbm
+
+volumes:
+  elasticsearch_data:
+  mysql_data:
+networks:
+  logstash_network:
+

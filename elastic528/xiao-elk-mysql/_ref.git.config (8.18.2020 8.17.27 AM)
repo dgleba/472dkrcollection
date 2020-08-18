@@ -1,0 +1,27 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/xiaochunping/docker-logstash-input-jdbc-plugin-mysql
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+
+
+
+
+git lds
+
+[33m40c624b\ 2019-07-25[31m (HEAD -> master, origin/master, origin/HEAD)\ [mUpdate README.md[34m\ [GitHub]
+[33m0593710\ 2019-07-25[31m\ [mUpdate Dockerfile[34m\ [GitHub]
+[33mae01baf\ 2019-07-25[31m\ [mUpdate README.md[34m\ [GitHub]
+[33m28ff56c\ 2019-07-12[31m\ [mUpdate Dockerfile[34m\ [GitHub]
+[33m8da5ecf\ 2019-07-12[31m\ [mUpdate README.md[34m\ [GitHub]
+[33mfe73204\ 2019-02-11[31m\ [mMerge branch 'master' of repository.dimas-maryanto.com:products/plugins/docker-logstash-input-jdbc-mysql[34m\ [dimmaryanto93]
+[33m462bb9e\ 2019-02-11[31m\ [mupdate logstash plugin mutate[34m\ [dimmaryanto93]
+[33mef85472\ 2019-02-10[31m\ [mAdd LICENSE[34m\ [Dimas Maryanto]
+[33m2cc539f\ 2019-02-10[31m\ [minit project[34m\ [dimmaryanto93]

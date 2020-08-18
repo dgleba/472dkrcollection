@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+echo ~----------~----------Startingb $HOSTNAME, pwd: `pwd`, "${BASH_SOURCE[0]}" $(date +" %Y-%m-%d_%H.%M.%S")
+date ; set +vx  ; set -vx ; # echo off, then echo on
+#
+set -vx
+
+function tmout()
+{
+    echo
+    s=120 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow-keys to continue or Ctrl-c to cancel...." -t $s -d $'\e'; echo;echo;
+}
+
+
+
+chmod -x ./.env
+source ./.env
+
+cd logstash
+if [ ! -f mysql-connector-java-"${MYSQL_CONNECT_VER}".tar.gz ] ; then
+    echo 'Connector file not found; so get it.'
+    wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-"${MYSQL_CONNECT_VER}".tar.gz 
+    tar --wildcards --no-anchored -xf mysql-connector-java-"${MYSQL_CONNECT_VER}".tar.gz   mysql-connector-java*.jar
+fi
+cd ..
+
+
+tmout
+
+docker-compose build logstash
+
+docker-compose build
+
+docker-compose up
+
+# rmdir -r mysql-connector-java-"${MYSQL_CONNECT_VER}"
+
