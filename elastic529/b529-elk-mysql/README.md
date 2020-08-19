@@ -2,6 +2,8 @@
 
 # Instructions
 
+## Start
+
 ```
 
 open files in editor and adjust if necessary.
@@ -9,18 +11,32 @@ open files in editor and adjust if necessary.
   docker-compose.yml
   etc...
 
-dc=docker-compose
 
 
 # Build and run
     bash bsh
 
  
-# bash rsh
-
+# unused.. bash rsh
 
 
 ```
+
+## Use
+
+Visit Kibana in your browser. `your-ip:5601`
+
+eg:  `http://10.4.1.228:5601/`
+
+Add the poems index.
+
+The Discover menu item can show the data.
+
+See pics in docs folder.
+
+
+
+
 
 # Troubleshooting Problems
 
