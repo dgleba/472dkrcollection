@@ -1,7 +1,7 @@
 2020-07-16
 
 
-status: work i think.
+status: works i think.
 
 
 ideas: generates engine .properties files using bash, template and env vars.

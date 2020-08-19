@@ -4,3 +4,11 @@
 x/
 /app2/_0-init-has-run-marker-directory
 _0-init-has-run-marker-directory
+
+datasys/
+sysdata/
+data/
+
+
+mysql-source/docker-entrypoint-initdb.d/large-data.sql
+
