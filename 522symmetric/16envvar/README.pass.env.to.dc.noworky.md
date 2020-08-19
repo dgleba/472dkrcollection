@@ -1,4 +1,9 @@
+
 noworky
+
+
+how-to-pass-environment-variable-to-docker-compose-up
+
 
 
 https://stackoverflow.com/questions/49293967/how-to-pass-environment-variable-to-docker-compose-up
