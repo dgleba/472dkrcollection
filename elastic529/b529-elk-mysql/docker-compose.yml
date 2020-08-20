@@ -17,7 +17,7 @@ services:
       - logstash_network
     command: --default-authentication-plugin=mysql_native_password
     healthcheck:
-      test: ["CMD", ping", "-h", "localhost"]
+      test: ["CMD", ping", "-c 2", "localhost"]
       interval: 1m30s
       timeout: 20s
       retries: 3
