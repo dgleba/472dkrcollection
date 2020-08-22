@@ -1,24 +1,24 @@
 
-# purpose:
+# Purpose:
 
 test changing permissions using container
 
 
 # Idea:
 
-start it up, run bash permsh. see that permissions are changed on /t1 and that it can be removed using the host.
+- start it up, 
+- run bash permsh. 
+- see that permissions are changed on /t1 and that it can be removed or edited using the host linux user.
 
 
-## commands:
+## Commands:
 
 ```
-dc up -d
+docker-compose up -d
 
 albe@pmdsdata7:/srv/file/test/472dkrcollection/debian$ ll
 total 36
 drwxrwsrwx  3 albe www-data 4096 Aug 21 16:18 .
-drwxrwsr-x 27 albe www-data 4096 Aug 21 15:42 ..
--rwxrwxrwx  1 albe www-data    3 Aug 21 15:42 _status..txt
 drwxr-sr-x  2 root www-data 4096 Aug 21 16:18 t1
 
 
@@ -30,8 +30,6 @@ uid=1000
 albe@pmdsdata7:/srv/file/test/472dkrcollection/debian$ ll
 total 36
 drwxrwsrwx  3 albe www-data 4096 Aug 21 16:18 .
-drwxrwsr-x 27 albe www-data 4096 Aug 21 15:42 ..
--rwxrwxrwx  1 albe www-data    3 Aug 21 15:42 _status..txt
 drwxrwsrwx  2 albe www-data 4096 Aug 21 16:18 t1
 
 
