@@ -4,7 +4,7 @@ services:
     image: debian:10
     working_dir: /app
     volumes:
-      - ./:/app
+      - ./app/:/app
     # the tail command below simply keeps the container running so it does not exit.
     command: bash -c "mkdir ./t1; touch t1/f1; tail -f /dev/null"
 
