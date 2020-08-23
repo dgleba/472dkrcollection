@@ -1,0 +1,32 @@
+version: "2"
+
+services:
+  portng:
+    image: jwilder/nginx-proxy
+    restart: always
+    networks:
+      - proxy
+    ports:
+      - "14080:80"
+    volumes:
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+      - "./vhost.d:/etc/nginx/vhost.d:ro"
+
+  portainer:
+    image: portainer/portainer
+    restart: always
+    environment:
+      - VIRTUAL_HOST=dev.pt
+    ports:
+      - "9009:9000"
+    networks:
+      - proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+networks:
+  proxy:
+
+volumes:
+  portainer_data:
