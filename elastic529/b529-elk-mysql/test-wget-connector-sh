@@ -24,18 +24,11 @@ if [ ! -f mysql-connector-java-"${MYSQL_CONNECT_VER}".tar.gz ] ; then
     wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-"${MYSQL_CONNECT_VER}".tar.gz 
 fi
 # extract jar file from tar file using wildcards, use xform to remove all folders - directory structure.
-tar --wildcards --no-anchored   --xform='s#^.+/##x' -xf mysql-connector-java-"${MYSQL_CONNECT_VER}".tar.gz   mysql-connector-java*.jar
+tar --wildcards --no-anchored  --xform='s#^.+/##x' -xf mysql-connector-java-"${MYSQL_CONNECT_VER}".tar.gz   mysql-connector-java*.jar
 cd ..
 
 
-
-tmout
-
-docker-compose build logstash
-
-docker-compose build
-
-docker-compose up
+# tmout
 
 # rmdir -r mysql-connector-java-"${MYSQL_CONNECT_VER}"
 

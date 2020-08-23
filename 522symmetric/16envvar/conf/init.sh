@@ -46,7 +46,7 @@ function cleanup {
 #  start here
 
 #
-# set lock so that script will only run one instance..
+# set lock so that script will only run once..
 #
 
 # set envvar to no if not exists..
@@ -64,7 +64,7 @@ fi
 DIR=$LOCKDIR
 if [ -d "$DIR" ]; then
   ### Take action if $DIR exists ###
-  echo "lockdir ${DIR} exists. This should mean init has already run once. Continuing without running init..."
+  echo "lockdir ${DIR} exists. This should mean init has already ran once. Continuing without running init..."
 else
   ###  Control will jump here if $DIR does NOT exists ###
   echo "Lockdir ${DIR} not found.. run init.sh this one time.."
