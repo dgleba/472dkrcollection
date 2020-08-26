@@ -25,6 +25,12 @@ services:
       discovery.type: single-node
     networks:
       - elk
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "9"
+
 
   logstash:
     build:
@@ -51,6 +57,11 @@ services:
       - elk
     depends_on:
       - elasticsearch
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "9"
 
   kibana:
     build:
@@ -68,7 +79,11 @@ services:
       - elk
     depends_on:
       - elasticsearch
-
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "9"
 
   mysql:
     image: mysql:5.7
@@ -92,6 +107,12 @@ services:
       timeout: 20s
       retries: 3
       start_period: 30s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "9"
+
 
   adminer:
     # 10.4.1.231:6117/
@@ -101,6 +122,9 @@ services:
       - 14123:8080
     networks:
       - elk
+    environment:
+      - ADMINER_DEFAULT_SERVER=mysql
+      # - ADMINER_PLUGINS='tables-filter'
 
 networks:
   elk:
@@ -109,5 +133,3 @@ networks:
 volumes:
   elasticsearch:
   mysqldata:
-
-  

@@ -1,3 +1,13 @@
+
+
+# Originally from:
+
+https://github.com/deviantony/docker-elk
+
+2020-08-22
+
+
+
 # Elastic stack (ELK) on Docker
 
 [![Join the chat at https://gitter.im/deviantony/docker-elk](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deviantony/docker-elk?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

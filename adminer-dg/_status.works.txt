@@ -1,0 +1,2 @@
+works.
+i will just use regular adminer
