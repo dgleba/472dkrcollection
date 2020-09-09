@@ -123,14 +123,14 @@ https://github.com/dgleba/482dkrcollection/blob/master/mysqlsimple5/Makefile#L32
 
 # older
 
+
+I think this may have come from..
+     https://github.com/nicholaskajoh/dockerized-django.git
+
 # Dockerized Django
 
 Sample project on how to dockerize your Django project in development and production environments.
 
-This may have come from..
-
-[remote "origin"]
-url = https://github.com/nicholaskajoh/dockerized-django.git
 
 ## Requirements
 
