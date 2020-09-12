@@ -25,7 +25,8 @@ SECRET_KEY = '+m4&b^ib&8uj2ja900hw4o=#8vx150(uh%z117i9=s0m*tepbg'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',') if os.getenv('ALLOWED_HOSTS') else []
 
 
 # Application definition
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'image_cropping',
     'crispy_forms',
     'cruds_adminlte',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

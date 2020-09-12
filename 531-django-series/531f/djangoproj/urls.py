@@ -21,5 +21,5 @@ urlpatterns = [
 ]
 
 # django-cruds-adminlte
-from cruds_adminlte.urls import crud_for_app
-urlpatterns += crud_for_app('blog')
+# from cruds_adminlte.urls import crud_for_app
+# urlpatterns += crud_for_app('blog')

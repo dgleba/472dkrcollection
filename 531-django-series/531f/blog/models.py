@@ -9,10 +9,10 @@ from django.urls import reverse
 class Post(models.Model):
 
     # Fields
-    created = models.DateTimeField(auto_now_add=True, editable=False)
+    title = models.CharField(max_length=100)
     body = models.TextField(max_length=5100)
-    title = models.TextField(max_length=100)
     last_updated = models.DateTimeField(auto_now=True, editable=False)
+    created = models.DateTimeField(auto_now_add=True, editable=False)
 
     class Meta:
         pass

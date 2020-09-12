@@ -1,3 +1,26 @@
 
+works.
+
+
 goal:
-generate admin
+generate admin.py
+
+
+https://django-extensions.readthedocs.io/en/latest/installation_instructions.html
+
+https://django-extensions.readthedocs.io/en/latest/admin_generator.html
+
+  docker-compose run --rm djdev  python manage.py admin_generator blog
+
+
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531f$   docker-compose run --rm djdev  python manage.py admin_generator blog
+# -*- coding: utf-8 -*-
+from django.contrib import admin
+from .models import Post
+
+@admin.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('id', 'created', 'body', 'title', 'last_updated')
+    list_filter = ('created', 'last_updated')
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531f$ 
+
