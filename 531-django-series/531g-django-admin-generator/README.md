@@ -41,9 +41,11 @@ docker-compose build
 These have already been run against this project..
 
   docker-compose run --rm djdev django-admin.py startproject djangoproj .
-  
-  docker-compose run --rm djdev python manage.py startapp polls
 
+  docker-compose run --rm djdev python manage.py startapp polls
+  
+  docker-compose run --rm djdev python manage.py startapp blog
+  
   # This can work with sqlite in development. See production below for use with mysql.
 
     docker-compose run --rm djdev python manage.py makemigrations
@@ -53,7 +55,6 @@ These have already been run against this project..
     docker-compose run --rm djdev python manage.py createsuperuser
 
 
-
 # delete all docker images, containers, volumes, etc for this compose file
 # careful..   dkd --rmi all -v
 
@@ -61,6 +62,7 @@ Start a new app..
 docker-compose run --rm djdev python manage.py startapp trakberry2
 
 docker-compose exec djdev pip list
+docker-compose run --rm djdev pip list
 
 dc up
 dc stop

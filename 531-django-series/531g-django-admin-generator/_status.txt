@@ -1,0 +1,45 @@
+
+works.
+
+
+
+
+
+goal:
+generate admin.py
+
+
+https://pypi.org/project/django-admin-generator/
+
+
+Run pip install django-admin-generator or execute python setup.py install in the source directory
+Add django_admin_generator to your INSTALLED_APPS
+
+
+docker-compose run --rm djdev  python manage.py admin_generator blog
+
+
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531g-django-admin-generator$ docker-compose run --rm djdev  python manage.py admin_generator blog
+# vim: set fileencoding=utf-8 :
+from django.contrib import admin
+
+from . import models
+
+class PostAdmin(admin.ModelAdmin):
+
+    list_display = ('id', 'title', 'body', 'last_updated', 'created')
+    list_filter = (
+        'last_updated',
+        'created',
+        'id',
+        'title',
+        'body',
+        'last_updated',
+        'created',
+    )
+
+def _register(model, admin_class):
+    admin.site.register(model, admin_class)
+
+_register(models.Post, PostAdmin)
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531g-django-admin-generator$
