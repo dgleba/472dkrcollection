@@ -1,0 +1,7 @@
+
+
+goal: document error
+
+
+https://github.com/oscarmlage/django-cruds-adminlte/issues/146
+
