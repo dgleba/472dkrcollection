@@ -52,9 +52,10 @@ services:
       #  I tried directory with no full path.. ERROR: Invalid interpolation format for "volumes" option in service "db": "../datasys/mysql-${PWD##*/}:/var/lib/mysql/"
       # - ../datasys/mysql${PWD}:/var/lib/mysql/ # folder for mysql's internal data files.
       - mysqldata:/var/lib/mysql
-      - ./script:/script # folder for scripts, etc.
-      - ../data/home${PWD}/:/home # folder for exported data, etc.
-      # - ../data/home-mysql499d/:/home # folder for exported data, etc.
+      # folder for scripts, etc.
+      - ./script:/script 
+      # folder for exported data, etc.
+      - ../data/home${PWD}/:/home 
     #
     # https://medium.freecodecamp.org/how-to-setup-log-rotation-for-a-docker-container-a508093912b2
     logging:

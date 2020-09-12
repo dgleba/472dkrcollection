@@ -35,10 +35,14 @@ These have already been run against this project..
 
   docker-compose run --rm djdev django-admin.py startproject djangoproj .
   docker-compose run --rm djdev python manage.py startapp polls
+
   # This can work with sqlite in development. See production below for use with mysql.
     docker-compose run --rm djdev python manage.py makemigrations
+
     docker-compose run --rm djdev python manage.py migrate
+
     docker-compose run --rm djdev python manage.py createsuperuser
+
 
 
 # delete all docker images, containers, volumes, etc for this compose file
@@ -101,6 +105,10 @@ yes..
 docker-compose -f docker-compose.prod.yml up
 docker-compose -f docker-compose.prod.yml stop
 docker-compose -f docker-compose.prod.yml restart
+
+# delete containers and data..
+# careful...  docker-compose -f docker-compose.prod.yml down -v --remove-orphans
+
 
 
 ```
