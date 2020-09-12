@@ -24,7 +24,4 @@ urlpatterns = [
     path('polls/', include('polls.urls'))
 ]
 
-# django-cruds-adminlte
-from django.utils import six
-from cruds_adminlte.urls import crud_for_app
-urlpatterns += crud_for_app('polls')
+

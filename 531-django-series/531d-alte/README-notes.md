@@ -1,50 +1,6 @@
 # Notes
 
 
-# 2020-09-12_Sat_11.34-AM
-
-django-cruds-adminlte 0.0.17+git.9110c69 requires django-crispy-forms==1.7.2, but you'll have django-crispy-forms 1.9.2 which is incompatible.
-django-cruds-adminlte 0.0.17+git.9110c69 requires djangoajax==2.3.7, but you'll have djangoajax 3.2 which is incompatible.
-
-
-
-ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
-We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
-django-cruds-adminlte 0.0.17+git.9110c69 requires django-crispy-forms==1.7.2, but you'll have django-crispy-forms 1.9.2 which is incompatible.
-django-cruds-adminlte 0.0.17+git.9110c69 requires djangoajax==2.3.7, but you'll have djangoajax 3.2 which is incompatible.
-Successfully installed django-2.2.16 django-appconf-1.0.4 django-crispy-forms-1.9.2 django-cruds-adminlte-0.0.17+git.9110c69 django-image-cropping-1.4.0 django-mysql-2.4.1 django-utils-six-2.0 djangoajax-3.2 easy-thumbnails-2.7 gunicorn-19.9.0 mysqlclient-1.4.6 pillow-7.2.0 python-dotenv-0.10.3 pytz-2020.1 sqlparse-0.3.1
-WARNING: You are using pip version 20.2.2; however, version 20.2.3 is available.
-You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
-Removing intermediate container 5be5481a18b6
- ---> 245cdbe071a1
-Successfully built 245cdbe071a1
-Successfully tagged 531c-admlte_djdev:latest
-albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531c-admlte$ 
-
-
-
-# 2020-09-12
-
-
-django-cruds-adminlte ModuleNotFoundError No module named 'six'
-
-
-
-pip install django-crispy-forms
-pip install easy-thumbnails
-pip install django-image-cropping
-pip install djangoajax
-
-
-django-crispy-forms
-easy-thumbnails
-django-image-cropping
-djangoajax
-
-
-
-
-
 # error
 
 ```
