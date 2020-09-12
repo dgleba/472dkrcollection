@@ -1,0 +1,15 @@
+
+not started.
+
+try..
+https://github.com/oscarmlage/django-cruds-adminlte
+
+
+
+_____________
+
+
+ref.
+copied from 499d-django sftp://192.168.88.60/srv/dkr/472dkrcollection/499d-django
+
+

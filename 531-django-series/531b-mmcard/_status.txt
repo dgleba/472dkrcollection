@@ -1,0 +1,58 @@
+
+error
+
+2020-09-11_Fri_15.47
+
+_____________
+
+
+
+See  
+    sftp://192.168.88.60/srv/dkr/472dkrcollection/531-django-series/531b-mmcard/_from.djangobuilder.io
+
+
+this from 
+https://djangobuilder.io/#/project/FJsbPtioNSAqK2SwRXIv
+
+
+_____________
+
+
+
+OperationalError at /books/books/book/
+no such table: books_book
+Request Method:	GET
+Request URL:	http://192.168.88.60:6461/books/books/book/
+Django Version:	2.2.16
+Exception Type:	OperationalError
+Exception Value:	
+no such table: books_book
+Exception Location:	/usr/local/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py in execute, line 383
+Python Executable:	/usr/local/bin/python
+Python Version:	3.7.9
+Python Path:	
+['/code',
+ '/usr/local/lib/python37.zip',
+ '/usr/local/lib/python3.7',
+ '/usr/local/lib/python3.7/lib-dynload',
+ '/usr/local/lib/python3.7/site-packages']
+Server time:	Fri, 11 Sep 2020 19:46:07 +0000
+Error during template rendering
+In template /code/templates/base.html, error at line 0
+
+no such table: books_book
+1	{% load static %}
+2	<html>
+3	  <head>
+4	    <title>Django Builder - hango</title>
+5	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+6	    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+7	  </head>
+8	  <body>
+9	    <div id="content" class="container">
+10	      <h2>Home: <a href="{% url 'index' %}">hango</a></h2>
+Traceback Switch to copy-and-paste view
+/usr/local/lib/python3.7/site-packages/django/db/backends/utils.py in _execute
+                return self.cursor.execute(sql, params) 
+
+

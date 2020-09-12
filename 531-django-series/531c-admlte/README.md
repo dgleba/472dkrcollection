@@ -1,13 +1,6 @@
-
-# This is:
-
-https://github.com/dgleba/472dkrcollection/tree/master/499d-django
-
-
 # ref.
 
 https://docs.docker.com/compose/django/
-
 
 # Installation
 

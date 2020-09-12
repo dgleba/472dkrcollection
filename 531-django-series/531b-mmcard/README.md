@@ -1,13 +1,6 @@
-
-# This is:
-
-https://github.com/dgleba/472dkrcollection/tree/master/499d-django
-
-
 # ref.
 
 https://docs.docker.com/compose/django/
-
 
 # Installation
 
@@ -38,23 +31,28 @@ eg: make clean - this will clean up unneeded containers and such.
 ```
 docker-compose build
 
-These have already been run against this project..
-
-  docker-compose run --rm djdev django-admin.py startproject djangoproj .
-  docker-compose run --rm djdev python manage.py startapp polls
-  # This can work with sqlite in development. See production below for use with mysql.
-    docker-compose run --rm djdev python manage.py makemigrations
-    docker-compose run --rm djdev python manage.py migrate
-    docker-compose run --rm djdev python manage.py createsuperuser
-
+docker-compose run --rm djdev django-admin.py startproject djangoproj .
 
 # delete all docker images, containers, volumes, etc for this compose file
 # careful..   dkd --rmi all -v
 
-Start a new app..
+
+docker-compose run --rm djdev python manage.py startapp polls
+
 docker-compose run --rm djdev python manage.py startapp trakberry2
 
+
+# This can work with sqlite in development. See production below for use with mysql.
+
+  docker-compose run --rm djdev python manage.py makemigrations
+
+  docker-compose run --rm djdev python manage.py migrate
+
+  docker-compose run --rm djdev python manage.py createsuperuser
+  
+
 docker-compose exec djdev pip list
+
 
 dc up
 dc stop
@@ -105,7 +103,8 @@ yes..
   docker-compose -f docker-compose.prod.yml run --rm  djprod python manage.py collectstatic --noinput
 
 
-docker-compose -f docker-compose.prod.yml up
+docker-compose -f docker-compose.prod.yml up 
+
 docker-compose -f docker-compose.prod.yml stop
 docker-compose -f docker-compose.prod.yml restart
 

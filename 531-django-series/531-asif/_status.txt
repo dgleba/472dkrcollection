@@ -1,0 +1,22 @@
+
+2020-09-10
+
+error.
+
+Starting 531-asif_djdev_1 ... done
+Attaching to 531-asif_djdev_1
+djdev_1  | Watching for file changes with StatReloader
+djdev_1  | Performing system checks...
+djdev_1  |
+djdev_1  | System check identified some issues:
+djdev_1  |
+djdev_1  | WARNINGS:
+djdev_1  | ?: (urls.W005) URL namespace 'admin' isn't unique. You may not be able to reverse all URLs in this namespace
+djdev_1  |
+djdev_1  | System check identified 1 issue (0 silenced).
+djdev_1  | September 10, 2020 - 22:06:50
+djdev_1  | Django version 2.2.16, using settings 'djangoproj.settings'
+djdev_1  | Starting development server at http://0.0.0.0:8000/
+djdev_1  | Quit the server with CONTROL-C.
+
+
