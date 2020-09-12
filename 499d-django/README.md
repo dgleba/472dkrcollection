@@ -110,6 +110,11 @@ docker-compose -f docker-compose.prod.yml stop
 docker-compose -f docker-compose.prod.yml restart
 
 
+# delete containers and data..
+# careful...  docker-compose -f docker-compose.prod.yml down -v --remove-orphans
+
+
+
 ```
 
 # Database commands

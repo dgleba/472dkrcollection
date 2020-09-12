@@ -44,6 +44,8 @@ These have already been run against this project..
 
   docker-compose run --rm djdev python manage.py startapp polls
   
+  docker-compose run --rm djdev python manage.py startapp blog
+  
   # This can work with sqlite in development. See production below for use with mysql.
 
     docker-compose run --rm djdev python manage.py makemigrations
@@ -113,6 +115,11 @@ yes..
 docker-compose -f docker-compose.prod.yml up
 docker-compose -f docker-compose.prod.yml stop
 docker-compose -f docker-compose.prod.yml restart
+
+
+# delete containers and data..
+# careful...  docker-compose -f docker-compose.prod.yml down -v --remove-orphans
+
 
 
 ```
