@@ -1,0 +1,13 @@
+
+#django>=2,<2.1
+django<2.1
+
+#python-dotenv==0.10.3
+
+#django-admin-generator
+
+
+#django-crudbuilder
+
+django-crudbuilder==0.2.7
+django-tables2==1.21.2

@@ -1,0 +1,113 @@
+
+works.
+
+
+
+goal:
+generate admin.py
+
+this:
+https://github.com/asifpy/django-crudbuilder
+
+
+
+
+_____________
+
+_____________
+
+
+
+
+=================================================
+
+solved errors..
+
+_____________
+
+
+
+2.
+
+error  
+
+djdev_1     |   File "/code/djangoproj/urls.py", line 23, in <module>
+djdev_1     |     url(r'^crud/',  include(urls)),
+djdev_1     | NameError: name 'url' is not defined
+
+
+ans.
+https://stackoverflow.com/questions/34789497/override-url-error-global-name-url-is-not-defined?rq=1
+
+You need to import url
+
+from django.conf.urls import include, url
+
+_____________
+
+1.
+
+django_tables2 TypeError: PersonTable.model = <Person: Person object (None)> (type Person), but type must be one of (ModelBase)
+
+solution:
+https://github.com/asifpy/django-crudbuilder/issues/67
+
+django-crudbuilder==0.2.7
+django-tables2==1.21.2
+This works
+
+
+
+djdev_1     | Unhandled exception in thread started by <function check_errors.<locals>.wrapper at 0x7f059f9ece60>
+djdev_1     | Traceback (most recent call last):
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/utils/autoreload.py", line 225, in wrapper
+djdev_1     |     fn(*args, **kwargs)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 120, in inner_run
+djdev_1     |     self.check(display_num_errors=True)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/management/base.py", line 364, in check
+djdev_1     |     include_deployment_checks=include_deployment_checks,
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/management/base.py", line 351, in _run_checks
+djdev_1     |     return checks.run_checks(**kwargs)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/checks/registry.py", line 73, in run_checks
+djdev_1     |     new_errors = check(app_configs=app_configs)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/checks/urls.py", line 40, in check_url_namespaces_unique
+djdev_1     |     all_namespaces = _load_all_namespaces(resolver)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/checks/urls.py", line 57, in _load_all_namespaces
+djdev_1     |     url_patterns = getattr(resolver, 'url_patterns', [])
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/utils/functional.py", line 36, in __get__
+djdev_1     |     res = instance.__dict__[self.name] = self.func(instance)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/urls/resolvers.py", line 540, in url_patterns
+djdev_1     |     patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/utils/functional.py", line 36, in __get__
+djdev_1     |     res = instance.__dict__[self.name] = self.func(instance)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/urls/resolvers.py", line 533, in urlconf_module
+djdev_1     |     return import_module(self.urlconf_name)
+djdev_1     |   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+djdev_1     |     return _bootstrap._gcd_import(name[level:], package, level)
+djdev_1     |   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+djdev_1     |   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+djdev_1     |   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+djdev_1     |   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+djdev_1     |   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+djdev_1     |   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+djdev_1     |   File "/code/djangoproj/urls.py", line 19, in <module>
+djdev_1     |     from crudbuilder import urls
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/crudbuilder/urls.py", line 24, in <module>
+djdev_1     |     list_view = viewbuilder.generate_list_view()
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/crudbuilder/views.py", line 93, in generate_list_view
+djdev_1     |     table_class=self.get_actual_table(),
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/crudbuilder/views.py", line 56, in get_actual_table
+djdev_1     |     return table_builder.generate_table()
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/crudbuilder/tables.py", line 43, in generate_table
+djdev_1     |     main_attrs
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django_tables2/tables.py", line 26, in __new__
+djdev_1     |     attrs["_meta"] = opts = TableOptions(attrs.get("Meta", None), name)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django_tables2/tables.py", line 119, in __init__
+djdev_1     |     self._check_types(options, class_name)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django_tables2/tables.py", line 182, in _check_types
+djdev_1     |     expression, type(value).__name__, ", ".join([t.__name__ for t in types])
+djdev_1     | TypeError: PersonTable.model = <Person: Person object (None)> (type Person), but type must be one of (ModelBase)
+
+
+_____________
+
