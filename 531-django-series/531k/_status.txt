@@ -1,0 +1,14 @@
+
+works.
+
+
+
+goal:
+generate crud
+
+
+https://github.com/spapas/django-generic-scaffold
+
+
+_____________
+

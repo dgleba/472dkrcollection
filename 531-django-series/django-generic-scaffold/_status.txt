@@ -1,0 +1,5 @@
+
+
+
+
+From:  git clone https://github.com/spapas/django-generic-scaffold.git

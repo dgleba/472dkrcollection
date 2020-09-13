@@ -1,0 +1,31 @@
+
+
+works for book-app   
+
+
+
+
+goal:
+generate crud
+
+
+
+https://github.com/mmcardle/django_builder/issues/100
+
+No migrations made
+
+https://djangobuilder.io/#/project/FJsbPtioNSAqK2SwRXIv
+
+
+_____________
+
+
+
+mkdir book-app/migrations
+touch book-app/migrations/__init__.py
+
+app=blog
+mkdir $app/migrations
+touch $app/migrations/__init__.py
+
+

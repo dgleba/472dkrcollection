@@ -1,0 +1,77 @@
+
+
+
+
+goal:
+generate crud
+
+
+https://github.com/bmihelac/django-cruds
+
+
+
+
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531h-bmi$ dc up
+Starting 531h-bmi_adminerd_1 ... done
+Starting 531h-bmi_djdev_1    ... done
+Attaching to 531h-bmi_djdev_1, 531h-bmi_adminerd_1
+djdev_1     | Watching for file changes with StatReloader
+djdev_1     | Performing system checks...
+djdev_1     |
+djdev_1     | System check identified no issues (0 silenced).
+djdev_1     | September 12, 2020 - 20:23:50
+djdev_1     | Django version 2.2.16, using settings 'djangoproj.settings'
+djdev_1     | Starting development server at http://0.0.0.0:8000/
+djdev_1     | Quit the server with CONTROL-C.
+adminerd_1  | PHP 5.6.40 Development Server started at Sat Sep 12 20:23:50 2020
+djdev_1     | Internal Server Error: /blog/post/
+djdev_1     | Traceback (most recent call last):
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
+djdev_1     |     return self.template.render(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 171, in render
+djdev_1     |     return self._render(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+djdev_1     |     return self.nodelist.render(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+djdev_1     |     bit = node.render_annotated(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+djdev_1     |     return self.render(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/loader_tags.py", line 150, in render
+djdev_1     |     return compiled_parent._render(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
+djdev_1     |     return self.nodelist.render(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 937, in render
+djdev_1     |     bit = node.render_annotated(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/base.py", line 904, in render_annotated
+djdev_1     |     return self.render(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/loader_tags.py", line 127, in render
+djdev_1     |     compiled_parent = self.get_parent(context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/loader_tags.py", line 124, in get_parent
+djdev_1     |     return self.find_template(parent, context)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/loader_tags.py", line 104, in find_template
+djdev_1     |     template_name, skip=history,
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/engine.py", line 129, in find_template
+djdev_1     |     raise TemplateDoesNotExist(name, tried=tried)
+djdev_1     | django.template.exceptions.TemplateDoesNotExist: base.html
+djdev_1     |
+djdev_1     | The above exception was the direct cause of the following exception:
+djdev_1     |
+djdev_1     | Traceback (most recent call last):
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+djdev_1     |     response = get_response(request)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+djdev_1     |     response = self.process_exception_by_middleware(e, request)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
+djdev_1     |     response = response.render()
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/response.py", line 106, in render
+djdev_1     |     self.content = self.rendered_content
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
+djdev_1     |     content = template.render(context, self._request)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 63, in render
+djdev_1     |     reraise(exc, self.backend)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/template/backends/django.py", line 84, in reraise
+djdev_1     |     raise new from exc
+djdev_1     | django.template.exceptions.TemplateDoesNotExist: base.html
+djdev_1     | [12/Sep/2020 20:24:03] "GET /blog/post/ HTTP/1.1" 500 140305
+
+

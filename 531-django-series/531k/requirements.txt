@@ -1,0 +1,10 @@
+
+django>=1,<2
+
+python-dotenv==0.10.3
+
+#django-extensions
+#djangorestframework
+
+# django-generic-scaffold
+git+https://github.com/spapas/django-generic-scaffold
