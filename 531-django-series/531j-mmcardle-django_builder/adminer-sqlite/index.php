@@ -13,12 +13,12 @@ function adminer_object() {
             <th>
               <?php echo lang('Username'); ?>
             <td>
-              <input id="username" name="auth[username]" value="<?php echo h($_GET["username"]);  ?>">
+              <input id="username" name="auth[username]" value="<?php echo getenv('DB_USER');  ?>">
           <tr>
             <th>
               <?php echo lang('Password'); ?>
             <td>
-              <input type="password" name="auth[password]">
+              <input type="password" name="auth[password]" value="<?php echo getenv('DB_PASS');  ?>"
           <tr>
             <th>
               <?php echo lang('Database'); ?>

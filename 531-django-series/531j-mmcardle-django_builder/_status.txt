@@ -20,6 +20,8 @@ https://djangobuilder.io/#/project/FJsbPtioNSAqK2SwRXIv
 _____________
 
 
+Migrations don't created without this file..
+
 
 mkdir book-app/migrations
 touch book-app/migrations/__init__.py
@@ -27,5 +29,9 @@ touch book-app/migrations/__init__.py
 app=blog
 mkdir $app/migrations
 touch $app/migrations/__init__.py
+
+
+_____________
+
 
 
