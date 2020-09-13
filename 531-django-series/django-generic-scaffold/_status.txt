@@ -3,3 +3,73 @@
 
 
 From:  git clone https://github.com/spapas/django-generic-scaffold.git
+
+
+
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/django-generic-scaffold/example-spapas$ dc up
+Creating network "499d-django_default" with the default driver
+Creating network "example-spapas_default" with the default driver
+Creating example-spapas_adminerd_1 ... done
+Creating example-spapas_djdev_1    ... done
+Attaching to example-spapas_adminerd_1, example-spapas_djdev_1
+adminerd_1  | PHP 5.6.40 Development Server started at Sun Sep 13 02:55:01 2020
+djdev_1     | Watching for file changes with StatReloader
+djdev_1     | Performing system checks...
+djdev_1     |
+djdev_1     | System check identified no issues (0 silenced).
+djdev_1     | September 13, 2020 - 02:55:02
+djdev_1     | Django version 2.2.16, using settings 'example.settings'
+djdev_1     | Starting development server at http://0.0.0.0:8000/
+djdev_1     | Quit the server with CONTROL-C.
+djdev_1     | Exception in thread django-main-thread:
+djdev_1     | Traceback (most recent call last):
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/utils/module_loading.py", line 20, in import_string
+djdev_1     |     return getattr(module, class_name)
+djdev_1     | AttributeError: module 'django.contrib.auth.middleware' has no attribute 'SessionAuthenticationMiddleware'
+djdev_1     |
+djdev_1     | The above exception was the direct cause of the following exception:
+djdev_1     |
+djdev_1     | Traceback (most recent call last):
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 45, in get_internal_wsgi_application
+djdev_1     |     return import_string(app_path)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/utils/module_loading.py", line 17, in import_string
+djdev_1     |     module = import_module(module_path)
+djdev_1     |   File "/usr/local/lib/python3.7/importlib/__init__.py", line 127, in import_module
+djdev_1     |     return _bootstrap._gcd_import(name[level:], package, level)
+djdev_1     |   File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+djdev_1     |   File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+djdev_1     |   File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+djdev_1     |   File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+djdev_1     |   File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+djdev_1     |   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+djdev_1     |   File "/code/example/wsgi.py", line 16, in <module>
+djdev_1     |     application = get_wsgi_application()
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+djdev_1     |     return WSGIHandler()
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/handlers/wsgi.py", line 135, in __init__
+djdev_1     |     self.load_middleware()
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/handlers/base.py", line 35, in load_middleware
+djdev_1     |     middleware = import_string(middleware_path)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/utils/module_loading.py", line 24, in import_string
+djdev_1     |     ) from err
+djdev_1     | ImportError: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+djdev_1     |
+djdev_1     | The above exception was the direct cause of the following exception:
+djdev_1     |
+djdev_1     | Traceback (most recent call last):
+djdev_1     |   File "/usr/local/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+djdev_1     |     self.run()
+djdev_1     |   File "/usr/local/lib/python3.7/threading.py", line 870, in run
+djdev_1     |     self._target(*self._args, **self._kwargs)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/utils/autoreload.py", line 54, in wrapper
+djdev_1     |     fn(*args, **kwargs)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 137, in inner_run
+djdev_1     |     handler = self.get_handler(*args, **options)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/contrib/staticfiles/management/commands/runserver.py", line 27, in get_handler
+djdev_1     |     handler = super().get_handler(*args, **options)
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/management/commands/runserver.py", line 64, in get_handler
+djdev_1     |     return get_internal_wsgi_application()
+djdev_1     |   File "/usr/local/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 50, in get_internal_wsgi_application
+djdev_1     |     ) from err
+djdev_1     | django.core.exceptions.ImproperlyConfigured: WSGI application 'example.wsgi.application' could not be loaded; Error importing module.
+djdev_1     |

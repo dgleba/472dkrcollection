@@ -1,0 +1,13 @@
+
+works.
+
+
+
+goal:
+generate admin.py
+
+
+
+https://github.com/ar4s/django-dedal
+
+
