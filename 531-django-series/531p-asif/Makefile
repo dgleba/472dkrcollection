@@ -16,7 +16,7 @@ perm:
 # shell in django
 #
 djbash:
-	docker-compose run djangodev /bin/bash
+	docker-compose run djdev /bin/bash
 
 
 prb:

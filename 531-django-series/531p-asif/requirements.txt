@@ -9,5 +9,7 @@ django-extensions
 
 #django-crudbuilder
 
+# django_tables2 TypeError: PersonTable.model = <Person: Person object (None)> (type Person), but type must be one of (ModelBase)
+# the following addresses the issue.
 django-crudbuilder==0.2.7
 django-tables2==1.21.2
