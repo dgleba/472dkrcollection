@@ -15,4 +15,5 @@ django-image-cropping
 #djangoajax==2.3.7
 djangoajax
 
-#django-utils-six
+django-utils-six
+six

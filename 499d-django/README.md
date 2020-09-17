@@ -38,7 +38,7 @@ eg: make clean - this will clean up unneeded containers and such.
 ```
 docker-compose build
 
-These have already been run against this project..
+Some of these may have already been run against this project..
 
   docker-compose run --rm djdev django-admin.py startproject djangoproj .
   
