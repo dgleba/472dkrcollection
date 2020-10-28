@@ -3,14 +3,26 @@ services:
   deb:
     image: debian:10
     working_dir: /app
+    env_file:
+      - ./.env
     volumes:
       - ./:/app
+
       # https://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-a-bash-script
       # ERROR: Invalid interpolation format for "volumes" option in service "deb": "../data/deb/${PWD##*/}:/data"
+
+      # this works, although it makes many subfolders
       - ../data/deb/${PWD}:/data
+      
+      # doesn't work.
+      - ../data/deb2/${DOCUMENT_ROOT}:/data2
+
     # the tail command below simply keeps the container running so it does not exit.
     command: bash -c "tail -f /dev/null"
 
 
 
- 
+# https://stackoverflow.com/questions/57979254/current-directory-variable-substitution-in-docker-compose-for-windows-10
+# environment:
+#            - WORKING_DIR=${DOCUMENT_ROOT}
+# And have an .env file in your working directory that contains DOCUMENT_ROOT=./ , then you can use the local .env file by running

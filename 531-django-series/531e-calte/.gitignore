@@ -1,6 +1,7 @@
 *.pyc
 .env
 .env.secret
+.env.*
 .vscode
 staticfiles/
 mediafiles/

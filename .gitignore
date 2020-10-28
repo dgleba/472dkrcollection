@@ -6,6 +6,7 @@ persistantData.json
 creds.py
 
 datasys/
+sysdata/
 data/
 x/
 certs/

@@ -46,7 +46,7 @@ services:
     # MYSQL_DATABASE: test
     command: --default-authentication-plugin=mysql_native_password
     ports:
-      - "6462:3306"
+      - "6466:3306"
     volumes:
       #  use PWD in mysql files volume so each project folder has it's own database folder. This is for mistake proofing. https://github.com/docker/compose/issues/2636
       #  I tried directory with no full path.. ERROR: Invalid interpolation format for "volumes" option in service "db": "../datasys/mysql-${PWD##*/}:/var/lib/mysql/"
