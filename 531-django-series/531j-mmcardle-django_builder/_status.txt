@@ -20,7 +20,7 @@ https://djangobuilder.io/#/project/FJsbPtioNSAqK2SwRXIv
 _____________
 
 
-Migrations don't created without this file..
+Migrations don't get created without this file..
 
 
 mkdir book-app/migrations
@@ -32,6 +32,42 @@ touch $app/migrations/__init__.py
 
 
 _____________
+
+http://192.168.88.60:6461/book-app/api/v1/book/
+
+
+curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/
+
+
+indented output..
+    curl -H 'Accept: application/json; indent=2' -u a:a http://192.168.88.60:6461/book-app/api/v1/book/
+
+    {
+        "last_updated": "2020-09-13T00:03:44.425218Z",
+        "created": "2020-09-13T00:03:44.425318Z",
+        "author": "a",
+        "name": "b"
+    },
+    {
+        "last_updated": "2020-09-13T00:04:07.960913Z",
+        "created": "2020-09-13T00:04:07.961029Z",
+        "author": "David Gleba",
+        "name": "34"
+    }
+
+
+response = all one string 
+    curl -H 'Accept: application/json; ' -u a:a http://192.168.88.60:6461/book-app/api/v1/book/
+
+curl -H 'Accept: application/json; ' -u a:a http://192.168.88.60:6461/book-app/api/v1/book/
+
+[{"last_updated":"2020-09-13T00:03:44.425218Z","created":"2020-09-13T00:03:44.425318Z","author":"a","name":"b"},
+{"last_updated":"2020-09-13T00:04:07.960913Z","created":"2020-09-13T00:04:07.961029Z","author":"David Gleba","name":"34"}]
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531j-mmcardle-django_builder$ 
+
+
+_____________
+
 
 
 

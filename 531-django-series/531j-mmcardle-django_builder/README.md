@@ -54,6 +54,11 @@ These have already been run against this project..
 
     docker-compose run --rm djdev python manage.py createsuperuser
 
+    # see .env file for env var..
+    # echo DJANGO_SUPERUSER_PASSWORD=a>>.env
+    # docker-compose run --rm djdev python manage.py createsuperuser --noinput --username a --email=a@a.com 
+    docker-compose run --rm djdev python manage.py createsuperuser --noinput --username admin --email=ad@a.com 
+
 
 # delete all docker images, containers, volumes, etc for this compose file
 # careful..   dkd --rmi all -v --remove-orphans
