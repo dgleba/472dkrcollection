@@ -1,0 +1,122 @@
+
+
+works for book-app   
+
+
+
+
+goal:
+generate crud
+
+
+
+_____________
+
+notes.
+
+
+
+_____________
+
+
+https://github.com/mmcardle/django_builder/issues/107
+
+all input erased on validation.
+
+set to not required in model.
+    use html5 required.
+
+
+createsuperuser using env var for password not working from docker-compose.
+
+
+
+_____________
+
+
+
+https://github.com/mmcardle/django_builder/issues/100
+
+No migrations made
+
+https://djangobuilder.io/#/project/FJsbPtioNSAqK2SwRXIv
+
+
+_____________
+
+
+Migrations don't get created without this file..
+
+
+mkdir book-app/migrations
+touch book-app/migrations/__init__.py
+
+app=blog
+mkdir $app/migrations
+touch $app/migrations/__init__.py
+
+
+_____________
+
+http://192.168.88.60:6461/book-app/api/v1/book/
+
+http://192.168.88.60:6461/blogapp/api/v1/book/
+
+
+curl -H 'Accept: application/json; indent=4' -u admin:password123 http://127.0.0.1:8000/users/
+
+
+indented output..
+    curl -H 'Accept: application/json; indent=2' -u a:a http://192.168.88.60:6461/book-app/api/v1/book/
+
+    {
+        "last_updated": "2020-09-13T00:03:44.425218Z",
+        "created": "2020-09-13T00:03:44.425318Z",
+        "author": "a",
+        "name": "b"
+    },
+    {
+        "last_updated": "2020-09-13T00:04:07.960913Z",
+        "created": "2020-09-13T00:04:07.961029Z",
+        "author": "David Gleba",
+        "name": "34"
+    }
+
+
+response = all one string 
+    curl -H 'Accept: application/json; ' -u a:a http://192.168.88.60:6461/book-app/api/v1/book/
+
+curl -H 'Accept: application/json; ' -u a:a http://192.168.88.60:6461/book-app/api/v1/book/
+
+[{"last_updated":"2020-09-13T00:03:44.425218Z","created":"2020-09-13T00:03:44.425318Z","author":"a","name":"b"},
+{"last_updated":"2020-09-13T00:04:07.960913Z","created":"2020-09-13T00:04:07.961029Z","author":"David Gleba","name":"34"}]
+albe@vamp398:/srv/dkr/472dkrcollection/531-django-series/531j-mmcardle-django_builder$ 
+
+
+_____________
+
+
+
+
+Page not found (404)
+Request Method:	GET
+Request URL:	http://192.168.88.60:6461/blogapp/api/v1/bookz/
+Using the URLconf defined in kangosite.urls, Django tried these URL patterns, in this order:
+
+[name='index']
+blogapp/ api/v1/ ^book/$ [name='book-list']
+blogapp/ api/v1/ ^book\.(?P<format>[a-z0-9]+)/?$ [name='book-list']
+blogapp/ api/v1/ ^book/(?P<pk>[^/.]+)/$ [name='book-detail']
+blogapp/ api/v1/ ^book/(?P<pk>[^/.]+)\.(?P<format>[a-z0-9]+)/?$ [name='book-detail']
+blogapp/ api/v1/ ^$ [name='api-root']
+blogapp/ api/v1/ ^\.(?P<format>[a-z0-9]+)/?$ [name='api-root']
+blogapp/ blogapp/book/ [name='blogapp_book_list']
+blogapp/ blogapp/book/create/ [name='blogapp_book_create']
+blogapp/ blogapp/book/detail/<int:pk>/ [name='blogapp_book_detail']
+blogapp/ blogapp/book/update/<int:pk>/ [name='blogapp_book_update']
+admin/
+api-auth/
+The current path, blogapp/api/v1/bookz/, didn't match any of these.
+
+You're seeing this error because you have DEBUG = True in your Django settings file. Change that to False, and Django will display a standard 404 page.
+

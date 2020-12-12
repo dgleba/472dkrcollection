@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="m-2"><h4>blog</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'blog_Post_list' %}">Post Listing</a></div>
+<div class="m-2"><h4>book-app</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'book-app_book_list' %}">book Listing</a></div>
+{% endblock %}

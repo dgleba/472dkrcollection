@@ -9,9 +9,7 @@ router = routers.DefaultRouter()
 router.register("book", api.bookViewSet)
 
 urlpatterns = (
-    # dg
     path("api/v1/", include(router.urls)),
-    
     path("book-app/book/", views.bookListView.as_view(), name="book-app_book_list"),
     path("book-app/book/create/", views.bookCreateView.as_view(), name="book-app_book_create"),
     path("book-app/book/detail/<int:pk>/", views.bookDetailView.as_view(), name="book-app_book_detail"),
