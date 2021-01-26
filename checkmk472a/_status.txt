@@ -1,0 +1,28 @@
+2020-05-27 works
+
+
+=================================================
+
+2021-01-16_Sat_10.53-AM
+
+albe@vamp398:/srv/dkr$ docker inspect checkmk_checkmk_1 |grep -in checkmk
+61:        "Name": "/checkmk_checkmk_1",
+71:                "/srv/dkr/472dkrcollection/checkmk/backups:/backups:rw",
+73:                "/srv/dkr/472dkrcollection/datasys/check_mk/srv/dkr/472dkrcollection/checkmk:/omd/sites:rw"
+83:            "NetworkMode": "checkmk_default",
+192:                "Source": "/srv/dkr/472dkrcollection/checkmk/backups",
+208:                "Source": "/srv/dkr/472dkrcollection/datasys/check_mk/srv/dkr/472dkrcollection/checkmk",
+216:            "Hostname": "checkmk.local",
+245:            "Image": "checkmk/check-mk-raw:1.6.0-latest",
+260:                "com.docker.compose.project": "checkmk",
+261:                "com.docker.compose.service": "checkmk",
+263:                "maintainer": "feedback@checkmk.com",
+264:                "org.opencontainers.image.description": "Checkmk is a leading tool for Infrastructure & Application Monitoring",
+265:                "org.opencontainers.image.source": "https://github.com/tribe29/checkmk",
+266:                "org.opencontainers.image.title": "Checkmk",
+267:                "org.opencontainers.image.url": "https://checkmk.com/",
+299:                "checkmk_default": {
+303:                        "checkmk",
+albe@vamp398:/srv/dkr$
+
+

@@ -6,7 +6,7 @@ version: "3.6"
 
 services:
   checkmk:
-    image: checkmk/check-mk-raw:1.6.0-latest
+    image: checkmk/check-mk-raw:1.6.0p20
     restart: always
     hostname: checkmk.local
     # user: cmk
