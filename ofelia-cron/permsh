@@ -1,0 +1,5 @@
+
+id 
+
+docker-compose run --rm deb bash -c "chmod -R ugo+rwx  /app ; echo uid="${UID}" ; chown  -R "$UID"  /app"
+
