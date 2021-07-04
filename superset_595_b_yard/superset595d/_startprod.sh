@@ -1,12 +1,10 @@
-# ---------------------------------------------------
-z 595d
 docker-compose -f docker-compose-prod.yml up -d redis db 
-s=11 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
-z 595d
+s=129 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
+
 docker-compose -f docker-compose-prod.yml up -d superset 
-s=12 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
-z 595d
+s=15 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
+
 docker-compose -f docker-compose-prod.yml up -d superset-init 
-s=139 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
-z 595d
-docker-compose -f docker-compose-prod.yml up superset-worker superset-worker-beat
+s=259 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
+
+docker-compose -f docker-compose-prod.yml up -d superset-worker superset-worker-beat

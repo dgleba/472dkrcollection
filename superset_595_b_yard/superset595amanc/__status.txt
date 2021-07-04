@@ -1,0 +1,159 @@
+
+works.
+
+
+
+
+
+=================================================
+
+https://github.com/amancevice/docker-superset/issues/135
+
+
+# Start!!!
+
+
+cd /srv/dkr/472dkrcollection/superset_595_b_yard/superset595amanc
+#
+filen=./_start-amanc.sh
+#
+tee $filen <<- 'EOF'
+docker-compose -f docker-compose.yml up -d redis mysql adminer 
+s=129 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
+#
+docker-compose   run --rm  superset bash superset-init
+s=19 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
+#
+docker-compose -f docker-compose.yml up -d superset 
+s=39 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
+echo 
+echo You can try to log in now.
+echo
+EOF
+chmod +x $filen;
+# start it up..
+  $filen;
+ls  
+
+
+_____________
+
+
+
+user admin
+passwd = a
+
+
+
+=================================================
+
+
+
+
+
+
+=================================================
+=================================================
+
+more notes
+
+
+=================================================
+=================================================
+
+dkd
+docker system prune --volumes
+
+
+dc logs -tf
+
+
+dc up mysql redis adminer
+
+wait til it's done.
+
+dc up superset -d
+
+  15 seconds later..
+
+  docker-compose   exec superset bash superset-init
+
+
+_____________
+
+
+
+=================================================
+
+1.
+
+ggl.
+amancevice docker-superset superset sqlalchemy.exc.ProgrammingError: 
+(MySQLdb._exceptions.ProgrammingError) (1146, "Table 'superset.ab_permission_view_role' 
+doesn't exist")
+
+
+amancevice docker-superset superset sqlalchemy exc ProgrammingError MySQLdb._exceptions 
+ProgrammingError 1146 Table superset.ab_permission_view_role doesn't exist
+
+
+MySQLdb exceptions ProgrammingError 1146 Table superset.ab_permission_view_role doesn't exist
+
+
+
+
+  File "/usr/local/lib/python3.8/site-packages/MySQLdb/connections.py", line 224, in query
+    _mysql.connection.query(self, query)
+sqlalchemy.exc.ProgrammingError: (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'superset.ab_permission_view_role' doesn't exist")
+[SQL: SELECT ab_permission_view.id AS ab_permission_view_id, ab_permission_view.permission_id AS ab_permission_view_permission_id, ab_permission_view.view_menu_id AS ab_permission_view_view_menu_id 
+FROM ab_permission_view INNER JOIN ab_permission_view_role ON ab_permission_view.id = ab_permission_view_role.permission_view_id INNER JOIN ab_role ON ab_role.id = ab_permission_view_role.role_id INNER JOIN ab_permission ON ab_permission.id = ab_permission_view.permission_id INNER JOIN ab_view_menu ON ab_view_menu.id = ab_permission_view.view_menu_id 
+WHERE ab_permission.name = %s AND ab_role.id IN (%s)]
+[parameters: ('menu_access', 2)]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+
+
+    docker-compose   exec superset bash superset-init
+
+albe@vamp398:/srv/dkr/472dkrcollection/superset_595_b_yard/superset595amanc$     docker-compose   exec superset bash superset-init
+
+Username [admin]: User first name [admin]:
+User last name [user]:
+Email [admin@fab.org]: dgleba@gmail.com
+Password:
+Repeat for confirmation:
+Loaded your LOCAL configuration at [/etc/superset/superset_config.py]
+logging was configured successfully
+INFO:superset.utils.logging_configurator:logging was configured successfully
+/usr/local/lib/python3.8/site-packages/flask_caching/__init__.py:201: UserWarning: Flask-Caching: CACHE_TYPE is set to null, caching is effectively disabled.
+  warnings.warn(
+Recognized Database Authentications.
+ERROR:flask_appbuilder.security.sqla.manager:Error adding new user to database. (MySQLdb._exceptions.ProgrammingError) (1146, "Table 'superset.ab_user_role' doesn't exist")
+[SQL: INSERT INTO ab_user_role (user_id, role_id) VALUES (%s, %s)]
+[parameters: (1, 1)]
+(Background on this error at: http://sqlalche.me/e/13/f405)
+No user created an error occured
+Loaded your LOCAL configuration at [/etc/superset/superset_config.py]
+logging was configured successfully
+INFO:superset.utils.logging_configurator:logging was configured successfully
+/usr/local/lib/python3.8/site-packages/flask_caching/__init__.py:201: UserWarning: Flask-Caching: CACHE_TYPE is set to null, caching is effectively disabled.
+  warnings.warn(
+INFO  [alembic.runtime.migration] Context impl MySQLImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 4e6a06bad7a8, Init
+INFO  [alembic.runtime.migration] Running upgrade 4e6a06bad7a8 -> 5a7bad26f2a7, empty message
+...
+
+
+=================================================
+
+https://github.com/amancevice/docker-superset/issues/135
+
+I was able to start the image, and I think the magic was to wait a bit after 
+the MySQL starts to init properly, and do not open the site until the 
+docker exec -it superset superset-init 
+command finishes. But I wasn't able to reproduce the startup consistently.
+
+
+
+=================================================
+

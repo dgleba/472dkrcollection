@@ -1,0 +1,14 @@
+
+
+Status:
+
+    works.
+
+I changed it to mysql backend database.
+
+
+this is official superset
+
+[remote "origin"]
+	url = https://github.com/apache/superset.git
+
