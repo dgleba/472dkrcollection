@@ -43,6 +43,15 @@ _____________
 user admin
 passwd = a
 
+_____________
+
+
+database..
+
+postgres://postgres:xxxx@192.168.88.60:5433/listo
+
+mysql://muser:xxx@10.4.71.231:7414/aeppd01
+
 
 
 =================================================
