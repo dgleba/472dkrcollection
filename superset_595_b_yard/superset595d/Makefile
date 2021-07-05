@@ -28,7 +28,7 @@ install: superset pre-commit
 #@  
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   2021-07-02[Jul-Fri]13-29PM 
 
-produp:
+pup:
 	 docker-compose -f docker-compose-prod.yml up
 
 nuke:
