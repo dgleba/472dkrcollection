@@ -11,6 +11,7 @@ see makefile for up and down after first start.
 
 see ./_firsttimestartprod.sh below.
 
+superset app login:  admin admin
 
 _____________
 
@@ -62,8 +63,8 @@ s=129 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continu
 
 # try this order..
 docker-compose -f docker-compose-prod.yml up -d superset-init 
-# I think about 5 minutes should be enough. I think the next parts can be started before this fully finishes.
-# 600 seconds should over do it.
+# I think about 5 minutes should be enough for no examples. I think the next parts can be started before this fully finishes.
+# 600 seconds with examples creation should more than do it.
 date
 s=600 ; read  -rsp $"Wait $s seconds or press Escape-key or Arrow key to continue..." -t $s -d $'\e'; echo;echo;
 

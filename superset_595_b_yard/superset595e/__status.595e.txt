@@ -23,3 +23,8 @@ this is started from official superset.
 [remote "origin"]
 	url = https://github.com/apache/superset.git
 
+
+
+user admin 
+password admin for web app.
+
