@@ -1,0 +1,25 @@
+
+2021-07-05
+
+Status:
+
+    works.
+
+
+_____________
+
+
+What this is:
+
+production docker superset from official repo.
+
+I didn't clone the code here since we are using the docker hub image.
+
+I changed it to mysql backend database.
+
+
+this is started from official superset.
+
+[remote "origin"]
+	url = https://github.com/apache/superset.git
+
